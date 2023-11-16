@@ -16,8 +16,8 @@ html, body {
     align-items: center;
     text-align: center;
     text-wrap: wrap;
-    color: black;
-    text-shadow: 0 0 0.25rem cyan;
+    color: #1B1B1A;
+    text-shadow: 0 0 0.25rem rgb(0, 255, 0);
     background-image: url('../images/raster/construction-background.png');
     background-position: 0 0;
     background-repeat: no-repeat;
@@ -31,6 +31,28 @@ header {
     align-items: center;
 }
 
+.construction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.construction h1, .construction h2 {
+    margin: 0;
+}
+
+.construction h2 {
+    margin-bottom: 1rem;
+}
+
+.logo {
+    width: 10vw;
+}
+
+.logo img {
+    width: 100%;
+}
+
 .con-tape {
     width: 51vw;
     height: 1rem;
@@ -38,10 +60,10 @@ header {
         135deg,
         yellow,
         yellow 2vw,
-        black 2vw,
-        black 4vw
+        #1B1B1A 2vw,
+        #1B1B1A 4vw
     );
     background-size: contain;
-    box-shadow: 0 0 0.25rem 0.1rem cyan;
+    box-shadow: 0 0 0.25rem 0.1rem rgb(0, 255, 0);
     animation: marquee 10s linear infinite;
 }
