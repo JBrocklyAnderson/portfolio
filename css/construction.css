@@ -1,0 +1,73 @@
+/* Construction styling 
+@keyframes marquee {
+    0% { background-position: 0, 0; }
+    100% {background-position: -20rem, 0; }
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-wrap: wrap;
+    color: #1B1B1A;
+    text-shadow: 0 0 0.25rem rgb(0, 255, 0);
+    background-image: url('../images/raster/construction-background.png');
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    overflow: hidden;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.construction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.construction h1, .construction h2 {
+    margin: 0;
+}
+
+.construction h2 {
+    margin-bottom: 1rem;
+}
+
+.logo {
+    width: 10vw;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.con-tape {
+    width: 51vw;
+    height: 1rem;
+    background: repeating-linear-gradient(
+        135deg,
+        yellow,
+        yellow 2vw,
+        #1B1B1A 2vw,
+        #1B1B1A 4vw
+    );
+    background-size: contain;
+    box-shadow: 0 0 0.25rem 0.1rem rgb(0, 255, 0);
+    animation: marquee 10s linear infinite;
+} */
+
+/* `font-family: 'Montserrat Subrayada', sans-serif;` */
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Hairline&family=Montserrat+Subrayada:wght@400;700&display=swap');
+
+:root {
+    font-size: 16px;
+}

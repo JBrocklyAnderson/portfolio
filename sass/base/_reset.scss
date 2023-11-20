@@ -1,0 +1,44 @@
+/* _reset.scss */
+
+// Work with a more intuitive model for box-sizing
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+// Remove 
+body, header, footer, section, article, aside, h1, h2, h3, h4, h5, h6, ul, ol, li {
+    margin: 0;
+    padding: 0;
+    font: 100%;
+}
+
+// Ensure content fills the viewport
+html {
+    width: 100%;
+    min-height: 100%;
+}
+
+// Normalize list types {
+ul, ol {
+    list-style: none;
+}
+
+// Normalize anchor tags 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+// Ensure responsivity of media elements
+img, picture, svg, video, audio {
+    display: block;
+    max-width: 100%;
+}
+
+// Reset form element styles
+button, input, select, textarea {
+    margin: 0;
+    border: none;
+    background: transparent;
+    font: inherit;
+}

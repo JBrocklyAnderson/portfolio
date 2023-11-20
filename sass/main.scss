@@ -1,0 +1,20 @@
+/* Import utilities */
+@import 'utilities/variables'; // Add variables
+@import 'utilities/mixins'; // Add mixins
+
+/* Import font families */
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Hairline&family=Montserrat+Subrayada:wght@700&display=swap'); //`font-family: 'Montserrat Subrayada', sans-serif;`
+
+/* Import base styles */
+@import 'base/reset'; // Add reset stylesheet
+@import 'base/typography'; // Add typography stylesheet
+
+/* Import layout styles */
+@import 'layouts/body'; // Add body styles
+@import 'layouts/header'; // Add header layout
+@import 'layouts/footer'; // Add footer layout
+
+/* Import specific UI component styles */
+@import 'components/buttons'; // Add styling to buttons
+@import 'components/carousel'; // Add styling to carousel
+
