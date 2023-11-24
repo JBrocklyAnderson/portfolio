@@ -1,0 +1,12 @@
+body {
+    background-color: $black;
+}
+
+#navBar ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gap-med {
+    gap: 1rem;
+}

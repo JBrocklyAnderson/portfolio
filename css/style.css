@@ -1,6 +1,11 @@
-/* Import utilities */
 /* Import font families */
 @import url("https://fonts.googleapis.com/css2?family=Bungee+Hairline&family=Montserrat+Subrayada:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+/* Import utilities */
+/* Assign font variables */
+/* Assign color theme variables */
+/* Assign shadowing variables */
 /* Import base styles */
 /* _reset.scss */
 *, *::before, *::after {
@@ -10,12 +15,12 @@
 body, header, footer, section, article, aside, h1, h2, h3, h4, h5, h6, ul, ol, li {
   margin: 0;
   padding: 0;
-  font: 100%;
 }
 
 html {
   width: 100%;
   min-height: 100%;
+  font-size: 16px;
 }
 
 ul, ol {
@@ -39,7 +44,75 @@ button, input, select, textarea {
   font: inherit;
 }
 
+.txt-color-dark {
+  color: #e4e4e5;
+}
+
+.txt-shadow-soft {
+  text-shadow: 0.1rem 0.1rem 0.25rem rgb(0, 255, 0);
+}
+
+.heading {
+  font-family: "Montserrat Subrayada", sans-serif;
+}
+
+.fs-7 {
+  font-size: 5rem;
+}
+
+.fs-5 {
+  font-size: 3rem;
+}
+
+.fs-2 {
+  font-size: 2rem;
+}
+
+.base-font-family {
+  font-family: "Orbitron", sans-serif;
+}
+
+/* Style small text for things like dates */
+.fs-sm {
+  font-size: 0.7rem;
+  font-weight: bolder;
+}
+
 /* Import layout styles */
+body {
+  background-color: #000000;
+}
+
+#navBar ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gap-med {
+  gap: 1rem;
+}
+
+#intro {
+  display: flex;
+  align-items: center;
+}
+
+#introInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.gap-med {
+  gap: 1rem;
+}
+
 /* Import specific UI component styles */
+.intro-logo {
+  width: 10%;
+}
+
+.img-btn {
+  width: 1rem;
+}
 
 /*# sourceMappingURL=style.css.map */

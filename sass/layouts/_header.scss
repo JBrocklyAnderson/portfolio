@@ -1,0 +1,13 @@
+#intro {
+    display: flex;
+    align-items: center;
+}
+
+#introInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.gap-med {
+    gap: 1rem;
+}

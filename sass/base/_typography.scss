@@ -1,0 +1,34 @@
+.txt-color-dark {
+    color: $light-gr;
+}
+
+.txt-shadow-soft {
+    text-shadow: $txt-shadow-soft;
+}
+
+.heading {
+    font-family: $heading-font-family;
+}
+
+.fs-7 {
+    font-size: 5rem;
+}
+
+.fs-5 {
+    font-size: 3rem;
+}
+
+.fs-2 {
+    font-size: 2rem;
+}
+
+.base-font-family {
+    font-family: $base-font-famly;
+}
+
+/* Style small text for things like dates */
+.fs-sm {
+    font-size: 0.7rem;
+    font-weight: bolder;
+}
+

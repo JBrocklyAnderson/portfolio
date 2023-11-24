@@ -1,6 +1,8 @@
 /* _reset.scss */
 
 // Work with a more intuitive model for box-sizing
+
+
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -9,13 +11,13 @@
 body, header, footer, section, article, aside, h1, h2, h3, h4, h5, h6, ul, ol, li {
     margin: 0;
     padding: 0;
-    font: 100%;
 }
 
 // Ensure content fills the viewport
 html {
     width: 100%;
     min-height: 100%;
+    font-size: $base-font-size;
 }
 
 // Normalize list types {

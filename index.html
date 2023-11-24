@@ -31,29 +31,16 @@
 	<link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 
-<body>
-    <!-- Construction page 
-	<header>
-        <div class="construction">
-			<div class="logo">
-				<img src="images/svg/j3-logo.svg" alt="J3 Logo">
-			</div>
-            <h1>Webpage currently under construction</h1>
-            <h2>Stay tuned for unveiling</h2>
-        </div>
-
-        <div class="con-tape"></div>
-    </header>
-	-->
+<body class="txt-color-dark">
 	<header id="intro">
-		<img src="images/svg/j3-logo.svg" class="logo intro-logo">
+		<img src="images/svg/j3-logo-thm-dark.svg" alt="J3 Logo" class="intro-logo">
 		<div id="introInfo">
-			<h1>Joseph Brockly-Anderson</h1>
-			<p>My professional tagline</p>
+			<h1 class="heading fs-7 txt-shadow-soft">Joseph Brockly-Anderson</h1>
+			<h2 class="heading fs-5 txt-shadow-soft">My professional tagline</h2>
 		</div>
 	</header>
-	<nav id="navBar">
-		<ul>
+	<nav id="navBar" class="heading fs-2 txt-shadow-soft">
+		<ul class="gap-med">
 			<li>
 				<a href="#aboutMe">About Me</a>
 			</li>
@@ -79,33 +66,162 @@
 	</nav>
 
 	<section id="aboutMe">
-		<p class="normal-font"></p>
+		<p class="base-font-family"></p>
 	</section>
 
 	<section id="skills">
-		<h2>Skills</h2>
-		<div id="skillsGrid"
+		<h2 class="visually-hidden">Skills</h2>
+		<div id="skillsGrid">
+
+		</div>
 	</section>
 
 	<section id="workExp">
-		<p class="normal-font"></p>
+		<h2 class="heading fs-2 txt-shadow-soft">Freelance Web Developer</h2>
+		<p class="fs-sm base-font-family">Jul 2023 - Aug 2023</p>
+		<p class="base-font-family">I've been designing business and portfolio websites for clients and professionals alike using front-end languages like HTML, CSS, and JavaScript combined with frameworks for their efficient application, which can be viewed in detail in the <a href="#projects">projects</a> and <a href="#skills">skills</a> sections, respectively.</p>
+		
+		<h2 class="heading fs-2 txt-shadow-soft">Google Data Analytics Professional Certification</h2>
+		<p class="fs-sm base-font-family">Jul 2023 - Aug 2023</p>
+		<p class="base-font-family">After a sustained elevation of enthusiasm, I completed an extensive 6-month, 250+ hour job-ready career certification by demonstrating hands-on experience with data preparation, cleansing, validation, analysis, visualization, interpretation, and presentation using spreadsheets, R Studio, SQL, BigQuery, Tableau, and version control tools. This certification cemented my passion for data analysis and the world of computer programming.</p>
+
+		<h2 class="heading fs-2 txt-shadow-soft">Willow</h2>
+		<p class="fs-sm base-font-family">Oct 2023 - Present</p>
+		<p class="base-font-family">I'm applying all my prior experience in customer service to network with professionals in a variety of fields, designing analytic projects based on the collection, validation, and management of sales, tip, and commute data, and mastering the complex algorithmic interplay between gustatory, olfactory, and aesthetic subjectivity to raise sales totals and increase customer satisfaction.</p>
+		
+		<h2 class="heading fs-2 txt-shadow-soft">Restaurant Industry</h2>
+		<p class="fs-sm base-font-family">The Beginning of Time - Aug 2021</p>
+		<p class="base-font-family">Over the course of my working life, I've provided exceptional customer service by developing core skills in organizational thinking, teamwork and leadership,communication and conflict resolution, time	management and operations flow, adaptability and multitasking, accountability and cultural awareness, and attention to detail and cash-handling, among other hard and soft skills that have equipped me to handle responsibilities in every industry I can imagine.</p>
 	</section>
 
 	<section id="projects">
-		
+		<div id="projectsGrid">
+			<article>
+				<h2 class="heading fs-2 txt-shadow-soft">Willow Analysis</h2>
+				<p class="base-font-family">A comprehensive analysis of my sales data, tip totals, and commute times working at an upscale Italian restaurant</p>
+			</article>
+
+			<article>
+				<h2 class="heading fs-2 txt-shadow-soft">Chinese Tone Colorizer</h2>
+				<p class="base-font-family">An online tool giving Chinese language learners the capability of converting any pasted string of text into colors according to its characters' tone and relative positioning</p>
+			</article>
+			
+			<article>
+				<h2 class="heading fs-2 txt-shadow-soft">Windin' Trails Waggin' Tails</h2>
+				<p class="base-font-family">A dog-walking and pet-sitting service geared for success with a professional, responsive website designed with HTML, CSS, and JavaScript</p>
+			</article>
+
+			<article>
+				<h2 class="heading fs-2 txt-shadow-soft">Cyclistic Bike-Sharing Analysis</h2>
+				<p class="base-font-family">A dedicated analysis of Cyclistic's (Momentum LLC) Chicago-based bike share data using R Studio and Google's Maps Project API</p>
+			</article>
+
+			<article>
+				<h2 class="heading fs-2 txt-shadow-soft">Conflict in 21st Century Burkina Faso: What is to be Done?</h2>
+				<p class="base-font-family">An university-level award-winning literature review of Burkinabè conflict across time, space, and sociological domain with an aim to mitigate human suffering</p>
+			</article>
+		</div>
 	</section>
 
+
 	<section id="education">
-		<p class="normal-font"></p>
+		<div>
+			<h2 class="heading fs-2 txt-shadow-soft">Los Rios Community College District</h2>
+			<p class="fs-sm base-font-family">Aug 2012 - May 2019 |<span> GPA: 3.30</span></p>
+			<p class="base-font-family">I launched my professional academic career directly after high school, spending time exploring what the world had to offer and which fields I wanted to study and advance. I left with a <strong>Double Associate's in Social & Behavioral Sciences</strong> and <strong>Arts & Humanities</strong>.</p>
+			<div> <!-- drop down menu --> 
+				<button>
+					<img src="images/svg/triangle-dd.svg" alt="Dropdown Button" class="img-btn"><span class="txt-color-dark fs-sm base-font-family">Coursework</span>
+				</button>
+				<ul class="base-font-family">
+					<li>Statistics & Probability</li>
+					<li>Macroeconomics</li>
+					<li>World History: 1500-Present</li>
+					<li>Political Theory</li>
+					<li>US Government</li>
+					<li>US History</li>
+					<li>Comparative Politics</li>
+					<li>International Relations</li>
+					<li>Public Speaking</li>
+					<li>Mass Media & Society</li>
+					<li>Mandarin Chinese (3)</li>
+					<li>French (4)</li>
+					<li>Spanish</li>
+					<li>Biological Psychology</li>
+					<li>Astronomy</li>
+					<li>Philosophy</li>
+					<li>Drawing & Composition</li>
+					<li>Creative Writing</li>
+					<li>World Religion</li>
+					<li>Rock & Roll</li>
+				</ul>
+			</div>
+		</div>
+		
+		
+		<div> <!-- Wrap for dropdown functionality -->
+			<h2 class="heading fs-2 txt-shadow-soft">University of California, Davis</h2>
+			<p class="fs-sm base-font-family">Sep 2021 - Jun 2023 |<span> GPA: 3.85</span></p>
+			<p class="base-font-family">Davis was where I fully matured as a student of human knowledge and social relations. I networked with brilliance, explored languages and cultures from around the world, participated in clubs that ranged from philosophy to engineering, and immersed myself in diverse courses that enriched my well-roundedness. During my tenure, I mastered an efficient method of organization that let me <em>halve</em> my 10-week courses while maintaining marks above 90%. I graduated with honors as a <strong>Baccalaureate of Political Science with a minor in Mandarin Chinese</strong>, reflected in the languages section of my portfolio.</p>
+			<div> <!-- drop down menu --> 
+				<button>
+					<img src="images/svg/triangle-dd.svg" alt="Dropdown Button" class="img-btn"><span class="txt-color-dark fs-sm base-font-family">Coursework</span>
+				</button>
+				<ul class="base-font-family">
+					<li>Scientific Study of Politics</li>
+					<li>Distributive Justice</li>
+					<li>Theories of International Politics</li>
+					<li>Politics of Global Interdependence</li>
+					<li>Politics of Global Inequality</li>
+					<li>Contemporary African Politics</li>
+					<li>Political Psychology</li>
+					<li>Public Opinion</li>
+					<li>Group Politics</li>
+					<li>The US Presidency</li>
+					<li>Special Studies in Foreign Aid</li>
+					<li>Advanced Composition</li>
+					<li>History of the PRC</li>
+					<li>Intermediate Chinese (3)</li>
+					<li>Advanced Chinese (3)</li>
+					<li>Chinese Poetry</li>
+					<li>French Composition</li>
+					<li>Advanced French Grammar</li>
+				</ul>
+			</div>
+		</div>
 	</section>
 
 	<section id="awards">
-		<p class="normal-font"></p>
+		<h2 class="heading fs-2 txt-shadow-soft">Registered Student Organization Leadership & Development</h2>
+		<p class="fs-sm base-font-family">Fall 2021</p>
+		<p class="base-font-family">I began my journey through university knowing that I wanted to lead my fellow schoolmates into a positive future.</p>
+
+		<h2 class="heading fs-2 txt-shadow-soft">San Francisco State University Graduate College of Education's <em>STARTALK</em> Summer Chinese Immersion</h2>
+		<p class="fs-sm base-font-family">Summer 2022</p>
+		<p class="base-font-family">Powering through a minor in Mandarin Chinese, I got accepted into a prestigious immersion program, met amazing colleagues, and further refined a well-rounded multicultural perspective.</p>
+		
+		<h2 class="heading fs-2 txt-shadow-soft">Citation For Outstanding Performance</h2>
+		<p class="fs-sm base-font-family">2022 - 2023</p>
+		<p class="base-font-family">I put my all into the courses I took and demonstrated a vigorous thirst for knowledge. </p>
+
+		<h2 class="heading fs-2 txt-shadow-soft">Dean's List Recognition</h2>
+		<p class="fs-sm base-font-family">Spring 2023</p>
+		<p class="base-font-family">My determination, organization, efficiency, and clarity of focus was rewarded.</p>
 	</section>
 
 	<section id="contact">
-		<p class="normal-font"></p>
+		<h2 class="heading fs-2 txt-shadow-soft">Call Me / Text Me</h2>
+		<p class="base-font-family">(530) 417-1973</p>
+
+		<h2 class="heading fs-2 txt-shadow-soft">Email Me</h2>
+		<p class="base-font-family">jbrocklyanderson@gmail.com</p>
+
+		<h2 class="heading fs-2 txt-shadow-soft">Find Me Elsewhere</h2>
+		<p class="base-font-family"><!-- LinkedIn --></p>
+		<p class="base-font-family"><!-- GitHub --></p>
 	</section>
 
 
+<!-- <script src="responsive.js"> -->
 </body>
+</html>
