@@ -81,15 +81,12 @@ button, input, select, textarea {
 /* Import layout styles */
 body {
   background-color: #000000;
+  scroll-behavior: smooth;
 }
 
 #navBar ul {
   display: flex;
   flex-wrap: wrap;
-}
-
-.gap-med {
-  gap: 1rem;
 }
 
 #intro {

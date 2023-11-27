@@ -1,5 +1,6 @@
 body {
     background-color: $black;
+    scroll-behavior: smooth;
 }
 
 #navBar ul {
@@ -7,6 +8,3 @@ body {
     flex-wrap: wrap;
 }
 
-.gap-med {
-    gap: 1rem;
-}
