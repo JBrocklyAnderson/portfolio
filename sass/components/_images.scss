@@ -1,7 +1,7 @@
 .intro-logo {
-    width: 10%;
+    width: clamp(calc($base-font-size * 3), 9vw, 12rem);
 }
 
-.img-btn {
-    width: 1rem;
+.icon {
+    width: max(6rem, 10%);
 }
