@@ -1,12 +1,68 @@
 body {
-    background-color: $black;
+    background: $black-green-gradient;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
-#navBar ul {
+.flex {
     display: flex;
+}
+
+.flex-wrap {
     flex-wrap: wrap;
+}
+
+.h-centered-columns {
+    justify-content: center;
+}
+
+.v-centered-columns {
+    align-items: center;
+}
+
+.frosted {
+    background-color: $secondary-color;
+    backdrop-filter: blur(0.5rem);
+    border-radius: 1rem;
+}
+
+.shadow {
+    box-shadow: $shadow;
+}
+
+.platinum-shadow {
+    box-shadow: $platinum-shadow;
 }
 
 .gap {
     gap: 1rem;
+}
+
+.sm-gap {
+    gap: 0.33rem;
+}
+
+.course {
+    background-color: $primary-color;
+    border-radius: 1rem;
+    font-weight: bold;
+    color: white;
+}
+
+.course:hover {
+    transform: scale(110%, 110%);
+    transition: transform 0.1s ease-in-out;
+    cursor: default;
+}
+
+.base-margin {
+    margin: 1rem;
+}
+
+.base-padding {
+    padding: 1rem;
+}
+
+.padding-side-extend {
+    padding: 0.25rem 0.5rem 0.25rem 0.5rem;
 }

@@ -4,4 +4,10 @@
 
 .icon {
     width: max(6rem, 10%);
+    padding: 1rem;
+}
+
+.dropdown:hover {
+    transform: scale(110%, 110%);
+    transition: transform 0.1s ease-in-out;
 }

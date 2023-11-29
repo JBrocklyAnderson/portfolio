@@ -4,11 +4,13 @@ $base-font-size: 16px;
 $base-font-famly: 'Orbitron', sans-serif;
 
 
-/* Assign color theme variables */
-$white: #ffffff;
-$black: #000000;
-$light-gr: #e4e4e5;
-$dark-gr: #1b1b1a;
+$black-green-gradient: radial-gradient(circle at 0% 0%, rgb(0,0,20), rgba(0,52,0,0.1)),
+           radial-gradient(circle at 100% 100%, rgb(0,52,0), rgb(0,0,0));
 
-/* Assign shadowing variables */
-$txt-shadow-soft: 0.1rem 0.1rem 0.25rem rgb(0, 255, 0);
+$primary-color: rgb(0, 0, 20);
+$secondary-color: rgb(235, 255, 255);
+$tertiary-color: rgba(0,255,0,0.8);
+
+$shadow: 0 0 0.25rem 0.25rem $tertiary-color;
+$platinum-shadow: 0 0 0.25rem 0.25rem $secondary-color;
+$txt-shadow: 0rem 0rem 0.25rem $tertiary-color;

@@ -10,7 +10,10 @@
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
   <defs
      id="defs1" />
   <sodipodi:namedview
@@ -24,7 +27,7 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="0.3108"
      inkscape:cx="833.33333"
-     inkscape:cy="1250"
+     inkscape:cy="989.38224"
      inkscape:window-width="1920"
      inkscape:window-height="991"
      inkscape:window-x="-9"
@@ -42,25 +45,34 @@
      id="path0_fill"
      class="st0"
      d="m 49.98,200.00004 c 27.6,0 50,-14.93326 50,-33.33335 v -33.33336 h -50 c -27.6,0 -50,14.93335 -50,33.33336 0,18.40009 22.4,33.33335 50,33.33335 z"
-     style="stroke-width:1" />
+     style="stroke-width:1;fill:#0aff00;fill-opacity:0.80000001" />
   <path
      id="path1_fill"
      class="st1"
      d="m -0.02,100.00003 c 0,-18.400007 22.4,-33.333348 50,-33.333348 h 50 v 66.666648 h -50 c -27.6,0 -50,-14.93324 -50,-33.3333 z"
-     style="stroke-width:1" />
+     style="stroke-width:1;fill:#000014;fill-opacity:1" />
   <path
      id="path1_fill_1_"
      class="st2"
      d="M -0.02,33.333343 C -0.02,14.933335 22.38,0 49.98,0 h 50 v 66.666682 h -50 c -27.6,0 -50,-14.933335 -50,-33.333339 z"
-     style="stroke-width:1" />
+     style="stroke-width:1;fill:#28283c;fill-opacity:1" />
   <path
      id="path2_fill"
      class="st3"
      d="m 99.98,0 h 50 c 27.6,0 50,14.933335 50,33.333343 0,18.400004 -22.4,33.333339 -50,33.333339 h -50 z"
-     style="stroke-width:1" />
+     style="stroke-width:1;fill:#141428;fill-opacity:1" />
   <path
      id="path3_fill"
      class="st4"
      d="m 199.98,100.00003 c 0,18.40006 -22.4,33.3333 -50,33.3333 -27.6,0 -50,-14.93324 -50,-33.3333 0,-18.400007 22.4,-33.333348 50,-33.333348 27.6,0 50,14.933341 50,33.333348 z"
-     style="stroke-width:1" />
+     style="stroke-width:1;fill:#3c3c50;fill-opacity:1" />
+  <metadata
+     id="metadata1">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Figma.logo</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
 </svg>
