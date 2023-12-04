@@ -3,7 +3,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
 /* Import utilities */
-/* Assign font variables */
+@keyframes mobileGlow {
+  0% {
+    box-shadow: 0 0 0.25rem 0.25rem rgb(0, 255, 0);
+  }
+  50% {
+    box-shadow: 0 0 0.25rem 0.35rem rgb(0, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0.25rem 0.25rem rgb(0, 255, 0);
+  }
+}
+@keyframes expandGlow {
+  0% {
+    box-shadow: 0 0 0.25rem 0.25rem rgb(0, 255, 0);
+  }
+  50% {
+    box-shadow: 0 0 0.75rem 0.75rem rgb(0, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0.5rem 0.5rem rgb(0, 255, 0);
+  }
+}
 /* Import base styles */
 /* _reset.scss */
 *, *::before, *::after {
@@ -45,12 +66,14 @@ button, input, select, textarea {
   font: inherit;
 }
 
-body {
+.txt-color {
   color: rgb(0, 0, 20);
 }
 
-.txt-shadow {
-  text-shadow: 0rem 0rem 0.25rem rgba(0, 255, 0, 0.8);
+.base-font-family {
+  font-family: monospace;
+  letter-spacing: -1px;
+  font-weight: 600;
 }
 
 .heading {
@@ -58,31 +81,91 @@ body {
 }
 
 .fs-4 {
-  font-size: clamp(40px, 6vw, 4rem);
+  font-size: clamp(40px, 6vw, 3rem);
 }
 
 .fs-2 {
-  font-size: clamp(20px, 3vw, 2rem);
+  font-size: clamp(20px, 3vw, 1.5rem);
 }
 
 .fs-1 {
-  font-size: clamp(10px, 1.5vw, 1rem);
+  font-size: clamp(16px, 2.4vw, 1.2rem);
 }
 
 .fs-sm {
-  font-size: clamp(8px, 0.72vw, 0.72rem);
+  font-size: clamp(12.8px, 1.92vw, 0.96rem);
   font-weight: bolder;
 }
 
-.base-font-family {
+.txt-glow {
+  text-shadow: 0 0 0.55rem rgb(0, 255, 0);
+}
+
+.centered {
+  text-align: center;
+}
+
+#essay p:first-of-type::first-letter {
+  float: left;
+  top: 0;
+  font-size: 6rem;
+  font-weight: 900;
+  margin-right: 0.25rem;
+  line-height: 0.75;
+}
+
+#essay p {
+  margin: 0.5rem 0 0.5rem;
+}
+
+.indent {
+  text-indent: 1.5rem;
+}
+
+.hanging-indent {
+  text-indent: -1.5rem;
+  padding-left: 1.5rem;
+}
+
+.orbitron {
   font-family: "Orbitron", sans-serif;
 }
 
 /* Import layout styles */
-body {
+.background {
   background: radial-gradient(circle at 0% 0%, rgb(0, 0, 20), rgba(0, 52, 0, 0.1)), radial-gradient(circle at 100% 100%, rgb(0, 52, 0), rgb(0, 0, 0));
   background-attachment: fixed;
   background-size: cover;
+}
+
+.bg-burkinabe {
+  background: radial-gradient(circle at 50% 50%, rgb(0, 0, 0), rgba(0, 0, 0, 0.5) 100%), radial-gradient(circle at 0% 0%, rgb(255, 0, 0), rgba(0, 0, 0, 0.5) 67%), radial-gradient(circle at 100% 100%, rgb(0, 255, 0), rgba(0, 0, 0, 0.5) 67%);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.base-margin {
+  margin: 1rem;
+}
+
+.base-padding {
+  padding: 1rem;
+}
+
+.padding-side-extend {
+  padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+}
+
+.gap {
+  gap: 1rem;
+}
+
+.sm-gap {
+  gap: 0.33rem;
+}
+
+.sm-row-gap {
+  row-gap: 0.5rem;
 }
 
 .flex {
@@ -101,29 +184,146 @@ body {
   align-items: center;
 }
 
+.main-grid {
+  display: grid;
+  grid-template-columns: auto;
+}
+@media (min-width: 513px) and (max-width: 768px) {
+  .main-grid {
+    grid-template-columns: [page-columns-start] auto [main-content-start] 85% [main-content-end] auto [page-columns-end];
+  }
+}
+@media (min-width: 769px) and (max-width: 1280px) {
+  .main-grid {
+    grid-template-columns: [page-columns-start] auto [navbar-column-start] 5% [main-content-start] 65% [main-content-end] 5% [navbar-column-end] auto [page-columns-end];
+  }
+}
+@media (min-width: 1281px) {
+  .main-grid {
+    grid-template-columns: [page-columns-start] auto [navbar-column-start] 5% [main-content-start] 45% [main-content-end] 5% [navbar-column-end] auto [page-columns-end];
+  }
+}
+
+.snap-middle {
+  grid-column: main-content-start/main-content-end;
+}
+
+.skill-grid {
+  display: grid;
+  grid-gap: 2rem;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+}
+@media (max-width: 512px) {
+  .skill-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 513px) and (max-width: 768px) {
+  .skill-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.skill-card {
+  position: relative;
+}
+
+.tooltip {
+  position: absolute;
+  color: rgb(235, 235, 255);
+  bottom: 100%;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.2s ease;
+  pointer-events: none;
+}
+
+.skill-card:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.slide-out-initial {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-2.5rem);
+  transition: visibility 0s, opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  z-index: 10;
+}
+
+.slide-out-final {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.skill-card:hover .slide-out-initial {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#workExp h3:not(:first-of-type) {
+  margin: 1rem 0 0 0;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+@media (max-width: 512px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 512px) and (min-width: 513px) and (max-width: 768px) {
+  .project-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (pointer: coarse) and (hover: none) {
+  #projectsGrid article {
+    animation: mobileGlow 1s ease-in-out infinite alternate;
+  }
+}
+
+#projectsGrid article:hover {
+  animation: expandGlow 0.2s forwards;
+}
+
+.course-container {
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
 .frosted {
-  background-color: rgb(235, 255, 255);
+  background-color: rgb(235, 235, 255);
   border-radius: 1rem;
 }
 
 .shadow {
-  box-shadow: 0 0 0.25rem 0.25rem rgba(0, 255, 0, 0.8);
+  box-shadow: 0 0 0.25rem 0.25rem rgb(0, 255, 0);
+}
+
+.dark-shadow {
+  box-shadow: 0.25rem 0.25rem 0.25rem rgb(0, 0, 20);
 }
 
 .platinum-shadow {
-  box-shadow: 0 0 0.25rem 0.25rem rgb(235, 255, 255);
+  box-shadow: 0 0 0.25rem 0.25rem rgb(235, 235, 255);
 }
 
-.gap {
-  gap: 1rem;
-}
-
-.sm-gap {
-  gap: 0.33rem;
+.gold-glow {
+  box-shadow: 0 0 6rem 0.25rem rgb(255, 198, 10), 0 0 3rem 0.25rem rgb(237, 204, 94), 0 0 1rem 0.25rem rgb(238, 223, 176);
 }
 
 .course {
   background-color: rgb(0, 0, 20);
+  text-shadow: 0 0 0.55rem rgb(0, 255, 0);
   border-radius: 1rem;
   font-weight: bold;
   color: white;
@@ -135,21 +335,63 @@ body {
   cursor: default;
 }
 
-.base-margin {
-  margin: 1rem;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
 
-.base-padding {
-  padding: 1rem;
+.project-card {
+  height: 26rem;
 }
 
-.padding-side-extend {
-  padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+.project-card-txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#LRCCD {
+  margin-top: 1rem;
+}
+
+#intro {
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 896px) {
+  #intro {
+    flex-direction: column;
+  }
 }
 
 #introInfo {
-  display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(235, 235, 255);
+}
+
+@media (min-width: 769px) {
+  #navBar {
+    grid-column: navbar-column-start/navbar-column-end;
+  }
+}
+
+#navbarItems li:hover {
+  color: rgb(0, 255, 0);
+}
+
+#essayIntro h2, #essayIntro p {
+  margin: 1rem 0 0 0;
+}
+
+#litReviewBibliography li {
+  margin: 0.5rem 0 0 0;
 }
 
 /* Import specific UI component styles */
@@ -158,8 +400,19 @@ body {
 }
 
 .icon {
-  width: max(6rem, 10%);
+  width: 8rem;
+  height: 8rem;
   padding: 1rem;
+}
+@media (pointer: coarse) {
+  .icon {
+    animation: mobileGlow 1s ease-in-out infinite alternate;
+  }
+}
+
+.project-thumbnail {
+  width: 100%;
+  border-radius: 1rem 1rem 0 0;
 }
 
 .dropdown:hover {
@@ -167,8 +420,41 @@ body {
   transition: transform 0.1s ease-in-out;
 }
 
+.hero {
+  width: 50%;
+  grid-column: 1/4;
+}
+
+#burkinabePrehistory {
+  width: 50%;
+  float: left;
+  margin: 1rem 1rem 1rem 0;
+}
+
+#burkinabeColonialRelations {
+  width: 50%;
+  float: right;
+  margin: 1rem 0 1rem 1rem;
+}
+
+#thomasSankara {
+  float: left;
+  margin-bottom: 0.5rem;
+  shape-outside: polygon(0% 100%, 0% 0%, 33% 0%, 33% 70%, 55% 68%, 75% 100%);
+}
+
+#burkinabeSalafists {
+  float: right;
+  width: 50%;
+  margin: 1rem 0 1rem 1rem;
+}
+
 .btn {
   width: clamp(1.5rem, 2.5vw, 2rem);
+}
+
+.dropdown-container button {
+  margin: 0.5rem 0 0.5rem 0;
 }
 
 /*# sourceMappingURL=style.css.map */

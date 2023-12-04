@@ -1,5 +1,30 @@
-#introInfo {
-    display: flex;
-    flex-direction: column;
+#intro {
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: 896px) {
+        flex-direction: column;
+    }
 }
 
+#introInfo {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $secondary-color;
+}
+
+#navBar {
+    @media  (min-width: 769px) {
+        grid-column: navbar-column-start / navbar-column-end;
+    }
+}
+
+#navbarItems li:hover {
+    color: $tertiary-color;
+}
+
+#essayIntro h2, #essayIntro p {
+    margin: 1rem 0 0 0;
+}

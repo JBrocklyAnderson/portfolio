@@ -1,9 +1,11 @@
-body {
+.txt-color {
     color: $primary-color;
 }
 
-.txt-shadow {
-    text-shadow: $txt-shadow;
+.base-font-family {
+    font-family: $base-font-famly;
+    letter-spacing: -1px;
+    font-weight: 600;
 }
 
 .heading {
@@ -11,23 +13,53 @@ body {
 }
 
 .fs-4 {
-    font-size: clamp(calc($base-font-size * 2.5), 6vw, 4rem);
+    font-size: clamp(calc($base-font-size * 2.5), 6vw, 3rem);
 }
 
 .fs-2 {
-    font-size: clamp(calc($base-font-size * 1.25), 3vw, 2rem);
+    font-size: clamp(calc($base-font-size * 1.25), 3vw, 1.5rem);
 }
 
 .fs-1 {
-    font-size: clamp(calc($base-font-size * 0.625), 1.5vw, 1rem);
+    font-size: clamp(calc($base-font-size * 1), 2.4vw, 1.2rem);
 }
 
 .fs-sm {
-    font-size: clamp(calc($base-font-size * 0.5), 0.72vw, 0.72rem);
+    font-size: clamp(calc($base-font-size * 0.8), 1.92vw, 0.96rem);
     font-weight: bolder;
 }
 
-.base-font-family {
-    font-family: $base-font-famly;
+.txt-glow {
+    text-shadow: $txt-glow;
 }
 
+.centered {
+    text-align: center;
+}
+
+#essay p:first-of-type::first-letter {
+    float: left;
+    top: 0;
+    font-size: 6rem;
+    font-weight: 900;
+    margin-right: 0.25rem;
+    line-height: 0.75;
+
+}
+
+#essay p {
+    margin: 0.5rem 0 0.5rem
+}
+
+.indent {
+    text-indent: 1.5rem;
+}
+
+.hanging-indent {
+    text-indent: -1.5rem;
+    padding-left: 1.5rem;
+}
+
+.orbitron {
+    font-family: $orbitron;
+}

@@ -1,9 +1,41 @@
-body {
+.background {
     background: $black-green-gradient;
     background-attachment: fixed;
     background-size: cover;
 }
 
+.bg-burkinabe {
+    background: $red-black-green-gradient;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+// Spacing 
+.base-margin {
+    margin: 1rem;
+}
+
+.base-padding {
+    padding: 1rem;
+}
+
+.padding-side-extend {
+    padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+}
+
+.gap {
+    gap: 1rem;
+}
+
+.sm-gap {
+    gap: 0.33rem;
+}
+
+.sm-row-gap {
+    row-gap: 0.5rem;
+}
+
+// Flexbox
 .flex {
     display: flex;
 }
@@ -20,9 +52,111 @@ body {
     align-items: center;
 }
 
+// Grid
+.main-grid {
+    display: grid;
+    grid-template-columns: auto;
+
+    @media (min-width: 513px) and (max-width: 768px) {
+        grid-template-columns: #{$gridColumnsM};
+    } 
+
+    @media (min-width: 769px) and (max-width: 1280px) {
+        grid-template-columns: #{$gridColumnsLG};
+    }
+
+    @media (min-width: 1281px) {
+        grid-template-columns: #{$gridColumnsXLG};
+    }
+}
+
+.snap-middle {
+    grid-column: main-content-start / main-content-end;
+}
+
+// Subgrids
+.skill-grid {
+    display: grid;
+    grid-gap: 2rem;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+
+    @media (max-width: 512px) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media (min-width: 513px) and (max-width: 768px) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.skill-card {
+    position: relative;
+}
+
+.tooltip {
+    position: absolute;
+    color: $secondary-color;
+    bottom: 100%;
+    left: 0;
+    visibility: hidden;
+    opacity: 0; 
+    transition: visibility 0s, opacity 0.2s ease;
+    pointer-events: none; 
+}
+
+.skill-card:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.slide-out-initial {
+    @include slideOutInitial;
+}
+
+.slide-out-final {
+    @include slideOutFinal;
+}
+
+.skill-card:hover .slide-out-initial {
+    @include slideOutFinal;
+}
+
+#workExp h3:not(:first-of-type) {
+    margin: 1rem 0 0 0;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    @media (max-width: 512px) {
+        grid-template-columns: 1fr; 
+        
+    @media (min-width: 513px) and (max-width: 768px) {
+        grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+
+#projectsGrid article {
+    @media (pointer: coarse) and (hover: none) {
+        animation: mobileGlow 1s ease-in-out infinite alternate;
+    }
+}
+
+#projectsGrid article:hover {
+    animation: expandGlow 0.2s forwards;
+}
+
+.course-container {
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+// Element stylings
 .frosted {
     background-color: $secondary-color;
-    backdrop-filter: blur(0.5rem);
     border-radius: 1rem;
 }
 
@@ -30,20 +164,21 @@ body {
     box-shadow: $shadow;
 }
 
+.dark-shadow {
+    box-shadow: $dark-shadow;
+}
+
 .platinum-shadow {
     box-shadow: $platinum-shadow;
 }
 
-.gap {
-    gap: 1rem;
-}
-
-.sm-gap {
-    gap: 0.33rem;
+.gold-glow {
+    box-shadow: $gold-glow;
 }
 
 .course {
     background-color: $primary-color;
+    text-shadow: $txt-glow;
     border-radius: 1rem;
     font-weight: bold;
     color: white;
@@ -55,14 +190,26 @@ body {
     cursor: default;
 }
 
-.base-margin {
-    margin: 1rem;
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
 }
 
-.base-padding {
-    padding: 1rem;
+.project-card {
+    height: 26rem;
 }
 
-.padding-side-extend {
-    padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+.project-card-txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+// Specific elements
+#LRCCD {
+    margin-top: 1rem;
 }

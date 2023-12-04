@@ -1,0 +1,23 @@
+@keyframes mobileGlow {
+    0% {
+        box-shadow: 0 0 0.25rem 0.25rem $tertiary-color;
+    }
+    50% {
+        box-shadow: 0 0 0.25rem 0.35rem $tertiary-color;
+    }
+    100% {
+        box-shadow: 0 0 0.25rem 0.25rem $tertiary-color;
+    }
+}
+
+@keyframes expandGlow {
+    0% {
+        box-shadow: 0 0 0.25rem 0.25rem $tertiary-color;
+    }
+    50% {
+        box-shadow: 0 0 0.75rem 0.75rem $tertiary-color;
+    }
+    100% {
+        box-shadow: 0 0 0.5rem 0.5rem $tertiary-color;
+    }
+}

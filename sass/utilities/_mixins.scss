@@ -1,0 +1,14 @@
+@mixin slideOutInitial {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-2.5rem);
+    transition: visibility 0s, opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    z-index: 10;
+}
+
+@mixin slideOutFinal {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
