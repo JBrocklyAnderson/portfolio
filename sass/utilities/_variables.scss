@@ -21,18 +21,21 @@ $tertiary-color: rgba(0,255,0,1);
 $gold-dark: rgb(255, 198, 10);
 $gold-mid: rgb(237, 204, 94);
 $gold-bright: rgb(238, 223, 176);
+$red-60: rgb(60, 0, 0);
 
 $shadow: 0 0 0.25rem 0.25rem $tertiary-color;
 $dark-shadow: 0.25rem 0.25rem 0.25rem $primary-color;
 $platinum-shadow: 0 0 0.25rem 0.25rem $secondary-color;
 $txt-glow: 0 0 0.55rem $tertiary-color;
-$gold-glow: 0 0 6rem 0.25rem rgb(255, 198, 10), 0 0 3rem 0.25rem rgb(237, 204, 94), 0 0 1rem 0.25rem rgb(238, 223, 176); 
+$gold-glow: 0 0 6rem 0.25rem rgb(254, 221, 1); 
 
 // Grid variables
-$gridColumnsM: "[page-columns-start] auto [main-content-start] 85% [main-content-end] auto [page-columns-end]";
-$gridColumnsLG: "[page-columns-start] auto [navbar-column-start] 5% [main-content-start] 65% [main-content-end] 5% [navbar-column-end] auto [page-columns-end]";
-$gridColumnsXLG: "[page-columns-start] auto [navbar-column-start] 5% [main-content-start] 45% [main-content-end] 5% [navbar-column-end] auto [page-columns-end]";
-// $gridRows: ;
+$gridColumnsM: "[page-columns-left] 7.5% [main-content-left] 85% [main-content-right] 7.5% [page-columns-right]";
+$gridColumnsLG: "[page-columns-left] 12.5% [navbar-left] 5% [main-content-left] 65% [main-content-right] 5% [navbar-right] 12.5% [page-columns-right]";
+$gridColumnsXLG: "[page-columns-left] 22.5% [navbar-left] 5% [main-content-left] 45% [main-content-right] 5% [navbar-right] 22.5% [page-columns-right]";
+$gridRows: "[navbar-top] auto [navbar-bottom] repeat(auto-fill, minmax(auto, 1fr))";
+$burkinabeGridRows: "[hero-top] 50vh [main-content-top intro-top] 25vh [hero-bottom] 1fr [intro-bottom essay-top] 1fr [essay-bottom bib-top] 1fr [bib-bottom main-content-bottom]"
+// $gridRows: "[hero-top] 5% [logo-top] 10% [logo-bottom navbar-top] 2rem [navbar-bottom] auto [main-content-top] 25% [hero-bottom] 25% [main-content-bottom] ";
 
 
 

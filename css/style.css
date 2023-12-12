@@ -14,6 +14,12 @@
     box-shadow: 0 0 0.25rem 0.25rem rgb(0, 255, 0);
   }
 }
+@media (pointer: coarse) and (hover: none) {
+  .mobile-glow {
+    animation: mobileGlow 1s ease-in-out infinite alternate;
+  }
+}
+
 @keyframes expandGlow {
   0% {
     box-shadow: 0 0 0.25rem 0.25rem rgb(0, 255, 0);
@@ -25,6 +31,62 @@
     box-shadow: 0 0 0.5rem 0.5rem rgb(0, 255, 0);
   }
 }
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-500%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(500%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideOutToUpperRight {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  100% {
+    transform: translateY(-75vh) translateX(45vw);
+  }
+}
+@keyframes slideOutToBottomLeft {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  100% {
+    transform: translateY(65vh) translateX(-35vw);
+  }
+}
+@keyframes fallDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+#introLogo {
+  animation: slideOutToUpperRight 1.5s cubic-bezier(0.5, 0, 1, 0) 5s forwards, slideInFromLeft 4s cubic-bezier(0, 1, 0, 1);
+}
+
+#introInfo {
+  animation: slideOutToBottomLeft 1.5s cubic-bezier(0.5, 0, 1, 0) 5s forwards, slideInFromRight 4s cubic-bezier(0, 1, 0, 1);
+}
+
+.slide-in-from-right {
+  animation: slideInFromRight 4s cubic-bezier(0, 1, 0, 1) 7s forwards;
+}
+
+.fall-down {
+  animation: fallDown 2s ease-in forwards 7s;
+}
+
 /* Import base styles */
 /* _reset.scss */
 *, *::before, *::after {
@@ -105,6 +167,10 @@ button, input, select, textarea {
   text-align: center;
 }
 
+.red-60 {
+  color: rgb(60, 0, 0);
+}
+
 #essay p:first-of-type::first-letter {
   float: left;
   top: 0;
@@ -129,6 +195,16 @@ button, input, select, textarea {
 
 .orbitron {
   font-family: "Orbitron", sans-serif;
+}
+
+.major-mono {
+  font-family: "Major Mono Display", monospace;
+}
+
+.project-card-txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 /* Import layout styles */
@@ -184,28 +260,37 @@ button, input, select, textarea {
   align-items: center;
 }
 
-.main-grid {
+.main-grid-columns {
   display: grid;
   grid-template-columns: auto;
 }
 @media (min-width: 513px) and (max-width: 768px) {
-  .main-grid {
-    grid-template-columns: [page-columns-start] auto [main-content-start] 85% [main-content-end] auto [page-columns-end];
+  .main-grid-columns {
+    grid-template-columns: [page-columns-left] 7.5% [main-content-left] 85% [main-content-right] 7.5% [page-columns-right];
   }
 }
 @media (min-width: 769px) and (max-width: 1280px) {
-  .main-grid {
-    grid-template-columns: [page-columns-start] auto [navbar-column-start] 5% [main-content-start] 65% [main-content-end] 5% [navbar-column-end] auto [page-columns-end];
+  .main-grid-columns {
+    grid-template-columns: [page-columns-left] 12.5% [navbar-left] 5% [main-content-left] 65% [main-content-right] 5% [navbar-right] 12.5% [page-columns-right];
   }
 }
 @media (min-width: 1281px) {
-  .main-grid {
-    grid-template-columns: [page-columns-start] auto [navbar-column-start] 5% [main-content-start] 45% [main-content-end] 5% [navbar-column-end] auto [page-columns-end];
+  .main-grid-columns {
+    grid-template-columns: [page-columns-left] 22.5% [navbar-left] 5% [main-content-left] 45% [main-content-right] 5% [navbar-right] 22.5% [page-columns-right];
   }
 }
 
+/*
+.main-grid-rows {
+
+}
+*/
+.burkinabe-grid-rows {
+  grid-template-rows: "[hero-top] 50vh [main-content-top intro-top] 25vh [hero-bottom] 1fr [intro-bottom essay-top] 1fr [essay-bottom bib-top] 1fr [bib-bottom main-content-bottom]";
+}
+
 .snap-middle {
-  grid-column: main-content-start/main-content-end;
+  grid-column: main-content-left/main-content-right;
 }
 
 .skill-grid {
@@ -248,6 +333,7 @@ button, input, select, textarea {
 
 .slide-out-initial {
   position: absolute;
+  pointer-events: none;
   visibility: hidden;
   opacity: 0;
   transform: translateY(-2.5rem);
@@ -259,37 +345,29 @@ button, input, select, textarea {
   visibility: visible;
   opacity: 1;
   transform: translateY(0);
+  pointer-events: auto;
 }
 
 .skill-card:hover .slide-out-initial {
   visibility: visible;
   opacity: 1;
   transform: translateY(0);
-}
-
-#workExp h3:not(:first-of-type) {
-  margin: 1rem 0 0 0;
+  pointer-events: auto;
 }
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(auto, 1fr));
+  grid-auto-rows: minmax(min-content, max-content);
 }
-@media (max-width: 512px) {
+@media (max-width: 768px) {
   .project-grid {
     grid-template-columns: 1fr;
   }
 }
-@media (max-width: 512px) and (min-width: 513px) and (max-width: 768px) {
-  .project-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
 
-@media (pointer: coarse) and (hover: none) {
-  #projectsGrid article {
-    animation: mobileGlow 1s ease-in-out infinite alternate;
-  }
+#projectsGrid article {
+  height: 30rem;
 }
 
 #projectsGrid article:hover {
@@ -318,7 +396,11 @@ button, input, select, textarea {
 }
 
 .gold-glow {
-  box-shadow: 0 0 6rem 0.25rem rgb(255, 198, 10), 0 0 3rem 0.25rem rgb(237, 204, 94), 0 0 1rem 0.25rem rgb(238, 223, 176);
+  box-shadow: 0 0 6rem 0.25rem rgb(254, 221, 1);
+}
+
+#uniCourseList {
+  padding: 0 0 1rem 0;
 }
 
 .course {
@@ -330,9 +412,12 @@ button, input, select, textarea {
 }
 
 .course:hover {
+  cursor: default;
+}
+
+.popout:hover {
   transform: scale(110%, 110%);
   transition: transform 0.1s ease-in-out;
-  cursor: default;
 }
 
 .visually-hidden {
@@ -344,18 +429,8 @@ button, input, select, textarea {
   white-space: nowrap;
 }
 
-.project-card {
-  height: 26rem;
-}
-
-.project-card-txt {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-#LRCCD {
-  margin-top: 1rem;
+#workExp h3:not(:first-of-type), #education h3:not(:first-of-type), #awards h3:not(:first-of-type) {
+  margin: 1rem 0 0 0;
 }
 
 #intro {
@@ -370,20 +445,106 @@ button, input, select, textarea {
 }
 
 #introInfo {
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   color: rgb(235, 235, 255);
+  text-align: center;
 }
-
-@media (min-width: 769px) {
-  #navBar {
-    grid-column: navbar-column-start/navbar-column-end;
+@media (min-width: 897px) {
+  #introInfo {
+    margin: 0 0 0 1rem;
+    text-align: left;
   }
 }
 
-#navbarItems li:hover {
-  color: rgb(0, 255, 0);
+#mobileHeader {
+  justify-content: space-between;
+  padding: 1rem 1rem;
+  align-items: flex-end;
+}
+@media (max-width: 768px) {
+  #mobileHeader {
+    position: sticky;
+    top: 0;
+    z-index: 200;
+    align-items: center;
+    background-color: rgb(0, 0, 20);
+    grid-column: page-columns-left/page-columns-right;
+  }
+}
+@media (min-width: 769px) {
+  #mobileHeader {
+    box-shadow: none;
+    grid-column: navbar-left/navbar-right;
+  }
+}
+
+#langSelect {
+  position: relative;
+  cursor: pointer;
+}
+
+#langSelect:hover {
+  box-shadow: 0 0 0.25rem 0.25rem rgb(0, 255, 0);
+}
+
+#langOptions {
+  width: 170%;
+  top: 2rem;
+  right: 0;
+  text-align: right;
+  padding: 0.5rem;
+  position: absolute;
+}
+@media (max-width: 768px) {
+  #langOptions {
+    right: -38%;
+    text-align: center;
+  }
+}
+
+#langOptions a {
+  display: block;
+  padding: 0.5rem;
+}
+
+#langOptions a:hover {
+  text-shadow: 0 0 0.55rem rgb(0, 255, 0);
+}
+
+@media (max-width: 768px) {
+  #navBar {
+    position: fixed;
+    inset: 0 0 0 50%;
+    z-index: 100;
+    transform: translateX(105%);
+    transition: transform 0.3s ease-in-out;
+    background-color: rgba(235, 235, 255, 0.8);
+  }
+  @supports (backdrop-filter: blur(0.75rem)) {
+    #navBar {
+      backdrop-filter: blur(0.75rem);
+    }
+  }
+}
+@media (min-width: 769px) {
+  #navBar {
+    grid-column: navbar-left/navbar-right;
+  }
+}
+
+#navBar[data-visibility=true] {
+  transform: translateX(0%);
+  transition: transform 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  #navBarItems {
+    flex-direction: column;
+    padding-block: 5rem;
+  }
+}
+
+#navBarItems li:hover {
+  text-shadow: 0 0 0.55rem rgb(0, 255, 0);
 }
 
 #essayIntro h2, #essayIntro p {
@@ -395,8 +556,18 @@ button, input, select, textarea {
 }
 
 /* Import specific UI component styles */
-.intro-logo {
+#introLogo {
   width: clamp(48px, 9vw, 12rem);
+  z-index: 10;
+}
+@media (min-width: 897px) {
+  #introLogo {
+    margin: 0 0 0 5rem;
+  }
+}
+
+#navbarLogo {
+  width: clamp(2rem, 5vw, 8rem);
 }
 
 .icon {
@@ -404,14 +575,11 @@ button, input, select, textarea {
   height: 8rem;
   padding: 1rem;
 }
-@media (pointer: coarse) {
-  .icon {
-    animation: mobileGlow 1s ease-in-out infinite alternate;
-  }
-}
 
 .project-thumbnail {
   width: 100%;
+  height: 25%;
+  object-fit: cover;
   border-radius: 1rem 1rem 0 0;
 }
 
@@ -420,9 +588,26 @@ button, input, select, textarea {
   transition: transform 0.1s ease-in-out;
 }
 
-.hero {
-  width: 50%;
-  grid-column: 1/4;
+#burkinabeFlag {
+  width: 100%;
+  height: 35vw;
+  object-fit: cover;
+  z-index: -10;
+  position: relative;
+  grid-column: page-columns-left/page-columns-right;
+}
+
+#burkinabeJ3Logo {
+  width: min(10rem, 15vw);
+  aspect-ratio: 1/1;
+  position: absolute;
+}
+
+#burkinabeJ3Logo:hover {
+  box-shadow: 0 0 6rem rgb(60, 0, 0);
+  background-color: rgba(60, 0, 0, 0.5);
+  border-radius: 5% 42.5% 50% 50%;
+  padding: 1rem;
 }
 
 #burkinabePrehistory {
@@ -447,6 +632,25 @@ button, input, select, textarea {
   float: right;
   width: 50%;
   margin: 1rem 0 1rem 1rem;
+}
+
+#navigationToggle {
+  width: 2rem;
+  aspect-ratio: 1/1;
+  background-image: url("../images/svg/icons/buttons/hamburger-icon.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  align-self: center;
+}
+@media (min-width: 769px) {
+  #navigationToggle {
+    display: none;
+  }
+}
+
+#navigationToggle:hover {
+  transform: scale(1.15, 1.15);
+  transition: transform 0.15s ease-in-out;
 }
 
 .btn {

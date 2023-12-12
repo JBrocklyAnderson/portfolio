@@ -1,19 +1,26 @@
-.intro-logo {
+#introLogo {
     width: clamp(calc($base-font-size * 3), 9vw, 12rem);
+    z-index: 10;
+
+    @media (min-width: 897px) {
+        margin: 0 0 0 5rem;
+    }
+}
+
+#navbarLogo {
+    width: clamp(2rem, 5vw, 8rem);
 }
 
 .icon {
     width: 8rem;
     height: 8rem;
     padding: 1rem;
-
-    @media (pointer: coarse) {
-        animation: mobileGlow 1s ease-in-out infinite alternate;
-      }
 }
 
 .project-thumbnail {
     width: 100%;
+    height: 25%;
+    object-fit: cover;
     border-radius: 1rem 1rem 0 0;
 }
 
@@ -22,21 +29,30 @@
     transition: transform 0.1s ease-in-out;
 }
 
-.hero {
-    width: 50%;
-    grid-column: 1 / 4;
+#burkinabeFlag {
+    width: 100%;
+    height: 35vw;
+    object-fit: cover;
+    z-index: -10;
+    position: relative;
+    grid-column: page-columns-left / page-columns-right;
+    // grid-row: hero-top / hero-bottom;
 }
 
+#burkinabeJ3Logo {
+    width: min(10rem, 15vw);
+    aspect-ratio: 1 / 1;
+    position: absolute;
+}
 
+#burkinabeJ3Logo:hover {
+    box-shadow: 0 0 6rem $red-60;
+    background-color: rgba(60, 0, 0, 0.5);
+    border-radius: 5% 42.5% 50% 50%;
+    padding: 1rem;
+}
 
-
-
-
-
-
-//// Page-specific elements
-
-// Conflict in Burkina Faso
+// Floated essay photos
 #burkinabePrehistory {
     width: 50%;
     float: left;

@@ -1,5 +1,6 @@
 @mixin slideOutInitial {
     position: absolute;
+    pointer-events: none;
     visibility: hidden;
     opacity: 0;
     transform: translateY(-2.5rem);
@@ -11,4 +12,7 @@
     visibility: visible;
     opacity: 1;
     transform: translateY(0);
+    pointer-events: auto;
 }
+
+// Animation support

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="500mm"
+   height="300mm"
+   viewBox="0 0 500 300"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="burkinabe-flag.svg"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.34609638"
+     inkscape:cx="628.43766"
+     inkscape:cy="1076.2898"
+     inkscape:window-width="1450"
+     inkscape:window-height="981"
+     inkscape:window-x="339"
+     inkscape:window-y="373"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#ee2222;stroke-width:0.343958;stroke-linecap:round;stroke-linejoin:round;fill-opacity:1"
+       id="rect1"
+       width="500"
+       height="150"
+       x="0"
+       y="0" />
+    <rect
+       style="fill:#009845;fill-opacity:1;stroke-width:0.343958;stroke-linecap:round;stroke-linejoin:round"
+       id="rect1-2"
+       width="500"
+       height="150"
+       x="-7.6293945e-06"
+       y="150" />
+    <path
+       sodipodi:type="star"
+       style="fill:#fedd01;fill-opacity:1;stroke-width:0.343958;stroke-linecap:round;stroke-linejoin:round"
+       id="path1"
+       inkscape:flatsided="false"
+       sodipodi:sides="5"
+       sodipodi:cx="250"
+       sodipodi:cy="150"
+       sodipodi:r1="72.321922"
+       sodipodi:r2="27.48233"
+       sodipodi:arg1="-0.31391711"
+       sodipodi:arg2="0.31440142"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 318.78765,127.66795 -42.65246,30.83089 16.3604,50.02112 -42.50224,-31.03763 -42.51728,31.01704 16.38462,-50.01319 -42.63751,-30.85154 52.6285,0.12778 16.16583,-50.08434 16.14158,50.09216 z"
+       inkscape:transform-center-x="-0.0054086464"
+       inkscape:transform-center-y="-6.9009837"
+       transform="translate(-0.00541186,6.9009819)" />
+  </g>
+</svg>

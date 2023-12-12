@@ -9,22 +9,105 @@
 }
 
 #introInfo {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     color: $secondary-color;
-}
+    text-align: center;
+    
 
-#navBar {
-    @media  (min-width: 769px) {
-        grid-column: navbar-column-start / navbar-column-end;
+    @media (min-width: 897px) {
+        margin: 0 0 0 1rem;
+        text-align: left;
     }
 }
 
-#navbarItems li:hover {
-    color: $tertiary-color;
+#mobileHeader {
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    align-items: flex-end;
+
+    @media (max-width: 768px) {
+        position: sticky;
+        top: 0;
+        z-index: 200;
+        align-items: center;
+        background-color: $primary-color;
+        grid-column: page-columns-left / page-columns-right;
+    }
+
+    @media (min-width: 769px) {
+        box-shadow: none;
+        grid-column: navbar-left / navbar-right;
+    }
+}
+
+#langSelect {
+    position: relative;
+    cursor: pointer;
+}
+
+#langSelect:hover {
+    box-shadow: $shadow;
+}
+
+#langOptions {
+    width: 170%;
+    top: 2rem;
+    right: 0;
+    text-align: right;
+    padding: 0.5rem;
+    position: absolute;
+
+    @media (max-width: 768px) {
+        right: -38%;
+        text-align: center;
+    }
+}
+
+#langOptions a {
+    display: block;
+    padding: 0.5rem;
+}
+
+#langOptions a:hover {
+    text-shadow: $txt-glow;
+}
+
+#navBar {
+    @media (max-width: 768px) {
+        position: fixed;
+        inset: 0 0 0 50%;
+        z-index: 100;
+        transform: translateX(105%);
+        transition: transform 0.3s ease-in-out;
+        background-color: rgba(235, 235, 255, 0.8);
+        
+        @supports (backdrop-filter: blur(0.75rem)) {
+            backdrop-filter: blur(0.75rem);
+        };
+    }
+
+    @media  (min-width: 769px) {
+        grid-column: navbar-left / navbar-right;
+        // grid-row: navbar-top / nav-bar-bottom;
+    }
+}
+
+#navBar[data-visibility="true"] {
+    transform: translateX(0%);
+    transition: transform 0.3s ease-in-out;
+}
+
+#navBarItems {
+    @media (max-width: 768px) {
+        flex-direction: column;
+        padding-block: 5rem;
+    }
+}
+
+#navBarItems li:hover {
+    text-shadow: $txt-glow;
 }
 
 #essayIntro h2, #essayIntro p {
     margin: 1rem 0 0 0;
 }
+

@@ -53,9 +53,10 @@
 }
 
 // Grid
-.main-grid {
+.main-grid-columns {
     display: grid;
     grid-template-columns: auto;
+    
 
     @media (min-width: 513px) and (max-width: 768px) {
         grid-template-columns: #{$gridColumnsM};
@@ -70,9 +71,59 @@
     }
 }
 
-.snap-middle {
-    grid-column: main-content-start / main-content-end;
+/*
+.main-grid-rows {
+
 }
+*/
+
+.burkinabe-grid-rows {
+    grid-template-rows: $burkinabeGridRows;
+}
+
+// #essayIntro {
+//     grid-row: intro-top / intro-bottom;
+// }
+
+// #essay {
+//     grid-row: essay-top / essay-bottom;
+// }
+
+// #essayBibliography {
+//     grid-row: bib-top / bib-bottom;
+// }
+
+.snap-middle {
+    grid-column: main-content-left / main-content-right;
+}
+
+// #aboutMe {
+//     grid-row: auto;
+// }
+
+// #skills {
+//     grid-row: auto;
+// }
+
+// #workExp {
+//     grid-row: auto;
+// }
+
+// #projects {
+//     grid-row: auto;
+// }
+
+// #education {
+//     grid-row: auto;
+// }
+
+// #awards {
+//     grid-row: auto;
+// }
+
+// #contact {
+//     grid-row: auto;
+// }
 
 // Subgrids
 .skill-grid {
@@ -123,27 +174,18 @@
     @include slideOutFinal;
 }
 
-#workExp h3:not(:first-of-type) {
-    margin: 1rem 0 0 0;
-}
-
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(auto, 1fr));
+    grid-auto-rows: minmax(min-content, max-content);
 
-    @media (max-width: 512px) {
-        grid-template-columns: 1fr; 
-        
-    @media (min-width: 513px) and (max-width: 768px) {
-        grid-template-columns: 1fr 1fr;
-        }
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
     }
 }
 
 #projectsGrid article {
-    @media (pointer: coarse) and (hover: none) {
-        animation: mobileGlow 1s ease-in-out infinite alternate;
-    }
+    height: 30rem;
 }
 
 #projectsGrid article:hover {
@@ -176,6 +218,10 @@
     box-shadow: $gold-glow;
 }
 
+#uniCourseList {
+    padding: 0 0 1rem 0;
+}
+
 .course {
     background-color: $primary-color;
     text-shadow: $txt-glow;
@@ -185,11 +231,15 @@
 }
 
 .course:hover {
-    transform: scale(110%, 110%);
-    transition: transform 0.1s ease-in-out;
     cursor: default;
 }
 
+.popout:hover {
+    transform: scale(110%, 110%);
+    transition: transform 0.1s ease-in-out; 
+}
+
+// Class used to display elements only to screen readers
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -199,17 +249,7 @@
     white-space: nowrap;
 }
 
-.project-card {
-    height: 26rem;
-}
-
-.project-card-txt {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
 // Specific elements
-#LRCCD {
-    margin-top: 1rem;
+#workExp h3:not(:first-of-type),  #education h3:not(:first-of-type), #awards h3:not(:first-of-type) {
+    margin: 1rem 0 0 0;
 }

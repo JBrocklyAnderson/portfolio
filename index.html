@@ -9,6 +9,8 @@
 	<meta name="Description" content="">
 	<!-- List keywords to enhance SEO on search engines still using them -->
 	<meta name="Keywords" content="">
+	<link rel="canonical" hreflang="en" href="" />
+	<link rel="alternate" hreflang="fr" href=fr/fr.index.html" />
 	<!-- Title the page -->
 	<title>J3</title>
 	
@@ -32,11 +34,11 @@
 	<link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 
-<body class="base-font-family main-grid background txt-color">
-	<header id="intro" class="flex gap base-padding snap-middle">
-		<img src="images/svg/j3-logo-thm-dark.svg" alt="J3 Logo" class="intro-logo">
+<body class="base-font-family main-grid-columns background txt-color">
+	<header id="intro" class="flex snap-middle">
+		<img src="images/svg/logo/j3-logo-thm-dark.svg" alt="J3 Logo" id="introLogo">
 		<div id="introInfo">
-			<h1 class="heading fs-4 txt-glow centered">Joseph Brockly-Anderson</h1>
+			<h1 id="introName" class="heading fs-4 txt-glow">Joseph Brockly-Anderson</h1>
 			<!-- IDEAS:
 				Cross-Pollinator of Coded Pixels & Cosmic Progress
 				Bringing Together Pixels & Progress
@@ -49,16 +51,37 @@
 				Creating Community with Computers in the Cosmos
 				Developper, Designer, Daredevil (fr: Collaborateur, concepteur, casse-cou; zh: 发展者，设计者，冒险家)
 			-->
-			<h2 class="fs-2 centered txt-glow">
-				<span>Developer.</span>
-				<span>Designer.</span>
-				<span>Daredevil.</span>
+			<h2 id="tagline" class="fs-2 txt-glow">
+				<span id="developer">Developer.</span>
+				<span id="designer">Designer.</span>
+				<span id="daredevil">Daredevil.</span>
 			</h2>
 		</div>
 	</header>
 
+	<!-- Mobile header -->
+	<div id="mobileHeader" class="flex snap-middle shadow">
+		<a href="index.html">
+			<img src="images/svg/logo/j3-logo-thm-dark.svg" alt="J3 Logo" id="navbarLogo" class="intro-logo fall-down">
+		</a>
+		<div id="langSelect" class="frosted platinum-shadow slide-in-from-right">
+			<button id="langBtn" class="flex sm-gap v-centered-columns">
+				<img src="images/svg/icons/buttons/triangle-dd.svg" alt="Dropdown Button" class="btn orbitron"><span class="fs-sm orbitron" aria-label="Language Menu">English</span>
+			</button>
+			<div id="langOptions" class="frosted shadow slide-out-initial ">
+				<a href="lang/fr/fr-index.html" class="popout" aria-label="French version" id="frenchLink">French</a>
+				<hr>
+				<a href="lang/zh-Hans/zh-Hans-index.html" class="popout" aria-label="Mandarin Chinese Version">Mandarin Chinese</a>
+			</div>
+		</div>
+		<button id="navigationToggle">
+			<span class="visually-hidden">Menu Toggle</span>
+		</button>
+	</div>
+
+	
 	<!-- Naivgation bar -->
-	<nav id="navBar" class="heading fs-2 frosted platinum-shadow base-padding snap-middle">
+	<nav id="navBar" class="heading fs-2 frosted platinum-shadow base-padding" data-visibility="false">
 		<ul id="navBarItems" class="flex flex-wrap gap h-centered-columns">
 			<li>
 				<a href="#aboutMe">About Me</a>
@@ -70,7 +93,7 @@
 				<a href="#workExp">Experience</a>
 			</li>
 			<li>
-				<a href="#projects">Projects</a>
+				<a href="#projects" class="">Projects</a>
 			</li>
 			<li>
 				<a href="#education">Education</a>
@@ -86,8 +109,8 @@
 
 	<!-- About me section -->
 	<section id="aboutMe" class="frosted shadow base-margin base-padding snap-middle">
-		<h1 class="visually-hidden">About Me</h1>
-		<p></p>
+		<h2 class="visually-hidden">About Me</h2>
+		<p class="fs-1">I'm a data-analyst trained front-end web developer and computer programmer with a passion for solving problems on as big of a scale as possible.</p>
 	</section>
 
 	<section id="skills" class="snap-middle base-margin">
@@ -95,7 +118,7 @@
 		<div id="skillsGrid" class="skill-grid">
 			<!-- HTML -->
 			<article id="html5" class="skill-card">
-				<img src="images/svg/icons/skills/html/html5-icon.svg" alt="HTML5" class="icon frosted shadow">
+				<img src="images/svg/icons/skills/html/html5-icon.svg" alt="HTML5" class="icon frosted shadow mobile-glow">
 				<div class="tooltip course padding-side-extend">
 					<h3>HTML5</h3>
 				</div>
@@ -103,28 +126,28 @@
 			
 			<!-- CSS -->
 			<article id="css3" class="skill-card">
-				<img src="images/svg/icons/skills/css/css-icon.svg" alt="CSS3" class="icon frosted shadow">
+				<img src="images/svg/icons/skills/css/css-icon.svg" alt="CSS3" class="icon frosted shadow mobile-glow">
 				<div class="tooltip course padding-side-extend">
 					<h3>CSS3</h3>
 				</div>
 				
 				<div class="slide-out-initial">
 					<article id="flexbox" class="skill-card">
-						<img src="images/svg/icons/skills/css/css-flexbox-icon.svg" alt="Flexbox" class="icon frosted shadow">
+						<img src="images/svg/icons/skills/css/css-flexbox-icon.svg" alt="Flexbox" class="icon frosted shadow mobile-glow">
 						<div class="tooltip course padding-side-extend">
 							<h4>Flexbox</h4>
 						</div>
 					</article>
 
 					<article id="Grid" class="skill-card">
-						<img src="images/svg/icons/skills/css/css-grid-icon.svg" alt="Grid" class="icon frosted shadow">
+						<img src="images/svg/icons/skills/css/css-grid-icon.svg" alt="Grid" class="icon frosted shadow mobile-glow">
 						<div class="tooltip course padding-side-extend">
 							<h4>Grid</h4>
 						</div>
 					</article>
 
 					<article id="sass" class="skill-card">
-						<img src="images/svg/icons/skills/css/sass-icon.svg" alt="Syntactically Awesome Style Sheets (SASS)" class="icon frosted shadow">
+						<img src="images/svg/icons/skills/css/sass-icon.svg" alt="Syntactically Awesome Style Sheets (SASS)" class="icon frosted shadow mobile-glow">
 						<div class="tooltip course padding-side-extend">
 							<h4>SASS</h4>
 						</div>
@@ -134,7 +157,7 @@
 
 			<!-- JavaScript -->
 			<article id="javascript" class="skill-card">
-				<img src="images/svg/icons/skills/javascript/javascript-icon.svg" alt="JavaScript" class="icon frosted shadow">
+				<img src="images/svg/icons/skills/javascript/javascript-icon.svg" alt="JavaScript" class="icon frosted shadow mobile-glow">
 				<div class="tooltip course padding-side-extend">
 					<h3>JavaScript</h3>
 				</div>
@@ -142,21 +165,21 @@
 
 			<!-- Python -->
 			<article id="python" class="skill-card">
-				<img src="images/svg/icons/skills/python/python-icon.svg" alt="Python" class="icon frosted shadow">
+				<img src="images/svg/icons/skills/python/python-icon.svg" alt="Python" class="icon frosted shadow mobile-glow">
 				<div class="tooltip course padding-side-extend">
 					<h3>Python</h3>
 				</div>
 
 				<div class="slide-out-initial">
 					<article id="flask" class="skill-card">
-						<img src="images/svg/icons/skills/python/flask-icon.svg" alt="Flask" class="icon frosted shadow">
+						<img src="images/svg/icons/skills/python/flask-icon.svg" alt="Flask" class="icon frosted shadow mobile-glow">
 						<div class="tooltip course padding-side-extend">
 							<h4>Flask</h4>
 						</div>
 					</article>
 
-					<article id="flask" class="skill-card">
-						<img src="images/svg/icons/skills/python/beautiful-soup-icon.svg" alt="Beautiful Soup" class="icon frosted shadow">
+					<article id="beautifulSoup" class="skill-card">
+						<img src="images/svg/icons/skills/python/beautiful-soup-icon.svg" alt="Beautiful Soup" class="icon frosted shadow mobile-glow">
 						<div class="tooltip course padding-side-extend">
 							<h4>Beautiful Soup</h4>
 						</div>
@@ -166,21 +189,21 @@
 
 			<!-- Git -->
 			<article id="git" class="skill-card">
-				<img src="images/svg/icons/skills/git/git-icon.svg" alt="Git" class="icon frosted shadow">
+				<img src="images/svg/icons/skills/git/git-icon.svg" alt="Git" class="icon frosted shadow mobile-glow">
 				<div class="tooltip course padding-side-extend">
 					<h3>Git</h3>
 				</div>
 				
 				<div class="slide-out-initial">
 					<article id="gitBash" class="skill-card">
-						<img src="images/svg/icons/skills/git/git-bash-icon.svg" alt="Git Bash" class="icon frosted shadow">
+						<img src="images/svg/icons/skills/git/git-bash-icon.svg" alt="Git Bash" class="icon frosted shadow mobile-glow">
 						<div class="tooltip course padding-side-extend">
 							<h4>Git Bash</h4>
 						</div>
 					</article>
 
 					<article id="gitHub" class="skill-card">
-						<img src="images/svg/icons/skills/git/github-icon.svg" alt="GitHub" class="icon frosted shadow">
+						<img src="images/svg/icons/skills/git/github-icon.svg" alt="GitHub" class="icon frosted shadow mobile-glow">
 						<div class="tooltip course padding-side-extend">
 							<h4>GitHub</h4>
 						</div>
@@ -190,14 +213,14 @@
 
 			<!-- R Language-->
 			<article id="rLanguage" class="skill-card">
-				<img src="images/svg/icons/skills/r/rlang-icon.svg" alt="R Language" class="icon frosted shadow">
+				<img src="images/svg/icons/skills/r/rlang-icon.svg" alt="R Language" class="icon frosted shadow mobile-glow">
 				<div class="tooltip course padding-side-extend">
 					<h3>R Language</h3>
 				</div>
 				
 				<div class="slide-out-initial">
-					<article id="R Studio" class="skill-card">
-						<img src="images/svg/icons/skills/r/rstudio-icon.svg" alt="R Studio" class="icon frosted shadow">
+					<article id="RStudio" class="skill-card">
+						<img src="images/svg/icons/skills/r/rstudio-icon.svg" alt="R Studio" class="icon frosted shadow mobile-glow">
 						<div class="tooltip course padding-side-extend">
 							<h4>R Studio®</h4>
 						</div>
@@ -207,14 +230,14 @@
 
 			<!-- SQL -->
 			<article id="sql" class="skill-card">
-				<img src="images/svg/icons/skills/sql/sql-icon.svg" alt="SQL" class="icon frosted shadow">
+				<img src="images/svg/icons/skills/sql/sql-icon.svg" alt="SQL" class="icon frosted shadow mobile-glow">
 				<div class="tooltip course padding-side-extend">
 					<h3>SQL</h3>
 				</div>
 				
 				<div class="slide-out-initial">
 					<article id="bigQuery" class="skill-card">
-						<img src="images/svg/icons/skills/sql/bigquery-icon.svg" alt="BigQuery" class="icon frosted shadow">
+						<img src="images/svg/icons/skills/sql/bigquery-icon.svg" alt="BigQuery" class="icon frosted shadow mobile-glow">
 						<div class="tooltip course padding-side-extend">
 							<h4>BigQuery</h4>
 						</div>
@@ -224,28 +247,28 @@
 
 			<!-- Microsoft Suite -->
 			<article id="microsoftSuite" class="skill-card">
-				<img src="images/svg/icons/skills/microsoft/microsoft-suite-icon.svg" alt="Microsoft Suite" class="icon frosted shadow">
+				<img src="images/svg/icons/skills/microsoft/microsoft-suite-icon.svg" alt="Microsoft Suite" class="icon frosted shadow mobile-glow">
 				<div class="tooltip course padding-side-extend">
 					<h3>MS Suite</h3>
 				</div>
 				
 				<div class="slide-out-initial">
 					<article id="excel" class="skill-card">
-						<img src="images/svg/icons/skills/microsoft/microsoft-excel-icon.svg" alt="Excel" class="icon frosted shadow">
+						<img src="images/svg/icons/skills/microsoft/microsoft-excel-icon.svg" alt="Excel" class="icon frosted shadow mobile-glow">
 						<div class="tooltip course padding-side-extend">
 							<h4>Excel</h4>
 						</div>
 					</article>
 
 					<article id="powerPoint" class="skill-card">
-						<img src="images/svg/icons/skills/microsoft/microsoft-powerpoint-icon.svg" alt="PowerPoint" class="icon frosted shadow">
+						<img src="images/svg/icons/skills/microsoft/microsoft-powerpoint-icon.svg" alt="PowerPoint" class="icon frosted shadow mobile-glow">
 						<div class="tooltip course padding-side-extend">
 							<h4>PowerPoint</h4>
 						</div>
 					</article>
 
 					<article id="word" class="skill-card">
-						<img src="images/svg/icons/skills/microsoft/microsoft-word-icon.svg" alt="Word" class="icon frosted shadow">
+						<img src="images/svg/icons/skills/microsoft/microsoft-word-icon.svg" alt="Word" class="icon frosted shadow mobile-glow">
 						<div class="tooltip course padding-side-extend">
 							<h4>Word</h4>
 						</div>
@@ -255,28 +278,28 @@
 
 			<!-- Google Suite -->
 			<article id="googleSuite" class="skill-card">
-				<img src="images/svg/icons/skills/google/google-suite-icon.svg" alt="Google Suite" class="icon frosted shadow">
+				<img src="images/svg/icons/skills/google/google-suite-icon.svg" alt="Google Suite" class="icon frosted shadow mobile-glow">
 				<div class="tooltip course padding-side-extend">
 					<h3>Google Suite</h3>
 				</div>
 				
 				<div class="slide-out-initial">
 					<article id="sheets" class="skill-card">
-						<img src="images/svg/icons/skills/google/google-sheets-icon.svg" alt="Sheets" class="icon frosted shadow">
+						<img src="images/svg/icons/skills/google/google-sheets-icon.svg" alt="Sheets" class="icon frosted shadow mobile-glow">
 						<div class="tooltip course padding-side-extend">
 							<h4>Sheets</h4>
 						</div>
 					</article>
 
 					<article id="slides" class="skill-card">
-						<img src="images/svg/icons/skills/google/google-slides-icon.svg" alt="Slides" class="icon frosted shadow">
+						<img src="images/svg/icons/skills/google/google-slides-icon.svg" alt="Slides" class="icon frosted shadow mobile-glow">
 						<div class="tooltip course padding-side-extend">
 							<h4>Slides</h4>
 						</div>
 					</article>
 
 					<article id="docs" class="skill-card">
-						<img src="images/svg/icons/skills/google/google-docs-icon.svg" alt="Docs" class="icon frosted shadow">
+						<img src="images/svg/icons/skills/google/google-docs-icon.svg" alt="Docs" class="icon frosted shadow mobile-glow">
 						<div class="tooltip course padding-side-extend">
 							<h4>Docs</h4>
 						</div>
@@ -286,28 +309,28 @@
 
 			<!-- Markdown -->
 			<article id="markdown" class="skill-card">
-				<img src="images/svg/icons/skills/markdown/markdown-icon.svg" alt="Markdown" class="icon frosted shadow">
+				<img src="images/svg/icons/skills/markdown/markdown-icon.svg" alt="Markdown" class="icon frosted shadow mobile-glow">
 				<div class="tooltip course padding-side-extend">
 					<h3>Markdown</h3>
 				</div>
 				
 				<div class="slide-out-initial">
 					<article id="latex" class="skill-card">
-						<img src="images/svg/icons/skills/markdown/latex-icon.svg" alt="LaTeX" class="icon frosted shadow">
+						<img src="images/svg/icons/skills/markdown/latex-icon.svg" alt="LaTeX" class="icon frosted shadow mobile-glow">
 						<div class="tooltip course padding-side-extend">
 							<h4>LaTeX</h4>
 						</div>
 					</article>
 
 					<article id="bibtex" class="skill-card">
-						<img src="images/svg/icons/skills/markdown/bibtex-icon.svg" alt="BibTeX" class="icon frosted shadow">
+						<img src="images/svg/icons/skills/markdown/bibtex-icon.svg" alt="BibTeX" class="icon frosted shadow mobile-glow">
 						<div class="tooltip course padding-side-extend">
 							<h4>BibTeX</h4>
 						</div>
 					</article>
 
 					<article id="yaml" class="skill-card">
-						<img src="images/svg/icons/skills/markdown/yaml-icon.svg" alt="YAML" class="icon frosted shadow">
+						<img src="images/svg/icons/skills/markdown/yaml-icon.svg" alt="YAML" class="icon frosted shadow mobile-glow">
 						<div class="tooltip course padding-side-extend">
 							<h4>YAML</h4>
 						</div>
@@ -317,7 +340,7 @@
 
 			<!-- Tableau-->
 			<article id="tableau" class="skill-card">
-				<img src="images/svg/icons/skills/tableau/tableau-icon.svg" alt="Tableau" class="icon frosted shadow">
+				<img src="images/svg/icons/skills/tableau/tableau-icon.svg" alt="Tableau" class="icon frosted shadow mobile-glow">
 				<div class="tooltip course padding-side-extend">
 					<h3>Tableau</h3>
 				</div>
@@ -325,21 +348,21 @@
 
 			<!-- Inkscape -->
 			<article id="inkscape" class="skill-card">
-				<img src="images/svg/icons/skills/inkscape/inkscape-icon.svg" alt="inkscape" class="icon frosted shadow">
+				<img src="images/svg/icons/skills/inkscape/inkscape-icon.svg" alt="inkscape" class="icon frosted shadow mobile-glow">
 				<div class="tooltip course padding-side-extend">
 					<h3>Inkscape</h3>
 				</div>
 			</article>
 
 			<article id="figma" class="skill-card">
-				<img src="images/svg/icons/skills/figma/figma-icon.svg" alt="Figma" class="icon frosted shadow">
+				<img src="images/svg/icons/skills/figma/figma-icon.svg" alt="Figma" class="icon frosted shadow mobile-glow">
 				<div class="tooltip course padding-side-extend">
 					<h3>Figma</h3>
 				</div>
 			</article>
 
 			<article id="sketchUp" class="skill-card">
-				<img src="images/svg/icons/skills/sketchup/sketchup-icon.svg" alt="SketchUp" class="icon frosted shadow">
+				<img src="images/svg/icons/skills/sketchup/sketchup-icon.svg" alt="SketchUp" class="icon frosted shadow mobile-glow">
 				<div class="tooltip course padding-side-extend">
 					<h3>SketchUp</h3>
 				</div>
@@ -370,29 +393,29 @@
 	<section id="projects" class="snap-middle base-margin">
 		<h2 class="visually-hidden">Projects</h2>
 		<div id="projectsGrid" class="project-grid gap">
-			<a href="">
-				<article class="frosted shadow project-card">
-					<img src="" alt="Willow Analysis Cover Page">
+			<!-- <a href="https://jbrocklyanderson.github.io/willow-analysis">
+				<article class="frosted shadow project-card mobile-glow expand-glow">
+					<img src="images/raster/thumbnails/willow-analysis.png" alt="Willow Analysis Cover Page" class="project-thumbnail">
 					<div class="project-card-txt">
 						<h3 class="heading fs-2 base-padding txt-glow">Willow Analysis</h3>
 						<p class="fs-1 base-padding">A comprehensive analysis of my sales data, tip totals, and commute times working at an upscale Italian restaurant</p>
 					</div>
 				</article>
-			</a>
+			</a> -->
 
-			<a href="">
-				<article class="frosted shadow project-card">
-					<img src="images/raster/thumbnails/mandarin-orange.png" alt="Mandarin Orange Cover Page" class="project-thumbnail">
+			<a href="https://jbrocklyanderson.github.io/chroma-lingua">
+				<article class="frosted shadow project-card mobile-glow expand-glow">
+					<img src="images/raster/thumbnails/mandarin-orange.png" alt="Chroma Lingua Cover Page" class="project-thumbnail">
 					<div class="project-card-txt">
-						<h3 class="heading fs-2 base-padding txt-glow">Mandarin Orange</h3>
-						<p class="fs-1 base-padding">An online tool giving Chinese language learners the capability of converting any pasted string of text into colors according to its characters' tone and relative positioning</p>
+						<h3 class="heading fs-2 base-padding txt-glow">Chroma Lingua</h3>
+						<p class="fs-1 base-padding">An online tool giving language learners the capability of converting text into colors according to its characters' tone, relative positioning, and pronunciation</p>
 					</div>
 				</article>
 			</a>
 			
 			<a href="https://brendondye.github.io/windintrailswaggintails/">
-				<article class="frosted shadow project-card">
-					<img src="images/raster/thumbnails/wtwt.png" alt="Windin' Trails Waggin' Tails Cover Page" class="project-thumbnail">
+				<article class="frosted shadow project-card mobile-glow expand-glow">
+					<img src="images/raster/thumbnails/wtwt.png" alt="Dogs of all shape and size running to the camera across a golden meadow with majestic mountains in the background at sunset" class="project-thumbnail">
 					<div class="project-card-txt">
 						<h3 class="heading fs-2 base-padding txt-glow">Windin' Trails Waggin' Tails</h3>
 						<p class="fs-1 base-padding">A dog-walking and pet-sitting service geared for success with a professional, responsive website designed with HTML, CSS, and JavaScript</p>
@@ -400,9 +423,9 @@
 				</article>
 			</a>
 
-			<a href="">
-				<article class="frosted shadow project-card">
-					<img src="" alt="Willow Analysis Cover Page">
+			<a href="pdf/cyclistic-nontechnical.pdf">
+				<article class="frosted shadow project-card mobile-glow expand-glow">
+					<img src="images/raster/thumbnails/cyclistic.png" alt="Bicyclists in Chicago's Millenium Park enjoying a ride on a beautiful day" class="project-thumbnail">
 					<div class="project-card-txt">
 						<h3 class="heading fs-2 base-padding txt-glow">Cyclistic Bike-Sharing Analysis</h3>
 						<p class="fs-1 base-padding">A dedicated analysis of Cyclistic's (Momentum LLC) Chicago-based bike share data using R Studio and Google's Maps API</p>
@@ -411,8 +434,8 @@
 			</a>
 
 			<a href="html/conflict-in-burkina-faso.html">
-				<article class="frosted shadow project-card">
-					<img src="images/raster/thumbnails/burkinabe-flag.png" alt="Burkinabè Flag" class="project-thumbnail">
+				<article class="frosted shadow project-card mobile-glow expand-glow">
+					<img src="images/raster/thumbnails/burkinabe-flag.svg" alt="Burkinabè Flag" class="project-thumbnail">
 					<div class="project-card-txt">
 						<h3 class="heading fs-2 base-padding txt-glow">Conflict in 21st Century Burkina Faso</h3>
 						<p class="fs-1 base-padding">An university-level award-winning literature review of Burkinabè conflict across time, space, and sociological domain with an aim to mitigate human suffering</p>
@@ -425,65 +448,65 @@
 	<section id="education" class="frosted shadow base-margin base-padding snap-middle">
 		<h2 class="visually-hidden">Education</h2>
 		<div> <!-- Wrap for dropdown functionality -->
-			<h2 class="heading fs-2 txt-glow">University of California, Davis</h2>
+			<h3 class="heading fs-2 txt-glow">University of California, Davis</h3>
 			<p class="fs-sm orbitron">Sep 2021 - Jun 2023 | GPA: 3.85</p>
 			<p class="fs-1">Davis was where I fully matured as a student of human knowledge and social relations. I networked with brilliance, explored languages and cultures from around the world, participated in clubs that ranged from philosophy to engineering, and immersed myself in diverse courses that enriched my well-roundedness. During my tenure, I mastered an efficient method of organization that let me <em>halve</em> my 10-week courses while maintaining marks above 90%. I graduated with honors as a <strong>Baccalaureate of Political Science with a minor in Mandarin Chinese</strong>, reflected in the languages section of my portfolio.</p>
 			<div class="dropdown-container"> <!-- drop down menu --> 
 				<button class="dropdown flex sm-gap v-centered-columns">
 					<img src="images/svg/icons/buttons/triangle-dd.svg" alt="Dropdown Button" class="btn"><span class="fs-sm orbitron">COURSEWORK</span>
 				</button>
-				<ul class="fs-1 flex flex-wrap gap sm-row-gap course-container slide-out-initial">
-					<li class="course padding-side-extend dark-shadow">Scientific Study of Politics</li>
-					<li class="course padding-side-extend dark-shadow">Distributive Justice</li>
-					<li class="course padding-side-extend dark-shadow">Theories of International Politics</li>
-					<li class="course padding-side-extend dark-shadow">Politics of Global Interdependence</li>
-					<li class="course padding-side-extend dark-shadow">Politics of Global Inequality</li>
-					<li class="course padding-side-extend dark-shadow">Contemporary African Politics</li>
-					<li class="course padding-side-extend dark-shadow">Political Psychology</li>
-					<li class="course padding-side-extend dark-shadow">Public Opinion</li>
-					<li class="course padding-side-extend dark-shadow">Group Politics</li>
-					<li class="course padding-side-extend dark-shadow">The US Presidency</li>
-					<li class="course padding-side-extend dark-shadow">Special Studies in Foreign Aid</li>
-					<li class="course padding-side-extend dark-shadow">Advanced Composition</li>
-					<li class="course padding-side-extend dark-shadow">History of the PRC</li>
-					<li class="course padding-side-extend dark-shadow">Intermediate Chinese (3)</li>
-					<li class="course padding-side-extend dark-shadow">Advanced Chinese (3)</li>
-					<li class="course padding-side-extend dark-shadow">Chinese Poetry</li>
-					<li class="course padding-side-extend dark-shadow">French Composition</li>
-					<li class="course padding-side-extend dark-shadow">Advanced French Grammar</li>
+				<ul id="uniCourseList" class="fs-1 flex flex-wrap gap sm-row-gap course-container slide-out-initial">
+					<li class="course popout padding-side-extend dark-shadow">Scientific Study of Politics</li>
+					<li class="course popout padding-side-extend dark-shadow">Distributive Justice</li>
+					<li class="course popout padding-side-extend dark-shadow">Theories of International Politics</li>
+					<li class="course popout padding-side-extend dark-shadow">Politics of Global Interdependence</li>
+					<li class="course popout padding-side-extend dark-shadow">Politics of Global Inequality</li>
+					<li class="course popout padding-side-extend dark-shadow">Contemporary African Politics</li>
+					<li class="course popout padding-side-extend dark-shadow">Political Psychology</li>
+					<li class="course popout padding-side-extend dark-shadow">Public Opinion</li>
+					<li class="course popout padding-side-extend dark-shadow">Group Politics</li>
+					<li class="course popout padding-side-extend dark-shadow">The US Presidency</li>
+					<li class="course popout padding-side-extend dark-shadow">Special Studies in Foreign Aid</li>
+					<li class="course popout padding-side-extend dark-shadow">Advanced Composition</li>
+					<li class="course popout padding-side-extend dark-shadow">History of the PRC</li>
+					<li class="course popout padding-side-extend dark-shadow">Intermediate Chinese (3)</li>
+					<li class="course popout padding-side-extend dark-shadow">Advanced Chinese (3)</li>
+					<li class="course popout padding-side-extend dark-shadow">Chinese Poetry</li>
+					<li class="course popout padding-side-extend dark-shadow">French Composition</li>
+					<li class="course popout padding-side-extend dark-shadow">Advanced French Grammar</li>
 				</ul>
 			</div>
 		</div>
 
 		<div>
-			<h2 id="LRCCD" class="heading fs-2 txt-glow">Los Rios Community College District</h2>
+			<h3 id="LRCCD" class="heading fs-2 txt-glow">Los Rios Community College District</h3>
 			<p class="fs-sm orbitron">Aug 2012 - May 2019 | GPA: 3.30</p>
 			<p class="fs-1">I launched my professional academic career directly after high school, spending time exploring what the world had to offer and which fields I wanted to study and advance. I left with a <strong>Double Associate's in Social & Behavioral Sciences</strong> and <strong>Arts & Humanities</strong>.</p>
 			<div class="dropdown-container"> <!-- drop down menu --> 
 				<button class="dropdown flex sm-gap v-centered-columns">
 					<img src="images/svg/icons/buttons/triangle-dd.svg" alt="Dropdown Button" class="btn"><span class="fs-sm orbitron">COURSEWORK</span>
 				</button>
-				<ul class="fs-1 flex flex-wrap gap sm-row-gap course-container slide-out-initial">
-					<li class="course padding-side-extend dark-shadow">Statistics & Probability (106%)</li>
-					<li class="course padding-side-extend dark-shadow">Macroeconomics</li>
-					<li class="course padding-side-extend dark-shadow">World History: 1500-Present</li>
-					<li class="course padding-side-extend dark-shadow">Political Theory</li>
-					<li class="course padding-side-extend dark-shadow">US Government</li>
-					<li class="course padding-side-extend dark-shadow">US History</li>
-					<li class="course padding-side-extend dark-shadow">Comparative Politics</li>
-					<li class="course padding-side-extend dark-shadow">International Relations</li>
-					<li class="course padding-side-extend dark-shadow">Public Speaking</li>
-					<li class="course padding-side-extend dark-shadow">Mass Media & Society</li>
-					<li class="course padding-side-extend dark-shadow">Mandarin Chinese (3)</li>
-					<li class="course padding-side-extend dark-shadow">French (4)</li>
-					<li class="course padding-side-extend dark-shadow">Spanish</li>
-					<li class="course padding-side-extend dark-shadow">Biological Psychology</li>
-					<li class="course padding-side-extend dark-shadow">Astronomy</li>
-					<li class="course padding-side-extend dark-shadow">Philosophy</li>
-					<li class="course padding-side-extend dark-shadow">Drawing & Composition</li>
-					<li class="course padding-side-extend dark-shadow">Creative Writing</li>
-					<li class="course padding-side-extend dark-shadow">World Religion</li>
-					<li class="course padding-side-extend dark-shadow">Rock & Roll</li>
+				<ul id="ccCourseList" class="fs-1 flex flex-wrap gap sm-row-gap course-container slide-out-initial">
+					<li class="course popout padding-side-extend dark-shadow">Statistics & Probability (106%)</li>
+					<li class="course popout padding-side-extend dark-shadow">Macroeconomics</li>
+					<li class="course popout padding-side-extend dark-shadow">World History: 1500-Present</li>
+					<li class="course popout padding-side-extend dark-shadow">Political Theory</li>
+					<li class="course popout padding-side-extend dark-shadow">US Government</li>
+					<li class="course popout padding-side-extend dark-shadow">US History</li>
+					<li class="course popout padding-side-extend dark-shadow">Comparative Politics</li>
+					<li class="course popout padding-side-extend dark-shadow">International Relations</li>
+					<li class="course popout padding-side-extend dark-shadow">Public Speaking</li>
+					<li class="course popout padding-side-extend dark-shadow">Mass Media & Society</li>
+					<li class="course popout padding-side-extend dark-shadow">Mandarin Chinese (3)</li>
+					<li class="course popout padding-side-extend dark-shadow">French (4)</li>
+					<li class="course popout padding-side-extend dark-shadow">Spanish</li>
+					<li class="course popout padding-side-extend dark-shadow">Biological Psychology</li>
+					<li class="course popout padding-side-extend dark-shadow">Astronomy</li>
+					<li class="course popout padding-side-extend dark-shadow">Philosophy</li>
+					<li class="course popout padding-side-extend dark-shadow">Drawing & Composition</li>
+					<li class="course popout padding-side-extend dark-shadow">Creative Writing</li>
+					<li class="course popout padding-side-extend dark-shadow">World Religion</li>
+					<li class="course popout padding-side-extend dark-shadow">Rock & Roll</li>
 				</ul>
 			</div>
 		</div>
@@ -492,19 +515,19 @@
 	<section id="awards" class="frosted shadow base-margin base-padding snap-middle">
 		<h2 class="visually-hidden">Awards</h2>
 		<div>
-			<h2 class="heading fs-2 txt-glow">Registered Student Organization Leadership & Development</h2>
+			<h3 class="heading fs-2 txt-glow">Registered Student Organization Leadership & Development</h3>
 			<p class="fs-sm orbitron">Fall 2021</p>
 			<p class="fs-1">I began my journey through university knowing that I wanted to lead my fellow schoolmates into a positive future.</p>
 
-			<h2 class="heading fs-2 txt-glow">San Francisco State University Graduate College of Education's <em>STARTALK</em> Summer Chinese Immersion</h2>
+			<h3 class="heading fs-2 txt-glow">San Francisco State University Graduate College of Education's <em>STARTALK</em> Summer Chinese Immersion</h3>
 			<p class="fs-sm orbitron">Summer 2022</p>
 			<p class="fs-1">Powering through a minor in Mandarin Chinese, I got accepted into a prestigious immersion program, met amazing colleagues, and further refined a well-rounded multicultural perspective.</p>
 			
-			<h2 class="heading fs-2 txt-glow">Citation For Outstanding Performance</h2>
+			<h3 class="heading fs-2 txt-glow">Citation For Outstanding Performance</h3>
 			<p class="fs-sm orbitron">2022 - 2023</p>
 			<p class="fs-1">I put my all into the courses I took and demonstrated a vigorous thirst for knowledge. </p>
 
-			<h2 class="heading fs-2 txt-glow">Dean's List Recognition</h2>
+			<h3 class="heading fs-2 txt-glow">Dean's List Recognition</h3>
 			<p class="fs-sm orbitron">Spring 2023</p>
 			<p class="fs-1">My determination, organization, efficiency, and clarity of focus was rewarded.</p>
 		</div>
@@ -519,7 +542,7 @@
 
 		<h2 class="heading fs-2 txt-glow">Find Me Elsewhere</h2>
 		<a href="https://www.linkedin.com/in/joseph-brockly-anderson-438149287/">
-			<img src="images/svg/icons/buttons/linkedin-icon.svg" alt="LinkedIn Logo" class="btn">
+			<img src="images/svg/icons/skills/linkedin/linkedin-icon.svg" alt="LinkedIn Logo" class="btn">
 		</a>
 		<a href="https://github.com/JBrocklyAnderson">
 			<img src="images/svg/icons/skills/git/github-icon.svg" alt="GitHub Logo" class="btn">
