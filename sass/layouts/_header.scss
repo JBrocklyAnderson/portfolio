@@ -2,6 +2,8 @@
     height: 100vh;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    grid-column: page-columns-left / page-columns-right;
 
     @media (max-width: 896px) {
         flex-direction: column;
@@ -23,11 +25,11 @@
     justify-content: space-between;
     padding: 1rem 1rem;
     align-items: flex-end;
+    z-index: 200;
 
     @media (max-width: 768px) {
         position: sticky;
         top: 0;
-        z-index: 200;
         align-items: center;
         background-color: $primary-color;
         grid-column: page-columns-left / page-columns-right;
@@ -49,12 +51,14 @@
 }
 
 #langOptions {
+    display: block;
     width: 170%;
     top: 2rem;
     right: 0;
     text-align: right;
     padding: 0.5rem;
     position: absolute;
+    // z-index: 200;
 
     @media (max-width: 768px) {
         right: -38%;
@@ -64,7 +68,6 @@
 
 #langOptions a {
     display: block;
-    padding: 0.5rem;
 }
 
 #langOptions a:hover {
@@ -72,12 +75,12 @@
 }
 
 #navBar {
+    overflow-x: hidden;
+
     @media (max-width: 768px) {
         position: fixed;
         inset: 0 0 0 50%;
-        z-index: 100;
-        transform: translateX(105%);
-        transition: transform 0.3s ease-in-out;
+        z-index: 10;
         background-color: rgba(235, 235, 255, 0.8);
         
         @supports (backdrop-filter: blur(0.75rem)) {
@@ -89,6 +92,11 @@
         grid-column: navbar-left / navbar-right;
         // grid-row: navbar-top / nav-bar-bottom;
     }
+}
+
+#navBar[data-visibility="false"] {
+    transform: translateX(105%);
+    transition: transform 0.3s ease-in-out;
 }
 
 #navBar[data-visibility="true"] {

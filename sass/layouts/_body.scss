@@ -1,3 +1,12 @@
+body {
+    overflow-x: hidden;
+}
+
+body > *:not(#intro, #mobileHeader, #navBar) {
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+}
+
 .background {
     background: $black-green-gradient;
     background-attachment: fixed;
@@ -33,6 +42,14 @@
 
 .sm-row-gap {
     row-gap: 0.5rem;
+}
+
+.hide {
+    display: none;
+}
+
+.block {
+    display: block;
 }
 
 // Flexbox
@@ -93,15 +110,11 @@
 //     grid-row: bib-top / bib-bottom;
 // }
 
-.snap-middle {
+.snap-middle {    
     grid-column: main-content-left / main-content-right;
 }
 
 // #aboutMe {
-//     grid-row: auto;
-// }
-
-// #skills {
 //     grid-row: auto;
 // }
 
@@ -131,7 +144,7 @@
     grid-gap: 2rem;
     justify-items: center;
     align-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
 
     @media (max-width: 512px) {
         grid-template-columns: 1fr 1fr;

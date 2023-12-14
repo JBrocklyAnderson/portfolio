@@ -28,12 +28,21 @@
     }
 }
 
+@keyframes navbarSlideIn {
+    0% {
+        transform: translateX(-500%);
+    }
+    100% {
+        transform: translateX(105%);
+    }
+}
+
 @keyframes slideInFromLeft {
     0% {
         transform: translateX(-500%);
     }
     100% {
-        transform: translateX(0);
+        transform: translateX(0%);
     }
 }
 
@@ -66,10 +75,19 @@
 
 @keyframes fallDown {
     0% {
-        transform: translateY(-100%);
+        transform: translateY(-200vh);
     } 
     100% {
-        transform: translateY(0);
+        transform: translateY(0%);
+    }
+}
+
+@keyframes riseUp {
+    0% {
+        transform: translateY(500vh);
+    }
+    100% {
+        transform: translateY(0%);
     }
 }
 
@@ -85,12 +103,20 @@
         slideInFromRight 4s cubic-bezier(0, 1, 0, 1);  
 }
 
-.slide-in-from-right {
-    animation: slideInFromRight 4s cubic-bezier(0, 1, 0, 1) 7s forwards;
+#langSelect {
+    animation: slideInFromRight 2s cubic-bezier(0, 1, 0, 1) forwards;
 }
 
+// #navBar {
+//     animation: slideInFromLeft 2s cubic-bezier(0, 1, 0, 1);
+// }
+
 .fall-down {
-    animation: fallDown 2s ease-in forwards 7s;
+    animation: fallDown 2s cubic-bezier(0, 1, 0, 1) forwards;
+}
+
+.rise-up {
+    animation: riseUp 2s cubic-bezier(0, 1, 0, 1) forwards;
 }
 
 // #developer {

@@ -1,5 +1,69 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Handle language menu dropdown text replacement
+    //// Handle section transitions when navigation links are clicked
+    // Create function to hide all sections
+    function hideAllSections() {
+        document.querySelectorAll('body > *').forEach(element => {
+                element.classList.remove('block', 'flex');
+                element.classList.add('hide');
+        });
+    };
+
+    function hideMostSections() {
+        document.querySelectorAll('body > *').forEach(element => {
+            if (!element.matches('#mobileHeader') && !element.matches('#navBar')) {
+                element.classList.remove('block', 'flex');
+                element.classList.add('hide');
+            }
+        });
+    };
+
+    // Create function to show a section with a specific display
+    function showSection(selector, displayType) {
+        const section = document.querySelector(selector);
+        if (section) {
+            section.classList.remove('hide');
+            section.classList.add(displayType);
+        }
+    };
+
+    // Create function to hide all sections but mobile header and navigation bar
+
+    
+    // Hide all sections upon arrival
+    hideAllSections();
+
+    // Keep intro animations visible
+    showSection('#intro', 'flex');
+
+    // Listen for the end of the intro animation
+    const introLogo = document.getElementById('introLogo');
+
+    introLogo.addEventListener('animationend', function(event) {
+        // Make sure the event listener listens to the last animation of the sequence
+        if (event.animationName === 'slideOutToUpperRight') {
+
+            hideAllSections();
+            showSection('#mobileHeader', 'flex')
+            showSection('#navBar', 'block');
+            showSection('#aboutMe', 'block');
+        }
+    });
+
+    // Add click event listeners to navigation links
+    document.querySelectorAll('#navBarItems > li > a').forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+
+            const sectionID = this.getAttribute('href').substring(1);
+            const displayType = document.getElementById(sectionID).dataset.displayType;
+
+            hideMostSections();
+            showSection('#' + sectionID, displayType); // Reveal clicked section
+            document.getElementById(sectionID).classList.add('rise-up');
+        });
+    });
+    
+    //// Handle language menu dropdown toggle
     const langSelect = document.getElementById('langSelect');
     const langOptions = document.getElementById('langOptions');
 
@@ -8,45 +72,52 @@ document.addEventListener('DOMContentLoaded', function() {
         langOptions.classList.toggle('slide-out-final');
     });
     
-    // Handle navigation toggling for mobile devices
+    //// Handle navigation toggling for mobile devices
     const navBar = document.getElementById('navBar');
-    const navToggle = document.getElementById('navigationToggle');
 
-    navToggle.addEventListener("click", () => {
-        const visibility = navBar.getAttribute('data-visibility');
+    navBar.style.animation = 'slideInFromLeft 2s cubic-bezier(0, 1, 0, 1)'; // Apply initial animation to navigation bar
+    
+    navBar.addEventListener('animationend', () => { // Ensure the initial animation has run its course
+        navBar.style.animation = '/* slideInFromLeft 2s cubic-bezier(0, 1, 0, 1) */'; // Remove animation to allow additional toggeable translations
 
-        console.log(visibility)
-        if (visibility === 'false') {
-            navBar.setAttribute('data-visibility', 'true');
-        } else if (visibility === 'true') {
-            navBar.setAttribute('data-visibility', 'false')
-        }   
+        const navToggle = document.getElementById('navigationToggle'); // Grab the toggle button
+
+        // Add a click-based event listener
+        navToggle.addEventListener('click', () => {
+            const visibility = navBar.getAttribute('data-visibility'); // Access data attribute
+
+            if (visibility === 'false') {
+                navBar.setAttribute('data-visibility', 'true');
+            } else if (visibility === 'true') {
+                navBar.setAttribute('data-visibility', 'false')
+            }   
+        });
     });
     
     // Handle project card heights and thumbnail aspect-ratios
-    const projectCards = document.querySelectorAll('.project-card');
-    let maxHeight = 0;
+    // const projectCards = document.querySelectorAll('.project-card');
+    // let maxHeight = 0;
 
     // Find tallest card
-    projectCards.forEach(function(card) {
-        let cardHeight = card.offsetHeight;
+    // projectCards.forEach(function(card) {
+    //     let cardHeight = card.clientHeight;
         
-        if (cardHeight > maxHeight) {
-            maxHeight = cardHeight;
-        }
+    //     if (cardHeight > maxHeight) {
+    //         maxHeight = cardHeight;
+    //     }
 
         // Set thumbnails equal to 25% of card height
         // let imageHeight = cardHeight * 0.25;
         // let image = card.querySelector('.project-thumbnail');
         // image.style.height = imageHeight + 'px';
-    });
+    // });
 
     // Set all cards equal to tallest card height
-    projectCards.forEach(function(card) {
-        card.style.height = maxHeight + 'px'
-    });   
+    // projectCards.forEach(function(card) {
+    //     card.style.height = maxHeight + 'px'
+    // });   
     
-    // Initialize drop-down toggle for Education section
+    //// Handle drop-down toggle for Education section
     document.querySelectorAll('.dropdown').forEach(function(dropdownButton) {
         dropdownButton.addEventListener('click', function() {
             // Find the nearest course-container related to this dropdown button

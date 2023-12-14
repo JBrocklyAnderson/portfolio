@@ -65,10 +65,18 @@
 }
 @keyframes fallDown {
   0% {
-    transform: translateY(-100%);
+    transform: translateY(-200vh);
   }
   100% {
-    transform: translateY(0);
+    transform: translateY(0%);
+  }
+}
+@keyframes riseUp {
+  0% {
+    transform: translateY(500vh);
+  }
+  100% {
+    transform: translateY(0%);
   }
 }
 #introLogo {
@@ -79,12 +87,20 @@
   animation: slideOutToBottomLeft 1.5s cubic-bezier(0.5, 0, 1, 0) 5s forwards, slideInFromRight 4s cubic-bezier(0, 1, 0, 1);
 }
 
-.slide-in-from-right {
-  animation: slideInFromRight 4s cubic-bezier(0, 1, 0, 1) 7s forwards;
+#langSelect {
+  animation: slideInFromRight 4s cubic-bezier(0, 1, 0, 1) forwards;
+}
+
+#navBar {
+  animation: slideInFromLeft 4s cubic-bezier(0, 1, 0, 1) forwards;
 }
 
 .fall-down {
-  animation: fallDown 2s ease-in forwards 7s;
+  animation: fallDown 2s cubic-bezier(0, 1, 0, 1) forwards;
+}
+
+.rise-up {
+  animation: riseUp 2s cubic-bezier(0, 1, 0, 1) forwards;
 }
 
 /* Import base styles */
@@ -208,6 +224,16 @@ button, input, select, textarea {
 }
 
 /* Import layout styles */
+body {
+  overflow-x: hidden;
+  min-height: 100%;
+}
+
+body > *:not(#intro, #mobileHeader, #navBar) {
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+}
+
 .background {
   background: radial-gradient(circle at 0% 0%, rgb(0, 0, 20), rgba(0, 52, 0, 0.1)), radial-gradient(circle at 100% 100%, rgb(0, 52, 0), rgb(0, 0, 0));
   background-attachment: fixed;
@@ -242,6 +268,14 @@ button, input, select, textarea {
 
 .sm-row-gap {
   row-gap: 0.5rem;
+}
+
+.hide {
+  display: none;
+}
+
+.block {
+  display: block;
 }
 
 .flex {
@@ -298,7 +332,7 @@ button, input, select, textarea {
   grid-gap: 2rem;
   justify-items: center;
   align-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
 }
 @media (max-width: 512px) {
   .skill-grid {
@@ -437,6 +471,8 @@ button, input, select, textarea {
   height: 100vh;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  grid-column: page-columns-left/page-columns-right;
 }
 @media (max-width: 896px) {
   #intro {
@@ -459,12 +495,12 @@ button, input, select, textarea {
   justify-content: space-between;
   padding: 1rem 1rem;
   align-items: flex-end;
+  z-index: 200;
 }
 @media (max-width: 768px) {
   #mobileHeader {
     position: sticky;
     top: 0;
-    z-index: 200;
     align-items: center;
     background-color: rgb(0, 0, 20);
     grid-column: page-columns-left/page-columns-right;
@@ -487,6 +523,7 @@ button, input, select, textarea {
 }
 
 #langOptions {
+  display: block;
   width: 170%;
   top: 2rem;
   right: 0;
@@ -503,20 +540,20 @@ button, input, select, textarea {
 
 #langOptions a {
   display: block;
-  padding: 0.5rem;
 }
 
 #langOptions a:hover {
   text-shadow: 0 0 0.55rem rgb(0, 255, 0);
 }
 
+#navBar {
+  overflow-x: hidden;
+}
 @media (max-width: 768px) {
   #navBar {
     position: fixed;
     inset: 0 0 0 50%;
-    z-index: 100;
-    transform: translateX(105%);
-    transition: transform 0.3s ease-in-out;
+    z-index: 10;
     background-color: rgba(235, 235, 255, 0.8);
   }
   @supports (backdrop-filter: blur(0.75rem)) {
@@ -529,6 +566,11 @@ button, input, select, textarea {
   #navBar {
     grid-column: navbar-left/navbar-right;
   }
+}
+
+#navBar[data-visibility=false] {
+  transform: translateX(105%);
+  transition: transform 0.3s ease-in-out;
 }
 
 #navBar[data-visibility=true] {
@@ -549,6 +591,25 @@ button, input, select, textarea {
 
 #essayIntro h2, #essayIntro p {
   margin: 1rem 0 0 0;
+}
+
+@media (max-width: 768px) {
+  #contact {
+    flex-direction: column;
+  }
+}
+#contact {
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+#findMeElsewhere {
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#otherLinks {
+  gap: 1rem;
 }
 
 #litReviewBibliography li {

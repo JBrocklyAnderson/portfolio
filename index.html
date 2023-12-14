@@ -35,7 +35,7 @@
 </head>
 
 <body class="base-font-family main-grid-columns background txt-color">
-	<header id="intro" class="flex snap-middle">
+	<header id="intro" data-display-type="flex">
 		<img src="images/svg/logo/j3-logo-thm-dark.svg" alt="J3 Logo" id="introLogo">
 		<div id="introInfo">
 			<h1 id="introName" class="heading fs-4 txt-glow">Joseph Brockly-Anderson</h1>
@@ -60,7 +60,7 @@
 	</header>
 
 	<!-- Mobile header -->
-	<div id="mobileHeader" class="flex snap-middle shadow">
+	<div id="mobileHeader" class="snap-middle shadow" data-display-type="flex">
 		<a href="index.html">
 			<img src="images/svg/logo/j3-logo-thm-dark.svg" alt="J3 Logo" id="navbarLogo" class="intro-logo fall-down">
 		</a>
@@ -68,7 +68,7 @@
 			<button id="langBtn" class="flex sm-gap v-centered-columns">
 				<img src="images/svg/icons/buttons/triangle-dd.svg" alt="Dropdown Button" class="btn orbitron"><span class="fs-sm orbitron" aria-label="Language Menu">English</span>
 			</button>
-			<div id="langOptions" class="frosted shadow slide-out-initial ">
+			<div id="langOptions" class="frosted shadow slide-out-initial">
 				<a href="lang/fr/fr-index.html" class="popout" aria-label="French version" id="frenchLink">French</a>
 				<hr>
 				<a href="lang/zh-Hans/zh-Hans-index.html" class="popout" aria-label="Mandarin Chinese Version">Mandarin Chinese</a>
@@ -80,8 +80,8 @@
 	</div>
 
 	
-	<!-- Naivgation bar -->
-	<nav id="navBar" class="heading fs-2 frosted platinum-shadow base-padding" data-visibility="false">
+	<!-- Navigation bar -->
+	<nav id="navBar" class="heading fs-2 frosted platinum-shadow base-padding" data-display-type="block" data-visibility="false">
 		<ul id="navBarItems" class="flex flex-wrap gap h-centered-columns">
 			<li>
 				<a href="#aboutMe">About Me</a>
@@ -93,7 +93,7 @@
 				<a href="#workExp">Experience</a>
 			</li>
 			<li>
-				<a href="#projects" class="">Projects</a>
+				<a href="#projects">Projects</a>
 			</li>
 			<li>
 				<a href="#education">Education</a>
@@ -108,12 +108,12 @@
 	</nav>
 
 	<!-- About me section -->
-	<section id="aboutMe" class="frosted shadow base-margin base-padding snap-middle">
+	<section id="aboutMe" class="frosted shadow base-margin base-padding snap-middle rise-up" data-display-type="block">
 		<h2 class="visually-hidden">About Me</h2>
 		<p class="fs-1">I'm a data-analyst trained front-end web developer and computer programmer with a passion for solving problems on as big of a scale as possible.</p>
 	</section>
 
-	<section id="skills" class="snap-middle base-margin">
+	<section id="skills" class="snap-middle base-margin" data-display-type="block">
 		<h2 class="visually-hidden">Skills</h2>
 		<div id="skillsGrid" class="skill-grid">
 			<!-- HTML -->
@@ -371,7 +371,7 @@
 		</div>
 	</section>
 
-	<section id="workExp" class="frosted shadow base-margin base-padding snap-middle">
+	<section id="workExp" class="frosted shadow base-margin base-padding snap-middle" data-display-type="block">
 		<h2 class="visually-hidden">Work Experience</h2>
 		<h3 class="heading fs-2 txt-glow">Freelance Web Developer</h3>
 		<p class="fs-sm orbitron">Jul 2023 - Aug 2023</p>
@@ -390,7 +390,7 @@
 		<p class="fs-1">Over the course of my working life, I've provided exceptional customer service by developing core skills in organizational thinking, teamwork and leadership,communication and conflict resolution, time	management and operations flow, adaptability and multitasking, accountability and cultural awareness, and attention to detail and cash-handling, among other hard and soft skills that have equipped me to handle responsibilities in every industry I can imagine.</p>
 	</section>
 
-	<section id="projects" class="snap-middle base-margin">
+	<section id="projects" class="snap-middle base-margin" data-display-type="block">
 		<h2 class="visually-hidden">Projects</h2>
 		<div id="projectsGrid" class="project-grid gap">
 			<!-- <a href="https://jbrocklyanderson.github.io/willow-analysis">
@@ -445,7 +445,7 @@
 		</div>
 	</section>
 
-	<section id="education" class="frosted shadow base-margin base-padding snap-middle">
+	<section id="education" class="frosted shadow base-margin base-padding snap-middle" data-display-type="block">
 		<h2 class="visually-hidden">Education</h2>
 		<div> <!-- Wrap for dropdown functionality -->
 			<h3 class="heading fs-2 txt-glow">University of California, Davis</h3>
@@ -512,7 +512,7 @@
 		</div>
 	</section>
 
-	<section id="awards" class="frosted shadow base-margin base-padding snap-middle">
+	<section id="awards" class="frosted shadow base-margin base-padding snap-middle" data-display-type="block">
 		<h2 class="visually-hidden">Awards</h2>
 		<div>
 			<h3 class="heading fs-2 txt-glow">Registered Student Organization Leadership & Development</h3>
@@ -533,20 +533,26 @@
 		</div>
 	</section>
 
-	<section id="contact" class="frosted shadow base-margin base-padding snap-middle">
-		<h2 class="heading fs-2 txt-glow">Call Me / Text Me</h2>
-		<p class="fs-1">(530) 417-1973</p>
+	<section id="contact" class="frosted shadow base-margin gap base-padding snap-middle" data-display-type="flex">
+		<div>
+			<h2 class="heading fs-2 txt-glow">Call Me / Text Me</h2>
+			<p class="fs-1">(530) 417-1973</p>
 
-		<h2 class="heading fs-2 txt-glow">Email Me</h2>
-		<p class="fs-1">jbrocklyanderson@gmail.com</p>
+			<h2 class="heading fs-2 txt-glow">Email Me</h2>
+			<p class="fs-1">jbrocklyanderson@gmail.com</p>
+		</div>
 
-		<h2 class="heading fs-2 txt-glow">Find Me Elsewhere</h2>
-		<a href="https://www.linkedin.com/in/joseph-brockly-anderson-438149287/">
-			<img src="images/svg/icons/skills/linkedin/linkedin-icon.svg" alt="LinkedIn Logo" class="btn">
-		</a>
-		<a href="https://github.com/JBrocklyAnderson">
-			<img src="images/svg/icons/skills/git/github-icon.svg" alt="GitHub Logo" class="btn">
-		</a>
+		<div id="findMeElsewhere" class="flex">
+			<h2 class="heading fs-2 txt-glow">Find Me Elsewhere</h2>
+			<div id="otherLinks" class="flex">
+				<a href="https://www.linkedin.com/in/joseph-brockly-anderson-438149287/">
+					<img src="images/svg/icons/skills/linkedin/linkedin-icon.svg" alt="LinkedIn Logo" class="btn">
+				</a>
+				<a href="https://github.com/JBrocklyAnderson">
+					<img src="images/svg/icons/skills/git/github-icon.svg" alt="GitHub Logo" class="btn">
+				</a>
+			</div>
+		</div>
 	</section>
 
 
