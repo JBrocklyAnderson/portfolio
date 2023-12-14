@@ -11,6 +11,13 @@
     width: clamp(2rem, 5vw, 8rem);
 }
 
+#profileHero {
+    width: 100%;
+    min-height: 25%;
+    object-fit: cover;
+    border-radius: 1rem 1rem 0 0;
+}
+
 .icon {
     width: 8rem;
     height: 8rem;
