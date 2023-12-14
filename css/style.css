@@ -31,12 +31,20 @@
     box-shadow: 0 0 0.5rem 0.5rem rgb(0, 255, 0);
   }
 }
+@keyframes mobileSlideIn {
+  0% {
+    transform: translateX(-500%);
+  }
+  100% {
+    transform: translateX(105%);
+  }
+}
 @keyframes slideInFromLeft {
   0% {
     transform: translateX(-500%);
   }
   100% {
-    transform: translateX(0);
+    transform: translateX(0%);
   }
 }
 @keyframes slideInFromRight {
@@ -88,11 +96,7 @@
 }
 
 #langSelect {
-  animation: slideInFromRight 4s cubic-bezier(0, 1, 0, 1) forwards;
-}
-
-#navBar {
-  animation: slideInFromLeft 4s cubic-bezier(0, 1, 0, 1) forwards;
+  animation: slideInFromRight 2s cubic-bezier(0, 1, 0, 1) forwards;
 }
 
 .fall-down {
@@ -224,14 +228,9 @@ button, input, select, textarea {
 }
 
 /* Import layout styles */
-body {
-  overflow-x: hidden;
-  min-height: 100%;
-}
-
 body > *:not(#intro, #mobileHeader, #navBar) {
   margin-top: 2rem;
-  margin-bottom: 5rem;
+  margin-bottom: 15rem;
 }
 
 .background {
@@ -294,22 +293,22 @@ body > *:not(#intro, #mobileHeader, #navBar) {
   align-items: center;
 }
 
-.main-grid-columns {
+body.main-grid-columns {
   display: grid;
   grid-template-columns: auto;
 }
 @media (min-width: 513px) and (max-width: 768px) {
-  .main-grid-columns {
+  body.main-grid-columns {
     grid-template-columns: [page-columns-left] 7.5% [main-content-left] 85% [main-content-right] 7.5% [page-columns-right];
   }
 }
 @media (min-width: 769px) and (max-width: 1280px) {
-  .main-grid-columns {
+  body.main-grid-columns {
     grid-template-columns: [page-columns-left] 12.5% [navbar-left] 5% [main-content-left] 65% [main-content-right] 5% [navbar-right] 12.5% [page-columns-right];
   }
 }
 @media (min-width: 1281px) {
-  .main-grid-columns {
+  body.main-grid-columns {
     grid-template-columns: [page-columns-left] 22.5% [navbar-left] 5% [main-content-left] 45% [main-content-right] 5% [navbar-right] 22.5% [page-columns-right];
   }
 }
@@ -500,6 +499,7 @@ body > *:not(#intro, #mobileHeader, #navBar) {
 @media (max-width: 768px) {
   #mobileHeader {
     position: sticky;
+    width: 100vw;
     top: 0;
     align-items: center;
     background-color: rgb(0, 0, 20);
@@ -568,9 +568,11 @@ body > *:not(#intro, #mobileHeader, #navBar) {
   }
 }
 
-#navBar[data-visibility=false] {
-  transform: translateX(105%);
-  transition: transform 0.3s ease-in-out;
+@media (max-width: 768px) {
+  #navBar[data-visibility=false] {
+    transform: translateX(105%);
+    transition: transform 0.3s ease-in-out;
+  }
 }
 
 #navBar[data-visibility=true] {

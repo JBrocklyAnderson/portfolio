@@ -75,10 +75,14 @@ document.addEventListener('DOMContentLoaded', function() {
     //// Handle navigation toggling for mobile devices
     const navBar = document.getElementById('navBar');
 
-    navBar.style.animation = 'slideInFromLeft 2s cubic-bezier(0, 1, 0, 1)'; // Apply initial animation to navigation bar
+    if (window.innerWidth < 768) {
+        navBar.style.animation = 'mobileSlideIn 2s cubic-bezier(0, 1, 0, 1)'; // Apply initial animation to navigation bar for mobile
+    } else {
+        navBar.style.animation = 'slideInFromLeft 2s cubic-bezier(0, 1, 0, 1)'; // Apply initial animation to navigation bar for mobile
+    }
     
     navBar.addEventListener('animationend', () => { // Ensure the initial animation has run its course
-        navBar.style.animation = '/* slideInFromLeft 2s cubic-bezier(0, 1, 0, 1) */'; // Remove animation to allow additional toggeable translations
+        navBar.style.animation = ''; // Remove animation to allow additional toggeable translations
 
         const navToggle = document.getElementById('navigationToggle'); // Grab the toggle button
 
@@ -129,4 +133,30 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    /* //// Manage dynamic content accessibility
+    document.querySelectorAll('.skill-card').forEach(card => {
+        card.setAttribute('tabindex', '0'); // Make each card focusable
+        card.setAttribute('role', 'button'); // Indicate interactivity
+        card.setAttribute('aria-expanded', 'false'); // Set attribute to intialize as collapsed
+
+        card.addEventListener('keydown', function(event) {
+            if (event.keyCode === 13 || event.keyCode === 32) { // Provide functionality to enter or space key
+                const subSkillsContainer = this.querySelector('.slide-out-initial'); // Grab the subskill cards container
+                
+                if (subSkillsContainer) {
+                    const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                    this.setAttribute('aria-expanded', !isExpanded); // Toggle expanded state
+
+                    if (!isExpanded) {
+                        const firstSubSkill = subSkillsContainer.querySelector('.skill-card');
+                        if (firstSubSkill) {
+                            firstSubSkill.setAttribute('tabindex', '0');
+                            firstSubSkill.focus();
+                        }
+                    }
+                }
+            }
+        });
+    }); */
 });

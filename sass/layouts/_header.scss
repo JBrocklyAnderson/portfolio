@@ -29,6 +29,7 @@
 
     @media (max-width: 768px) {
         position: sticky;
+        width: 100vw;
         top: 0;
         align-items: center;
         background-color: $primary-color;
@@ -95,8 +96,10 @@
 }
 
 #navBar[data-visibility="false"] {
-    transform: translateX(105%);
-    transition: transform 0.3s ease-in-out;
+    @media (max-width: 768px) {
+        transform: translateX(105%);
+        transition: transform 0.3s ease-in-out;
+    }
 }
 
 #navBar[data-visibility="true"] {
