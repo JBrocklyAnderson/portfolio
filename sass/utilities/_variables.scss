@@ -33,9 +33,6 @@ $gold-glow: 0 0 6rem 0.25rem rgb(254, 221, 1);
 $gridColumnsM: "[page-columns-left] 7.5% [main-content-left] 85% [main-content-right] 7.5% [page-columns-right]"; // (min-width: 513px) and (max-width: 768px)
 $gridColumnsLG: "[page-columns-left] 12.5% [navbar-left] 5% [main-content-left] 65% [main-content-right] 5% [navbar-right] 12.5% [page-columns-right]"; // (min-width: 769px) and (max-width: 1280px)
 $gridColumnsXLG: "[page-columns-left] 22.5% [navbar-left] 5% [main-content-left] 45% [main-content-right] 5% [navbar-right] 22.5% [page-columns-right]"; // (min-width: 1281px) 
-$gridRows: "[navbar-top] auto [navbar-bottom] repeat(auto-fill, minmax(auto, 1fr))";
-$burkinabeGridRows: "[hero-top] 50vh [main-content-top intro-top] 25vh [hero-bottom] 1fr [intro-bottom essay-top] 1fr [essay-bottom bib-top] 1fr [bib-bottom main-content-bottom]"
-// $gridRows: "[hero-top] 5% [logo-top] 10% [logo-bottom navbar-top] 2rem [navbar-bottom] auto [main-content-top] 25% [hero-bottom] 25% [main-content-bottom] ";
 
 
 

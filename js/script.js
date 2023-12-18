@@ -25,9 +25,6 @@ document.addEventListener('DOMContentLoaded', function() {
             section.classList.add(displayType);
         }
     };
-
-    // Create function to hide all sections but mobile header and navigation bar
-
     
     // Hide all sections upon arrival
     hideAllSections();
@@ -49,6 +46,26 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    function handleNavigation(event) {
+        // Check if event is a click or the enter key
+        if (event.type === 'click' || (event.type === 'keydown' && event.key === 'Enter')) {
+            event.preventDefault();
+
+            const sectionID = this.getAttribute('href').substring(1);
+            const displayType = document.getElementById(sectionID).dataset.displayType;
+
+            hideMostSections();
+            showSection('#' + sectionID, displayType); // Reveal clicked section
+            document.getElementById(sectionID).classList.add('rise-up');
+        }
+    }
+
+    document.querySelectorAll('#navBarItems > li > a').forEach(link => {
+        link.addEventListener('click', handleNavigation);
+        link.addEventListener('keydown', handleNavigation); // Ensure screen readers can navigate through navigation bar
+    });
+
+    /*
     // Add click event listeners to navigation links
     document.querySelectorAll('#navBarItems > li > a').forEach(link => {
         link.addEventListener('click', function(event) {
@@ -62,6 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById(sectionID).classList.add('rise-up');
         });
     });
+    */
     
     //// Handle language menu dropdown toggle
     const langSelect = document.getElementById('langSelect');

@@ -33,7 +33,7 @@
 }
 @keyframes mobileSlideIn {
   0% {
-    transform: translateX(-500%);
+    transform: translateX(-500vw);
   }
   100% {
     transform: translateX(105%);
@@ -41,15 +41,15 @@
 }
 @keyframes slideInFromLeft {
   0% {
-    transform: translateX(-500%);
+    transform: translateX(-100vw);
   }
   100% {
-    transform: translateX(0%);
+    transform: translateX(0);
   }
 }
 @keyframes slideInFromRight {
   0% {
-    transform: translateX(500%);
+    transform: translateX(100vw);
   }
   100% {
     transform: translateX(0);
@@ -91,11 +91,23 @@
   animation: slideOutToUpperRight 1.5s cubic-bezier(0.5, 0, 1, 0) 5s forwards, slideInFromLeft 4s cubic-bezier(0, 1, 0, 1);
 }
 
-#introInfo {
+#introName {
   animation: slideOutToBottomLeft 1.5s cubic-bezier(0.5, 0, 1, 0) 5s forwards, slideInFromRight 4s cubic-bezier(0, 1, 0, 1);
 }
 
-#langSelect {
+#designer {
+  animation: slideOutToBottomLeft 1.5s cubic-bezier(0.5, 0, 1, 0) 5s, slideInFromRight 4s cubic-bezier(0, 1, 0, 1) 0.2s backwards;
+}
+
+#developer {
+  animation: slideOutToBottomLeft 1.5s cubic-bezier(0.5, 0, 1, 0) 5s, slideInFromRight 4s cubic-bezier(0, 1, 0, 1) 0.4s backwards;
+}
+
+#daredevil {
+  animation: slideOutToBottomLeft 1.5s cubic-bezier(0.5, 0, 1, 0) 5s, slideInFromRight 4s cubic-bezier(0, 1, 0, 1) 0.6s backwards;
+}
+
+.slide-in-from-right {
   animation: slideInFromRight 2s cubic-bezier(0, 1, 0, 1) forwards;
 }
 
@@ -228,7 +240,7 @@ button, input, select, textarea {
 }
 
 /* Import layout styles */
-body > *:not(#intro, #mobileHeader, #navBar) {
+body#index > *:not(#intro, #mobileHeader, #navBar) {
   margin-top: 2rem;
   margin-bottom: 15rem;
 }
@@ -313,17 +325,37 @@ body.main-grid-columns {
   }
 }
 
-/*
-.main-grid-rows {
-
-}
-*/
-.burkinabe-grid-rows {
-  grid-template-rows: "[hero-top] 50vh [main-content-top intro-top] 25vh [hero-bottom] 1fr [intro-bottom essay-top] 1fr [essay-bottom bib-top] 1fr [bib-bottom main-content-bottom]";
-}
-
 .snap-middle {
   grid-column: main-content-left/main-content-right;
+}
+
+body#BurkinaFaso header {
+  z-index: 10;
+  grid-row: 1/3;
+  margin-top: 30.5vw;
+}
+
+#essay {
+  margin-block: 0;
+}
+
+.float-up-hidden {
+  opacity: 0;
+  transform: translateY(8rem);
+  transition: opacity 0.6s cubic-bezier(0, 0, 0, 1), transform 0.6s cubic-bezier(0, 0, 0, 1);
+}
+
+.float-up-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#aboutMeInfo p:nth-of-type(2) {
+  margin: 0.5rem 0 1rem 0;
+}
+
+#aboutMeInfo p:nth-of-type(n+4) {
+  margin: 0.5rem 0 0 0;
 }
 
 .skill-grid {
@@ -391,7 +423,6 @@ body.main-grid-columns {
 .project-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(auto, 1fr));
-  grid-auto-rows: minmax(min-content, max-content);
 }
 @media (max-width: 768px) {
   .project-grid {
@@ -400,7 +431,12 @@ body.main-grid-columns {
 }
 
 #projectsGrid article {
-  height: 30rem;
+  height: 20rem;
+}
+@media (min-width: 769px) {
+  #projectsGrid article {
+    height: 30rem;
+  }
 }
 
 #projectsGrid article:hover {
@@ -487,6 +523,16 @@ body.main-grid-columns {
   #introInfo {
     margin: 0 0 0 1rem;
     text-align: left;
+  }
+}
+
+#tagline {
+  justify-content: center;
+  gap: 0.75rem;
+}
+@media (min-width: 897px) {
+  #tagline {
+    justify-content: flex-start;
   }
 }
 
@@ -591,14 +637,6 @@ body.main-grid-columns {
   text-shadow: 0 0 0.55rem rgb(0, 255, 0);
 }
 
-#aboutMeInfo p:not(:nth-of-type(1, 3)) {
-  margin: 1rem 0 0 0;
-}
-
-#aboutMeInfo p:nth-of-type(2) {
-  margin: 0 0 1rem 0;
-}
-
 #essayIntro h2, #essayIntro p {
   margin: 1rem 0 0 0;
 }
@@ -630,6 +668,7 @@ body.main-grid-columns {
 #introLogo {
   width: clamp(48px, 9vw, 12rem);
   z-index: 10;
+  filter: drop-shadow(0 0 0.25rem rgb(0, 255, 0));
 }
 @media (min-width: 897px) {
   #introLogo {
@@ -639,11 +678,12 @@ body.main-grid-columns {
 
 #navbarLogo {
   width: clamp(2rem, 5vw, 8rem);
+  filter: drop-shadow(0 0 0.25rem rgb(0, 255, 0));
 }
 
 #profileHero {
   width: 100%;
-  min-height: 25%;
+  aspect-ratio: 4/2;
   object-fit: cover;
   border-radius: 1rem 1rem 0 0;
 }
@@ -661,6 +701,14 @@ body.main-grid-columns {
   border-radius: 1rem 1rem 0 0;
 }
 
+#dogsHero {
+  object-position: 0% 68%;
+}
+
+#bikesHero {
+  object-position: 0% 55%;
+}
+
 .dropdown:hover {
   transform: scale(110%, 110%);
   transition: transform 0.1s ease-in-out;
@@ -670,22 +718,34 @@ body.main-grid-columns {
   width: 100%;
   height: 35vw;
   object-fit: cover;
-  z-index: -10;
   position: relative;
   grid-column: page-columns-left/page-columns-right;
+  grid-row: 1;
 }
 
 #burkinabeJ3Logo {
   width: min(10rem, 15vw);
   aspect-ratio: 1/1;
   position: absolute;
+  z-index: 10;
 }
 
 #burkinabeJ3Logo:hover {
   box-shadow: 0 0 6rem rgb(60, 0, 0);
   background-color: rgba(60, 0, 0, 0.5);
-  border-radius: 5% 42.5% 50% 50%;
+  border-radius: 50% 50% 50% 50%;
   padding: 1rem;
+}
+
+.die-back {
+  opacity: 0;
+  transform: scale(0, 0);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.grow-forth {
+  opacity: 1;
+  transform: scale(1, 1);
 }
 
 #burkinabePrehistory {
