@@ -536,6 +536,11 @@ body#BurkinaFaso header {
   }
 }
 
+/* #tagline[data-lang="fr"] {
+    @media (max-width: 384px) {
+        font-size: $base-font-size;
+    }
+} */
 #mobileHeader {
   justify-content: space-between;
   padding: 1rem 1rem;
@@ -570,7 +575,7 @@ body#BurkinaFaso header {
 
 #langOptions {
   display: block;
-  width: 170%;
+  width: 105%;
   top: 2rem;
   right: 0;
   text-align: right;
@@ -579,7 +584,7 @@ body#BurkinaFaso header {
 }
 @media (max-width: 768px) {
   #langOptions {
-    right: -38%;
+    right: -2.5%;
     text-align: center;
   }
 }
@@ -598,7 +603,7 @@ body#BurkinaFaso header {
 @media (max-width: 768px) {
   #navBar {
     position: fixed;
-    inset: 0 0 0 50%;
+    inset: 0 0 0 45%;
     z-index: 10;
     background-color: rgba(235, 235, 255, 0.8);
   }
@@ -690,7 +695,7 @@ body#BurkinaFaso header {
 
 .icon {
   width: 8rem;
-  height: 8rem;
+  aspect-ratio: 1/1;
   padding: 1rem;
 }
 

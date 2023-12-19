@@ -1,0 +1,580 @@
+<!DOCTYPE html> <!--Declare as an HTML5 document-->
+<html hreflang="fr"> <!-- Declare as US-based English-->
+<head>
+	<!-- Declare character set -->
+	<meta charset="utf-8">
+	<!-- Declare base viewport properties -->
+ 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<!-- Describe website to help with SEO -->
+	<meta name="description" content="Mise en avant d'un développeur web polyvalent et analyste de données compétent en HTML, CSS, Sass, JavaScript, Python, SQL, et plus encore, avec une expérience dans les relations clients, la science politique et la linguistique, passionné par la création de sites web centrés sur l'utilisateur et pilotés par les données, alliant expertise technique et perspective culturelle mondiale.">
+	<meta name="author" content="Joseph Brockly-Anderson">
+	<!-- Link to alternate language versions -->
+	<link rel="canonical" hreflang="en" href="../../index.html" />
+	<link rel="alternate" hreflang="fr" href="../../fr/index.html" />
+	<link rel="alternate" hreflang="zh-Hans" href="../../zh-Hans/index.html">
+	<!-- Title the page -->
+	<title aria-labelledby="intro">J3 | Designer. Développeur. Défricheur.</title> 
+	
+	<!-- Specify what should be shown and how when sharing on social media -->
+	<meta property="og:type" content="website"> <!-- Declare as website -->
+	<meta property="og:url" content="https://jbrocklyanderson.github.io/portfolio/fr"> <!-- Declare URL -->
+	<meta property="og:title" content="J3 | Designer. Développeur. Défricheur."> <!-- Title the preview -->
+	<meta property="og:description" content="Mise en avant d'un développeur web polyvalent et analyste de données compétent en HTML, CSS, Sass, JavaScript, Python, SQL, et plus encore, avec une expérience dans les relations clients, la science politique et la linguistique, passionné par la création de sites web centrés sur l'utilisateur et pilotés par les données, alliant expertise technique et perspective culturelle mondiale.">	
+	<meta property="og:image" content="../../images/raster/thumbnails/j3-thumbnail.png"> <!-- Display thumbnail image -->
+	<meta property="og:image:alt" content="Logo de J3 | Joseph Brockly-Anderson | Designer. Développeur. Défricheur."> <!-- Add alternative image text for SEO and accessibility -->
+	
+
+	<!-- Twitter (X) specific tags -->
+	<meta name="twitter:card" content="summary_large_image"> <!-- Define type of card -->
+	<meta name="twitter:title" content="J3 | Designer. Développeur. Défricheur."> <!-- Title the card -->
+	<meta name="twitter:description" content="Mise en avant d'un développeur web polyvalent et analyste de données compétent en HTML, CSS, Sass, JavaScript, Python, SQL, et plus encore, avec une expérience dans les relations clients, la science politique et la linguistique, passionné par la création de sites web centrés sur l'utilisateur et pilotés par les données, alliant expertise technique et perspective culturelle mondiale."> <!-- Add description -->
+	<meta name="twitter:image" content="../../images/raster/thumbnails/j3-thumbnail.png"> <!-- Add preview image -->
+	<meta name="twitter:image:alt" content="Logo de J3 | Joseph Brockly-Anderson | Designer. Développeur. Défricheur."> <!-- Add alternative image text for SEO and accessibility -->
+
+	<!-- Link relevant style sheets -->
+	<link rel="stylesheet" href="../../css/style.css" type="text/css">
+</head>
+
+<body id="index" class="base-font-family main-grid-columns background txt-color">
+	<header id="intro" data-display-type="flex">
+		<img src="../../images/svg/logo/j3-logo-thm-dark.svg" alt="Logo de J3" id="introLogo" aria-hidden="true">
+		<div id="introInfo">
+			<h1 id="introName" class="heading fs-4 txt-glow">Joseph Brockly-Anderson</h1>
+			<!--
+			(fr: Collaborateur, concepteur, casse-cou; zh: 发展者，设计者，冒险家)
+			-->
+			<div id="tagline" class="flex fs-2 txt-glow" data-lang="fr">
+				<p id="designer">Designer.</p>
+				<p id="developer">Développeur.</p>
+				<p id="daredevil">Défricheur.</p>
+			</div>
+		</div>
+	</header>
+
+	<!-- Mobile header -->
+	<div id="mobileHeader" class="snap-middle shadow" data-display-type="flex">
+		<a href="index.html">
+			<img src="../../images/svg/logo/j3-logo-thm-dark.svg" alt="Logo de J3" id="navbarLogo" class="intro-logo fall-down">
+		</a>
+		<div id="langSelect" class="frosted platinum-shadow slide-in-from-right">
+			<button id="langBtn" class="flex sm-gap v-centered-columns">
+				<img src="../../images/svg/icons/buttons/triangle-dd.svg" alt="Menu déroulant de sélection de langue" class="btn orbitron"><span class="fs-sm orbitron" aria-label="Version française">Français</span>
+			</button>
+			<div id="langOptions" class="frosted shadow slide-out-initial">
+				<a href="../../index.html" class="fs-1" aria-label="Version anglaise" id="englishLink">English</a>
+				<hr>
+				<a href="lang/zh-Hans/index.html" class="fs-1" aria-label="Version chinoise">中文（简体）</a>
+			</div>
+		</div>
+		<button id="navigationToggle">
+			<span class="visually-hidden">Bouton de basculement navigationnel</span>
+		</button>
+	</div>
+
+	
+	<!-- Navigation bar -->
+	<nav id="navBar" class="heading fs-2 frosted platinum-shadow base-padding" data-display-type="block" data-visibility="false">
+		<ul id="navBarItems" class="flex flex-wrap gap h-centered-columns">
+			<li>
+				<a href="#aboutMe">À propos de moi</a>
+			</li>
+			<li>
+				<a href="#skills">Compétences</a>
+			</li>
+			<li>
+				<a href="#workExp">Expérience</a>
+			</li>
+			<li>
+				<a href="#projects">Projets</a>
+			</li>
+			<li>
+				<a href="#education">Éducation</a>
+			</li>
+			<li>
+				<a href="#awards">Récompenses</a>
+			</li>
+			<li>
+				<a href="#contact">Contact</a>
+			</li>
+		</ul>
+	</nav>
+
+	<!-- About me section -->
+	<section id="aboutMe" class="frosted shadow base-margin snap-middle rise-up" data-display-type="block">
+		<h2 class="visually-hidden">À propos de moi</h2>
+		<img src="../../images/raster/hero-banners/profile.jpg" id="profileHero">
+		<div id="aboutMeInfo" class="base-padding">
+			<h3 class="heading">Bonjour à toutes et à tous!</h3>
+			<p class="fs-1">Je suis Joseph, un développeur web dynamique, analyste de données, et futur ingénieur logiciel aspirant, possédant un éventail vibrant de compétences ancrées dans un profond engagement à façonner un avenir meilleur grâce à la technologie. Mon parcours a commencé à l'Université de Californie à Davis, où j'ai obtenu un Baccaulaureat en science politique avec une mineure en chinois mandarin, et où je me suis également plongé dans une exploration approfondie de la réalité sociale et mondiale.</p>
+			<p class="fs-1">Ma passion ne se résume pas à écrire du code; il s'agit de façonner l'avenir. Fort d'une expérience de plus d'une décennie dans le secteur de l'hôtellerie, j'ai développé une perspective unique sur l'interaction humaine et le service, intégrant cette compréhension à une approche technologique pour résoudre des problèmes concrets. J'apporte un mélange riche d'acuité analytique, de diversité linguistique et un engagement vivant envers un changement significatif.</p>
+			<h3 class="heading">Pourquoi moi?</h3>
+			<p class="fs-1"><strong class="txt-glow">Artisanat technologique</strong>: Concevoir des sites web élégants et des solutions de données robustes n'est pas seulement mon métier, c'est mon art. Que je conçoive un site web pour l'entreprise de garde d'animaux d'un ami ou que j'analyse des données pour une entreprise de partage de vélos à Chicago, je fusionne créativité et fonctionnalité en poursuivant des solutions élégantes.</p>
+			<p class="fs-1"><strong class="txt-glow">Perspective globale, impact local</strong>: Ayant voyagé et vécu dans 26 états et 5 pays, j'apporte une perspective mondiale aux défis locaux. Mes études en relations internationales, politique américaine, politique comparée et théorie politique éclairent mon approche des solutions technologiques, en veillant à ce qu'elles soient culturellement sensibles et éthiquement solides.</p>
+			<p class="fs-1"><strong class="txt-glow">Agilité linguistique</strong>: Couramment en anglais, compétent en mandarin et en français, et en constante progression dans l'apprentissage des langues (incluant l'espagnol et bientôt, l'arabe et la langue des signes), je crois en la rupture des barrières et en favorisant une communication inclusive dans le monde numérique.</p>
+			<p class="fs-1"><strong class="txt-glow">Champion du changement</strong>: Animé par la vision d'éliminer les fléaux sociaux tels que le sans-abrisme, la pauvreté, la guerre et l'effondrement écologique, je ne me contente pas de programmer des sites web ou d'analyser des données; je code pour une cause. Mon travail est un témoignage de ma conviction d'utiliser la technologie comme une force pour le bien.</p>
+			<p class="fs-1"><strong class="txt-glow">Excellence inébranlable</strong>: Récipiendaire d'honneurs académiques et écrivain publié, je suis engagé envers l'excellence. Cet engagement dépasse mes réussites académiques et s'étend à chaque projet que j'entreprends.</p>
+			<p class="fs-1">Je vous invite à explorer mon portfolio et à découvrir comment mon mélange éclectique de compétences, d'expériences et de passions fait de moi le candidat idéal pour des rôles qui ne sont pas seulement des emplois, mais des missions. Connectons-nous et collaborons sur des projets qui comptent, des projets qui non seulement nous défient mais changent également le monde.</p>
+		</div>
+	</section>
+
+	<section id="skills" class="snap-middle base-margin" data-display-type="block" aria-labelledby="hiddenSkillsHeading">
+		<h2 id="hiddenSkillsHeading" class="visually-hidden">Compétences</h2>
+		<div id="skillsGrid" class="skill-grid">
+			<!-- HTML -->
+			<article id="html5" class="skill-card" tabindex="0" aria-labelledby="html5Label">
+				<img src="../../images/svg/icons/skills/html/html5-icon.svg" alt="HTML5" class="icon frosted shadow mobile-glow">
+				<div id="html5Label" class="tooltip course padding-side-extend">
+					<h3>HTML5</h3>
+				</div>
+			</article>
+			
+			<!-- CSS -->
+			<article id="css3" class="skill-card" tabindex="0" aria-labelledby="css3Label" aria-expanded="false">
+				<img src="../../images/svg/icons/skills/css/css-icon.svg" alt="CSS3" class="icon frosted shadow mobile-glow">
+				<div id="css3Label" class="tooltip course padding-side-extend">
+					<h3>CSS3</h3>
+				</div>
+				
+				<div class="slide-out-initial">
+					<article id="flexbox" class="skill-card" tabindex="0" aria-labelledby="flexboxLabel">
+						<img src="../../images/svg/icons/skills/css/css-flexbox-icon.svg" alt="Flexbox" class="icon frosted shadow mobile-glow">
+						<div id="flexboxLabel" class="tooltip course padding-side-extend">
+							<h4>Flexbox</h4>
+						</div>
+					</article>
+
+					<article id="Grid" class="skill-card" tabindex="0" aria-labelledby="gridLabel">
+						<img src="../../images/svg/icons/skills/css/css-grid-icon.svg" alt="Grid" class="icon frosted shadow mobile-glow">
+						<div id="gridLabel" class="tooltip course padding-side-extend">
+							<h4>Grid</h4>
+						</div>
+					</article>
+
+					<article id="sass" class="skill-card" tabindex="0" aria-labelledby="sassLabel">
+						<img src="../../images/svg/icons/skills/css/sass-icon.svg" alt="Syntactically Awesome Style Sheets (SASS)" class="icon frosted shadow mobile-glow">
+						<div id="sassLabel" class="tooltip course padding-side-extend">
+							<h4>SASS</h4>
+						</div>
+					</article>
+				</div>
+			</article>
+
+			<!-- JavaScript -->
+			<article id="javascript" class="skill-card" tabindex="0" aria-labelledby="javascriptLabel" aria-expanded="false">
+				<img src="../../images/svg/icons/skills/javascript/javascript-icon.svg" alt="JavaScript" class="icon frosted shadow mobile-glow">
+				<div id="javascriptLabel" class="tooltip course padding-side-extend">
+					<h3>JavaScript</h3>
+				</div>
+
+				<div class="slide-out-initial">
+					<article id="react" class="skill-card" tabindex="0" aria-labelledby="reactLabel">
+						<img src="../../images/svg/icons/skills/javascript/react-icon.svg" alt="React" class="icon frosted shadow mobile-glow">
+						<div id="reactLabel" class="tooltip course padding-side-extend">
+							<h4>React</h4>
+						</div>
+					</article>
+				</div>
+			</article>
+
+			<!-- Python -->
+			<article id="python" class="skill-card" tabindex="0" aria-labelledby="pythonLabel" aria-expanded="false">
+				<img src="../../images/svg/icons/skills/python/python-icon.svg" alt="Python" class="icon frosted shadow mobile-glow">
+				<div id="pythonLabel" class="tooltip course padding-side-extend">
+					<h3>Python</h3>
+				</div>
+
+				<div class="slide-out-initial">
+					<article id="flask" class="skill-card" tabindex="0" aria-labelledby="flaskLabel">
+						<img src="../../images/svg/icons/skills/python/flask-icon.svg" alt="Flask" class="icon frosted shadow mobile-glow">
+						<div id="flaskLabel" class="tooltip course padding-side-extend">
+							<h4>Flask</h4>
+						</div>
+					</article>
+
+					<article id="beautifulSoup" class="skill-card" tabindex="0" aria-labelledby="bs4Label">
+						<img src="../../images/svg/icons/skills/python/beautiful-soup-icon.svg" alt="Beautiful Soup" class="icon frosted shadow mobile-glow">
+						<div id="bs4Label" class="tooltip course padding-side-extend">
+							<h4>Beautiful Soup</h4>
+						</div>
+					</article>
+				</div>
+			</article>
+
+			<!-- Git -->
+			<article id="git" class="skill-card" tabindex="0" aria-labelledby="gitLabel" aria-expanded="false">
+				<img src="../../images/svg/icons/skills/git/git-icon.svg" alt="Git" class="icon frosted shadow mobile-glow">
+				<div id="gitLabel" class="tooltip course padding-side-extend">
+					<h3>Git</h3>
+				</div>
+				
+				<div class="slide-out-initial">
+					<article id="gitBash" class="skill-card" tabindex="0" aria-labelledby="gitBashLabel">
+						<img src="../../images/svg/icons/skills/git/git-bash-icon.svg" alt="Git Bash" class="icon frosted shadow mobile-glow">
+						<div id="gitBashLabel" class="tooltip course padding-side-extend">
+							<h4>Git Bash</h4>
+						</div>
+					</article>
+
+					<article id="gitHub" class="skill-card" tabindex="0" aria-labelledby="githubLabel">
+						<img src="../../images/svg/icons/skills/git/github-icon.svg" alt="GitHub" class="icon frosted shadow mobile-glow">
+						<div id="githubLabel" class="tooltip course padding-side-extend">
+							<h4>GitHub</h4>
+						</div>
+					</article>
+				</div>
+			</article>
+
+			<!-- R Language-->
+			<article id="rLanguage" class="skill-card" tabindex="0" aria-labelledby="rLangLabel" aria-expanded="false">
+				<img src="../../images/svg/icons/skills/r/rlang-icon.svg" alt="R Langue" class="icon frosted shadow mobile-glow">
+				<div id="rLangLabel" class="tooltip course padding-side-extend">
+					<h3>R Langue</h3>
+				</div>
+				
+				<div class="slide-out-initial">
+					<article id="RStudio" class="skill-card" tabindex="0" aria-labelledby="rStudioLabel">
+						<img src="../../images/svg/icons/skills/r/rstudio-icon.svg" alt="R Studio" class="icon frosted shadow mobile-glow">
+						<div id="rStudioLabel" class="tooltip course padding-side-extend">
+							<h4>R Studio®</h4>
+						</div>
+					</article>
+				</div>
+			</article>
+
+			<!-- SQL -->
+			<article id="sql" class="skill-card" tabindex="0" aria-labelledby="sqlLabel" aria-expanded="false">
+				<img src="../../images/svg/icons/skills/sql/sql-icon.svg" alt="SQL" class="icon frosted shadow mobile-glow">
+				<div id="sqlLabel" class="tooltip course padding-side-extend">
+					<h3>SQL</h3>
+				</div>
+				
+				<div class="slide-out-initial">
+					<article id="bigQuery" class="skill-card" tabindex="0" aria-labelledby="bigQueryLabel">
+						<img src="../../images/svg/icons/skills/sql/bigquery-icon.svg" alt="BigQuery" class="icon frosted shadow mobile-glow">
+						<div id="bigQueryLabel" class="tooltip course padding-side-extend">
+							<h4>BigQuery</h4>
+						</div>
+					</article>
+				</div>
+			</article>
+
+			<!-- Microsoft Suite -->
+			<article id="microsoftSuite" class="skill-card" tabindex="0" aria-labelledby="msSuiteLabel" aria-expanded="false">
+				<img src="../../images/svg/icons/skills/microsoft/microsoft-suite-icon.svg" alt="Microsoft Suite" class="icon frosted shadow mobile-glow">
+				<div id="msSuiteLabel" class="tooltip course padding-side-extend">
+					<h3>MS Suite</h3>
+				</div>
+				
+				<div class="slide-out-initial">
+					<article id="excel" class="skill-card" tabindex="0" aria-labelledby="excelLabel">
+						<img src="../../images/svg/icons/skills/microsoft/microsoft-excel-icon.svg" alt="Excel" class="icon frosted shadow mobile-glow">
+						<div id="excelLabel" class="tooltip course padding-side-extend">
+							<h4>Excel</h4>
+						</div>
+					</article>
+
+					<article id="powerPoint" class="skill-card" tabindex="0" aria-labelledby="powerPointLabel">
+						<img src="../../images/svg/icons/skills/microsoft/microsoft-powerpoint-icon.svg" alt="PowerPoint" class="icon frosted shadow mobile-glow">
+						<div id="powerPointLabel" class="tooltip course padding-side-extend">
+							<h4>PowerPoint</h4>
+						</div>
+					</article>
+
+					<article id="word" class="skill-card" tabindex="0" aria-labelledby="wordLabel">
+						<img src="../../images/svg/icons/skills/microsoft/microsoft-word-icon.svg" alt="Word" class="icon frosted shadow mobile-glow">
+						<div id="wordLabel" class="tooltip course padding-side-extend">
+							<h4>Word</h4>
+						</div>
+					</article>
+				</div>
+			</article>
+
+			<!-- Google Suite -->
+			<article id="googleSuite" class="skill-card" tabindex="0" aria-labelledby="googleSuiteLabel" aria-expanded="false">
+				<img src="../../images/svg/icons/skills/google/google-suite-icon.svg" alt="Google Suite" class="icon frosted shadow mobile-glow">
+				<div id="googleSuiteLabel" class="tooltip course padding-side-extend">
+					<h3>Google Suite</h3>
+				</div>
+				
+				<div class="slide-out-initial">
+					<article id="sheets" class="skill-card" tabindex="0" aria-labelledby="sheetsLabel">
+						<img src="../../images/svg/icons/skills/google/google-sheets-icon.svg" alt="Sheets" class="icon frosted shadow mobile-glow">
+						<div id="sheetsLabel" class="tooltip course padding-side-extend">
+							<h4>Sheets</h4>
+						</div>
+					</article>
+
+					<article id="slides" class="skill-card" tabindex="0" aria-labelledby="slidesLabel">
+						<img src="../../images/svg/icons/skills/google/google-slides-icon.svg" alt="Slides" class="icon frosted shadow mobile-glow">
+						<div id="slidesLabel" class="tooltip course padding-side-extend">
+							<h4>Slides</h4>
+						</div>
+					</article>
+
+					<article id="docs" class="skill-card" tabindex="0" aria-labelledby="docsLabel">
+						<img src="../../images/svg/icons/skills/google/google-docs-icon.svg" alt="Docs" class="icon frosted shadow mobile-glow">
+						<div id="docsLabel" class="tooltip course padding-side-extend">
+							<h4>Docs</h4>
+						</div>
+					</article>
+				</div>
+			</article>
+
+			<!-- Markdown -->
+			<article id="markdown" class="skill-card" tabindex="0" aria-labelledby="markdownLabel" aria-expanded="false">
+				<img src="../../images/svg/icons/skills/markdown/markdown-icon.svg" alt="Markdown" class="icon frosted shadow mobile-glow">
+				<div id="markdownLabel" class="tooltip course padding-side-extend">
+					<h3>Markdown</h3>
+				</div>
+				
+				<div class="slide-out-initial">
+					<article id="latex" class="skill-card" tabindex="0" aria-labelledby="latexLabel">
+						<img src="../../images/svg/icons/skills/markdown/latex-icon.svg" alt="LaTeX" class="icon frosted shadow mobile-glow">
+						<div id="latexLabel" class="tooltip course padding-side-extend">
+							<h4>LaTeX</h4>
+						</div>
+					</article>
+
+					<article id="bibtex" class="skill-card" tabindex="0" aria-labelledby="bibtexLabel">
+						<img src="../../images/svg/icons/skills/markdown/bibtex-icon.svg" alt="BibTeX" class="icon frosted shadow mobile-glow">
+						<div id="bibtexLabel" class="tooltip course padding-side-extend">
+							<h4>BibTeX</h4>
+						</div>
+					</article>
+
+					<article id="yaml" class="skill-card" tabindex="0" aria-labelledby="yamlLabel">
+						<img src="../../images/svg/icons/skills/markdown/yaml-icon.svg" alt="YAML" class="icon frosted shadow mobile-glow">
+						<div id="yamlLabel" class="tooltip course padding-side-extend">
+							<h4>YAML</h4>
+						</div>
+					</article>
+				</div>
+			</article>
+
+			<!-- Tableau-->
+			<article id="tableau" class="skill-card" tabindex="0" aria-labelledby="tableauLabel">
+				<img src="../../images/svg/icons/skills/tableau/tableau-icon.svg" alt="Tableau" class="icon frosted shadow mobile-glow">
+				<div id="tableauLabel" class="tooltip course padding-side-extend">
+					<h3>Tableau</h3>
+				</div>
+			</article>
+
+			<!-- Inkscape -->
+			<article id="inkscape" class="skill-card" tabindex="0" aria-labelledby="inkscapeLabel">
+				<img src="../../images/svg/icons/skills/inkscape/inkscape-icon.svg" alt="inkscape" class="icon frosted shadow mobile-glow">
+				<div id="inkscapeLabel" class="tooltip course padding-side-extend">
+					<h3>Inkscape</h3>
+				</div>
+			</article>
+
+			<article id="figma" class="skill-card" tabindex="0" aria-labelledby="figmaLabel">
+				<img src="../../images/svg/icons/skills/figma/figma-icon.svg" alt="Figma" class="icon frosted shadow mobile-glow">
+				<div id="figmaLabel" class="tooltip course padding-side-extend">
+					<h3>Figma</h3>
+				</div>
+			</article>
+
+			<article id="sketchUp" class="skill-card" tabindex="0" aria-labelledby="sketchUpLabel">
+				<img src="../../images/svg/icons/skills/sketchup/sketchup-icon.svg" alt="SketchUp" class="icon frosted shadow mobile-glow">
+				<div id="sketchUpLabel" class="tooltip course padding-side-extend">
+					<h3>SketchUp</h3>
+				</div>
+			</article>
+
+			<article id="blender" class="skill-card" tabindex="0" aria-labelledby="blenderLabel">
+				<img src="../../images/svg/icons/skills/blender/blender.svg" alt="Blender" class="icon frosted shadow mobile-glow">
+				<div id="blenderLabel" class="tooltip course padding-side-extend">
+					<h3>Blender</h3>
+				</div>
+			</article>
+		</div>
+	</section>
+
+	<section id="workExp" class="frosted shadow base-margin base-padding snap-middle" data-display-type="block">
+		<h2 class="visually-hidden">Expérience</h2>
+		<h3 class="heading fs-2 txt-glow">Développeur Web Freelance</h3>
+		<p class="fs-sm orbitron">Juillet 2023 - Présent</p>
+		<p class="fs-1">En tant que développeur web freelance, je me spécialise dans la création de sites web captivants, adaptés aux besoins uniques de clients variés. Mon travail, qui s'étend de sites commerciaux et portfolios à des pages web personnelles, repose sur une solide maîtrise des langages de front-end tels que HTML, CSS, et JavaScript ainsi que leurs préprocesseurs extensibles (SASS) et frameworks inestimables (React). J'intègre des approches contemporaines de conception et de développement web pour améliorer l'efficacité et la structure, garantissant que chaque projet soit en harmonie avec la vision et les objectifs du client tout en respectant les directives d'accessibilité et en offrant une expérience utilisateur positive pour tous. Cette phase de ma carrière n'est pas seulement un témoignage de mes compétences techniques, mais aussi de ma capacité à traduire les exigences des clients en expériences digitales fonctionnelles et esthétiques.</p>
+		
+		<h3 class="heading fs-2 txt-glow">Certification professionnelle en analyse de données de Google</h3>
+		<p class="fs-sm orbitron">Juillet 2023 - Août 2023</p>
+		<p class="fs-1">Dans le but d'approfondir mon expertise en analyse de données, je me suis consacré avec acharnement à l'obtention de la rigoureuse Certification Professionnelle en Analyse de Données établie par Google. Au cours de plus de 250 heures d'apprentissage dédié et axé sur des projets, j'ai affiné mes compétences en collecte, préparation, nettoyage, analyse et visualisation de données, maîtrisant des outils tels que R Studio, SQL, BigQuery et Tableau. Ce parcours a été bien plus qu'une entreprise académique ; c'était une plongée profonde dans les domaines de l'interprétation et de la présentation des données, consolidant ma passion pour la découverte d'aperçus à travers les données et la programmation dans une multitude de domaines.</p>
+
+		<h3 class="heading fs-2 txt-glow">Willow</h3>
+		<p class="fs-sm orbitron">Octobre 2023 - Présent</p>
+		<p class="fs-1">Chez Willow, l'ensemble de mes compétences et expériences diverses se condensent dans les responsabilités que je me suis fixées. Tirant parti de mon expérience dans le service client, je participe au réseautage avec des professionnels de divers secteurs de l'industrie hôtelière, concevant et mettant en œuvre des projets analytiques et marketing qui englobent la collecte, la validation et la gestion de données. Mon attention portée sur l'équilibre délicat des facteurs gustatifs, olfactifs et esthétiques a joué un rôle clé dans l'augmentation des ventes et l'amélioration de la satisfaction client, démontrant ma capacité à appliquer une réflexion analytique dans des scénarios dynamiques et réels.</p>
+		
+		<h3 class="heading fs-2 txt-glow">Industrie de la restauration</h3>
+		<p class="fs-sm orbitron">Depuis la nuit des temps - Août 2021</p>
+		<p class="fs-1">Mon long parcours dans l'industrie de la restauration a jeté les bases de mon développement professionnel. Durant cette période, j'ai maîtrisé un éventail de compétences essentielles à toute industrie : la pensée organisationnelle, le leadership, la communication, la résolution de conflits, la gestion du temps, l'adaptabilité, la responsabilité, et le souci du détail. Cette expérience a été déterminante dans la formation de mon approche du service client, de la dynamique d'équipe et de l'efficacité opérationnelle, constituant le socle de mon éthique professionnelle et me préparant à relever des défis multiformes dans différents secteurs.</p>
+	</section>
+
+	<section id="projects" class="snap-middle base-margin" data-display-type="block">
+		<h2 class="visually-hidden">Projets</h2>
+		<div id="projectsGrid" class="project-grid gap">
+			<!-- <a href="https://jbrocklyanderson.github.io/willow-analysis">
+				<article class="frosted shadow project-card mobile-glow expand-glow">
+					<img src="../../images/raster/thumbnails/willow-analysis.png" alt="Page de Couverture de l'Analyse Willow" class="project-thumbnail">
+					<div class="project-card-txt">
+						<h3 class="heading fs-2 base-padding txt-glow">Analyse Willow</h3>
+						<p class="fs-1 base-padding">Une analyse compréhensive de mes données de ventes, totaux de pourboires et temps de trajet lors de mon travail dans un restaurant italien haut de gamme.</p>
+					</div>
+				</article>
+			</a> -->
+
+			<a href="https://jbrocklyanderson.github.io/chroma-lingua" aria-label="ChromaLingua: Un outil en ligne offrant aux apprenants de langues la possibilité de convertir du texte en couleurs">
+				<article class="frosted shadow project-card mobile-glow expand-glow">
+					<img src="../../images/raster/thumbnails/mandarin-orange.png" alt="Chroma Lingua Cover Page" class="project-thumbnail" aria-hidden="true">
+					<div class="project-card-txt">
+						<h3 class="heading fs-2 base-padding txt-glow">Chroma Lingua</h3>
+						<p class="fs-1 base-padding">Un outil en ligne offrant aux apprenants de langues la possibilité de convertir du texte en couleurs selon le ton de ses caractères, leur positionnement relatif et leur prononciation.</p>
+					</div>
+				</article>
+			</a>
+			
+			<a href="https://brendondye.github.io/windintrailswaggintails/" aria-label="Winding Trails Wagging Tails: A dog-walking / pet-sitting service geared for success with a professional responsive website.">
+				<article class="frosted shadow project-card mobile-glow expand-glow">
+					<img id="dogsHero" src="../../images/raster/thumbnails/wtwt.png" alt="Des chiens de toutes formes et tailles courant vers la caméra à travers une prairie dorée avec des montagnes majestueuses en arrière-plan au coucher du soleil" class="project-thumbnail" aria-hidden="true">
+					<div class="project-card-txt">
+						<h3 class="heading fs-2 base-padding txt-glow">Windin' Trails Waggin' Tails</h3>
+						<p class="fs-1 base-padding">Un service de promenade de chiens et de garde d'animaux orienté vers le succès avec un site web professionnel et réactif, conçu avec HTML, CSS et JavaScript.</p>
+					</div>
+				</article>
+			</a>
+
+			<a href="pdf/cyclistic-nontechnical.pdf" aria-label="A dedicated analysis of Cyclistic LLC's Chicago-based bike share data">
+				<article class="frosted shadow project-card mobile-glow expand-glow">
+					<img id="bikesHero" src="../../images/raster/thumbnails/cyclistic.png" alt="Bicyclists in Chicago's Millenium Park enjoying a ride on a beautiful day" class="project-thumbnail" aria-hidden="true">
+					<div class="project-card-txt">
+						<h3 class="heading fs-2 base-padding txt-glow">Analyse du Partage de Vélos Cyclistic</h3>
+						<p class="fs-1 base-padding">Analyse du Partage de Vélos Cyclistic. Une analyse dédiée des données de partage de vélos de Cyclistic (Momentum LLC) basée à Chicago, utilisant R Studio et l'API Google Maps</p>
+					</div>
+				</article>
+			</a>
+
+			<a href="html/conflict-in-burkina-faso.html" aria-label="Conflict in 21st Century Burkina Faso: An university-level award-winning literature review of Burkinabè conflict.">
+				<article class="frosted shadow project-card mobile-glow expand-glow">
+					<img src="../../images/raster/thumbnails/burkinabe-flag.svg" alt="Burkinabè Flag" class="project-thumbnail" aria-hidden="true">
+					<div class="project-card-txt">
+						<h3 class="heading fs-2 base-padding txt-glow">Conflit au Burkina Faso au 21ème siècle</h3>
+						<p class="fs-1 base-padding">Un compte-rendu littéraire primé au niveau universitaire sur le conflit burkinabè à travers le temps, l'espace et le domaine sociologique, dans le but d'atténuer la souffrance humaine</p>
+					</div>
+				</article>
+			</a>
+		</div>
+	</section>
+
+	<section id="education" class="frosted shadow base-margin base-padding snap-middle" data-display-type="block">
+		<h2 class="visually-hidden">Éducation</h2>
+		<div> <!-- Wrap for dropdown functionality -->
+			<h3 class="heading fs-2 txt-glow">Université de Californie à Davis</h3>
+			<p class="fs-sm orbitron">Septembre 2021 - Juin 2023 | MPC: 17,7</p>
+			<p class="fs-1">À Davis, j'ai affiné mon acuité intellectuelle, obtenant mon diplôme avec une moyenne pondérée cumulative de 17,7 en science politique et une mineure en Mandarin. Ce parcours fut bien plus qu'académique ; il représentait une métamorphose en un penseur mondial et un connaisseur de cultures et de langues diverses. J'ai activement participé à des clubs éclectiques, de la philosophie à l'ingénierie, embrassant un large spectre de connaissances. Mon passage ici a été marqué par une approche stratégique de l'apprentissage, où j'ai développé une méthode organisationnelle innovante qui m'a permis de <em>réduire de moitié</em> la durée de mes cours tout en maintenant une performance académique exemplaire au-dessus du 90ème percentile. Cette période témoigne de ma capacité à équilibrer des études rigoureuses avec des engagements parascolaires divers, reflétant mes intérêts et capacités multifacettes. Je suis diplômé avec honneurs en tant que <strong>baccaulaureat en science politique avec une mineure en Mandarin.</strong>.</p>
+			<div class="dropdown-container"> <!-- drop down menu --> 
+				<button class="dropdown flex sm-gap v-centered-columns" aria-label="Coursework Dropdown Button">
+					<img src="../../images/svg/icons/buttons/triangle-dd.svg" alt="Bouton déroulant pour les cours" class="btn"><span class="fs-sm orbitron">COURS</span>
+				</button>
+				<ul id="uniCourseList" class="fs-1 flex flex-wrap gap sm-row-gap course-container slide-out-initial">
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">Étude scientifique de la politique</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">Justice distributive</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">Théories de la politique internationale</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">Politique de l'interdépendence globale</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">Politique de l'inégalité globale</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">Politique africaine contemporaine</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">Psychologie politique</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">Opinion publique</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">Politique de groupes</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">La présidence des États-Unis</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">Études spécialisées sur l'aide étrangère</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">Composition avancées</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">Histoire de la RPC</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">Chinois intermédiaire (3)</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">Chinois avancée (3)</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">Poésie chinoise</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">Composition française</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">Grammaire française avancée</li>
+				</ul>
+			</div>
+		</div>
+
+		<div>
+			<h3 id="LRCCD" class="heading fs-2 txt-glow">Los Rios Community College District</h3>
+			<p class="fs-sm orbitron">Août 2012 - Mai 2019 | GPA: 16,6</p>
+			<p class="fs-1">Mon parcours académique au Los Rios Community College District a jeté les bases de mes projets futurs. Avec une moyenne pondérée cumulative de 16,6, j'ai obtenu des <em>doubles diplômes d'associé</em> en <em>sciences sociales & comportementales</em> et <em>arts & humanités</em>. Cette étape de mon éducation a été caractérisée par l'exploration et la découverte, où j'ai exploré divers domaines pour comprendre mes inclinations académiques et professionnelles, participé à des organisations étudiantes pour protéger les membres des communautés marginalisées des groupes haineux, et alimenté ma détermination à inspirer le leadership chez les gens ordinaires. Mes cours ici étaient divers, allant des statistiques à la macroéconomie, de la psychologie biologique à l'astronomie, du mandarin au espagnol et plus encore, me façonnant en une personne bien équilibrée avec une perspective large sur les disciplines mondiales.</p>
+			<div class="dropdown-container"> <!-- drop down menu --> 
+				<button class="dropdown flex sm-gap v-centered-columns" aria-label="Bouton déroulant pour les cours">
+					<img src="../../images/svg/icons/buttons/triangle-dd.svg" alt="Dropdown Button" class="btn"><span class="fs-sm orbitron">COURS</span>
+				</button>
+				<ul id="ccCourseList" class="fs-1 flex flex-wrap gap sm-row-gap course-container slide-out-initial">
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">Statistiques & probabilité (106%)</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">Macroéconomie</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">Histoire mondiale: 1500-Présent</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">Théorie politique</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">Gouvernement des États-Unis</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">Histoire des États-Unis</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">Politique comparée</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">Relations internationales</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">Prise de parole en public</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">Média de masse & societé</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">Chinois (3)</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">Français (4)</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">Espagnol</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">Psychologie biologique</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">Astronomie</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">Philosophie</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">Dessin & composition</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">Écriture créative</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">Religion mondiale</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">Histoire du Rock & Roll</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<section id="awards" class="frosted shadow base-margin base-padding snap-middle" data-display-type="block">
+		<h2 class="visually-hidden">Récompenses</h2>
+		<div>
+			<h3 class="heading fs-2 txt-glow">Organisation étudiante enregistrée pour le leadership & le développement</h3>
+			<p class="fs-sm orbitron">Automne 2021</p>
+			<p class="fs-1">Mes rôles de leadership dans des clubs universitaires, englobant les discussions politiques, les soins infirmiers et l'impression 3D, ont démontré ma capacité à guider et inspirer mes pairs vers un avenir positif. Cette expérience souligne mes qualités de leader et mon engagement à favoriser des environnements collaboratifs et prospectifs.</p>
+
+			<h3 class="heading fs-2 txt-glow">Programme d'immersion en chinois du Graduate College of Education de l'UESF</h3>
+			<p class="fs-sm orbitron">Été 2022</p>
+			<p class="fs-1">Ma participation à ce programme prestigieux souligne mon dévouement à maîtriser le mandarin et à élargir ma compréhension multiculturelle. Cette réalisation reflète mon engagement profond à embrasser et comprendre les cultures et langues diverses.</p>
+			
+			<h3 class="heading fs-2 txt-glow">Citation pour performance exceptionnelle</h3>
+			<p class="fs-sm orbitron">2022 - 2023</p>
+			<p class="fs-1">Cette citation a été une reconnaissance de ma quête incessante de connaissances et d'excellence dans mes efforts académiques. C'est un témoignage de ma rigueur intellectuelle et de ma capacité à exceller dans des environnements académiques exigeants.</p>
+
+			<h3 class="heading fs-2 txt-glow">Reconnaissance de la liste du doyen</h3>
+			<p class="fs-sm orbitron">Printemps 2023</p>
+			<p class="fs-1">Être nommé sur la Liste du Doyen a été le couronnement de ma détermination, de mon organisation stratégique et de ma clarté de focus. Cette distinction symbolise mon engagement envers l'excellence académique et ma capacité à atteindre des normes de performance élevées.</p>
+		</div>
+	</section>
+
+	<section id="contact" class="frosted shadow base-margin gap base-padding snap-middle" data-display-type="flex">
+		<div>
+			<h2 id="myPhone" class="heading fs-2 txt-glow">Appelez-moi / Envoyez-moi un SMS </h2>
+			<p class="fs-1"><a href="tel:+15304171973" aria-labelledby="myPhone">+1 (530) 417-1973</a></p>
+
+			<h2 class="heading fs-2 txt-glow">Écrivez-moi un email</h2>
+			<p class="fs-1">jbrocklyanderson@gmail.com</p>
+		</div>
+
+		<div id="findMeElsewhere" class="flex">
+			<h2 class="heading fs-2 txt-glow">Trouvez-moi ailleurs</h2>
+			<div id="otherLinks" class="flex">
+				<a href="https://www.linkedin.com/in/joseph-brockly-anderson-438149287/">
+					<img src="../../images/svg/icons/skills/linkedin/linkedin-icon.svg" alt="Logo de LinkedIn" class="btn">
+				</a>
+				<a href="https://github.com/JBrocklyAnderson">
+					<img src="../../images/svg/icons/skills/git/github-icon.svg" alt="Logo de GitHub" class="btn">
+				</a>
+			</div>
+		</div>
+	</section>
+
+
+<script src="../../js/script.js"></script>
+</body>
+</html>
