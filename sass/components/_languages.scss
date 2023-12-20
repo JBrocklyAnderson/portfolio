@@ -1,0 +1,96 @@
+body#index[data-lang='fr'] {
+    background: $black-blue-gradient;
+    background-attachment: fixed;
+    background-size: cover;
+
+    #langSelect:hover {
+        box-shadow: $fr-shadow;
+    }
+
+    #mobileHeader {
+        background-color: rgb(0, 20, 0);
+
+        @media (min-width: 769px) {
+            box-shadow: none;
+            background-color: transparent;
+        }
+    }
+
+    #navigationToggle {
+        background-image: url('../images/svg/icons/buttons/hamburger-icon-fr.svg');
+    }
+
+    .shadow {
+        box-shadow: $fr-shadow;
+    }
+
+    .drop-shadow {
+        filter: drop-shadow(0 0 0.25rem $quaternary-color);
+    }
+
+    .txt-glow {
+        text-shadow: $fr-txt-glow;
+    }
+
+    .mobile-glow {
+        @media (pointer: coarse) and (hover: none) {
+            animation: frMobileGlow 1s ease-in-out infinite alternate;
+        }
+    }
+
+    .course {
+        text-shadow: $fr-txt-glow;
+    }
+}
+
+body#index[data-lang='zh'] {    
+    font-family: $zh-base-font;
+    background: $black-red-gradient;
+    background-attachment: fixed;
+    background-size: cover;
+
+    #langSelect:hover {
+        box-shadow: $zh-shadow;
+    }
+
+    #mobileHeader {
+        background-color: rgb(20, 20, 0);
+
+        @media (min-width: 769px) {
+            box-shadow: none;
+            background-color: transparent;
+            
+        }
+    }
+
+    #navigationToggle {
+        background-image: url('../images/svg/icons/buttons/hamburger-icon-zh.svg');
+    }
+
+    .shadow {
+        box-shadow: $zh-shadow;
+    }
+
+    .drop-shadow {
+        filter: drop-shadow(0 0 0.25rem $quinary-color);
+    }
+
+    .heading {
+        font-family: $zh-heading-font;
+    }
+
+    .txt-glow {
+        text-shadow: $zh-txt-glow;
+    }
+
+    .mobile-glow {
+        @media (pointer: coarse) and (hover: none) {
+            animation: zhMobileGlow 1s ease-in-out infinite alternate;
+        }
+    }
+
+    .course {
+        text-shadow: $zh-txt-glow;
+    }
+}
+

@@ -1,0 +1,577 @@
+<!DOCTYPE html> <!--Declare as an HTML5 document-->
+<html hreflang="zh"> <!-- Declare as Chinese -->
+<head>
+	<!-- Declare character set -->
+	<meta charset="utf-8">
+	<!-- Declare base viewport properties -->
+ 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<!-- Describe website to help with SEO -->
+	<meta name="description" content="展现一位多才多艺的网络开发者和数据分析师，擅长HTML、CSS、Sass、JavaScript、Python、SQL等技术，具有消费者关系、政治科学和语言学背景。热衷于创造以用户为中心、数据驱动的网站，将技术专长与全球文化视角相结合。">
+	<meta name="author" content="红云海">
+	<!-- Link to alternate language versions -->
+	<link rel="canonical" hreflang="en" href="../index.html" />
+	<link rel="alternate" hreflang="fr" href="../lang/fr/index.html"/>
+	<link rel="alternate" hreflang="zh-Hans" href="../lang/zh-Hans/index.html">
+	<!-- Title the page -->
+	<title aria-labelledby="intro">J3 | 设计师。开发者。创新者。</title> 
+	
+	<!-- Specify what should be shown and how when sharing on social media -->
+	<meta property="og:type" content="website"> <!-- Declare as website -->
+	<meta property="og:url" content="https://jbrocklyanderson.github.io/portfolio/fr"> <!-- Declare URL -->
+	<meta property="og:title" content="J3 | 设计师。开发者。创新者。"> <!-- Title the preview -->
+	<meta property="og:description" content="展现一位多才多艺的网络开发者和数据分析师，擅长HTML、CSS、Sass、JavaScript、Python、SQL等技术，具有消费者关系、政治科学和语言学背景。热衷于创造以用户为中心、数据驱动的网站，将技术专长与全球文化视角相结合。">	
+	<meta property="og:image" content="../../images/raster/thumbnails/j3-thumbnail.png"> <!-- Display thumbnail image -->
+	<meta property="og:image:alt" content="J3 | 红云海 | 设计师。开发者。创新者。"> <!-- Add alternative image text for SEO and accessibility -->
+	
+
+	<!-- Twitter (X) specific tags -->
+	<meta name="twitter:card" content="summary_large_image"> <!-- Define type of card -->
+	<meta name="twitter:title" content="J3 | 设计师。开发者。创新者。"> <!-- Title the card -->
+	<meta name="twitter:description" content="展现一位多才多艺的网络开发者和数据分析师，擅长HTML、CSS、Sass、JavaScript、Python、SQL等技术，具有消费者关系、政治科学和语言学背景。热衷于创造以用户为中心、数据驱动的网站，将技术专长与全球文化视角相结合。"> <!-- Add description -->
+	<meta name="twitter:image" content="../../images/raster/thumbnails/j3-thumbnail.png"> <!-- Add preview image -->
+	<meta name="twitter:image:alt" content="J3 | 红云海 | 设计师。开发者。创新者。"> <!-- Add alternative image text for SEO and accessibility -->
+
+	<!-- Link relevant style sheets -->
+	<link rel="stylesheet" href="../../css/style.css" type="text/css">
+</head>
+
+<body id="index" class="base-font-family main-grid-columns background txt-color" data-lang="zh">
+	<header id="intro" data-display-type="flex">
+		<img src="../../images/svg/logo/j3-logo-thm-zh.svg" alt="J3标志" id="introLogo" class="drop-shadow" aria-hidden="true">
+		<div id="introInfo">
+			<h1 id="introName" class="heading fs-8 txt-glow">红云海</h1>
+			<div id="tagline" class="flex fs-2 txt-glow" data-lang="fr">
+				<p id="designer">设计师.</p>
+				<p id="developer">开发者.</p>
+				<p id="daredevil">创新者.</p>
+			</div>
+		</div>
+	</header>
+
+	<!-- Mobile header -->
+	<div id="mobileHeader" class="snap-middle shadow" data-display-type="flex">
+		<a href="index.html">
+			<img src="../../images/svg/logo/j3-logo-thm-zh.svg" alt="J3标志" id="navbarLogo" class="intro-logo drop-shadow fall-down">
+		</a>
+		<div id="langSelect" class="frosted platinum-shadow slide-in-from-right">
+			<button id="langBtn" class="flex sm-gap v-centered-columns">
+				<img src="../../images/svg/icons/buttons/triangle-dd-zh.svg" alt="Menu déroulant de sélection de langue" class="btn"><span class="fs-sm heading" aria-label="中文版">中文（简体）</span>
+			</button>
+			<div id="langOptions" class="frosted shadow slide-out-initial" data-lang="zh">
+				<a href="../../index.html" class="fs-1" aria-label="英文版" id="englishLink">English</a>
+				<hr>
+				<a href="../fr/index.html" class="fs-1" aria-label="法文版">Français</a>
+			</div>
+		</div>
+		<button id="navigationToggle">
+			<span class="visually-hidden">导航切换</span>
+		</button>
+	</div>
+
+	
+	<!-- Navigation bar -->
+	<nav id="navBar" class="heading fs-2 frosted platinum-shadow base-padding" data-display-type="block" data-visibility="false">
+		<ul id="navBarItems" class="flex flex-wrap gap h-centered-columns">
+			<li>
+				<a href="#aboutMe">关于我</a>
+			</li>
+			<li>
+				<a href="#skills">技能</a>
+			</li>
+			<li>
+				<a href="#workExp">经验</a>
+			</li>
+			<li>
+				<a href="#projects">项目</a>
+			</li>
+			<li>
+				<a href="#education">教育</a>
+			</li>
+			<li>
+				<a href="#awards">奖项</a>
+			</li>
+			<li>
+				<a href="#contact">联系方式</a>
+			</li>
+		</ul>
+	</nav>
+
+	<!-- About me section -->
+	<section id="aboutMe" class="frosted shadow base-margin snap-middle rise-up" data-display-type="block">
+		<h2 class="visually-hidden">关于我</h2>
+		<img src="../../images/raster/hero-banners/profile.jpg" id="profileHero">
+		<div id="aboutMeInfo" class="base-padding">
+			<h3 class="heading">大家好！</h3>
+			<p class="fs-1">我是红云海，一个充满活力的网页开发者、数据分析师，同时也是一位有抱负的软件工程师，拥有深厚的技能背景，并致力于通过技术塑造一个更美好的未来。我的旅程始于加州大学戴维斯分校，不仅获得了政治科学学士学位并辅修普通话，而且深入探索了全球和社会现实。</p>
+			<p class="fs-1">我的热情不仅仅是编写代码；它是在编写未来。在酒店行业拥有十多年的经验，我磨练出了关于人际互动和服务的独特视角，并将这种理解与技术驱动的方法结合起来，以解决现实世界的问题。我带来了丰富的分析能力、语言多样性，以及对有意义变化的热忱投入。</p>
+			<h3 class="heading">为什么选择我？</h3>
+			<p class="fs-1"><strong class="txt-glow">技术艺术性</strong>: 打造优雅的网站和强大的数据解决方案不仅是我的职业，更是我的艺术。无论是为朋友的宠物照看业务设计网站，还是为芝加哥的自行车共享公司分析数据，我都会将创意与功能性融为一体。</p>
+			<p class="fs-1"><strong class="txt-glow">全球视角，本地影响</strong>: 我曾在26个州和5个国家旅行和生活，我将全球视角带入本地挑战。我在国际关系、美国政治、比较政治和政治理论的学习，指导我开发出文化意识和伦理基础的技术解决方案。</p>
+			<p class="fs-1"><strong class="txt-glow">语言敏捷性</strong>: 我精通英语，普通话和法语流利，并且在持续的语言学习旅程中（包括西班牙语，很快还会有阿拉伯语和手语），我相信在数字世界中打破障碍，促进包容的沟通。</p>
+			<p class="fs-1"><strong class="txt-glow">变革的捍卫者</strong>: 我被消除社会弊病如无家可归、贫穷、战争和生态崩溃的愿景所驱动，我不仅仅是编写网站或分析数据；我是为了一个事业而编码。我的工作证明了我利用技术作为善的力量的信念。</p>
+			<p class="fs-1"><strong class="txt-glow">不懈的卓越</strong>: 作为学术荣誉的获得者和发表过文章的作者，我致力于卓越。这种承诺不仅延伸到我的学术成就，也延伸到我承担的每一个项目。</p>
+			<p class="fs-1">我邀请你探索我的作品集，并见证我如何将技能、经验和激情的多元混合，使我成为理想的候选人，适合的不仅仅是工作，而是使命。让我们联系并合作于重要的项目，这些项目不仅挑战我们，也改变世界。</p>
+		</div>
+	</section>
+
+	<section id="skills" class="snap-middle base-margin" data-display-type="block" aria-labelledby="hiddenSkillsHeading">
+		<h2 id="hiddenSkillsHeading" class="visually-hidden">技能</h2>
+		<div id="skillsGrid" class="skill-grid">
+			<!-- HTML -->
+			<article id="html5" class="skill-card" tabindex="0" aria-labelledby="html5Label">
+				<img src="../../images/svg/icons/skills/html/html5-icon.svg" alt="HTML5" class="icon frosted shadow mobile-glow">
+				<div id="html5Label" class="tooltip course padding-side-extend">
+					<h3>HTML5</h3>
+				</div>
+			</article>
+			
+			<!-- CSS -->
+			<article id="css3" class="skill-card" tabindex="0" aria-labelledby="css3Label" aria-expanded="false">
+				<img src="../../images/svg/icons/skills/css/css-icon.svg" alt="CSS3" class="icon frosted shadow mobile-glow">
+				<div id="css3Label" class="tooltip course padding-side-extend">
+					<h3>CSS3</h3>
+				</div>
+				
+				<div class="slide-out-initial">
+					<article id="flexbox" class="skill-card" tabindex="0" aria-labelledby="flexboxLabel">
+						<img src="../../images/svg/icons/skills/css/css-flexbox-icon.svg" alt="Flexbox" class="icon frosted shadow mobile-glow">
+						<div id="flexboxLabel" class="tooltip course padding-side-extend">
+							<h4>Flexbox</h4>
+						</div>
+					</article>
+
+					<article id="Grid" class="skill-card" tabindex="0" aria-labelledby="gridLabel">
+						<img src="../../images/svg/icons/skills/css/css-grid-icon.svg" alt="Grid" class="icon frosted shadow mobile-glow">
+						<div id="gridLabel" class="tooltip course padding-side-extend">
+							<h4>Grid</h4>
+						</div>
+					</article>
+
+					<article id="sass" class="skill-card" tabindex="0" aria-labelledby="sassLabel">
+						<img src="../../images/svg/icons/skills/css/sass-icon.svg" alt="Syntactically Awesome Style Sheets (SASS)" class="icon frosted shadow mobile-glow">
+						<div id="sassLabel" class="tooltip course padding-side-extend">
+							<h4>SASS</h4>
+						</div>
+					</article>
+				</div>
+			</article>
+
+			<!-- JavaScript -->
+			<article id="javascript" class="skill-card" tabindex="0" aria-labelledby="javascriptLabel" aria-expanded="false">
+				<img src="../../images/svg/icons/skills/javascript/javascript-icon.svg" alt="JavaScript" class="icon frosted shadow mobile-glow">
+				<div id="javascriptLabel" class="tooltip course padding-side-extend">
+					<h3>JavaScript</h3>
+				</div>
+
+				<div class="slide-out-initial">
+					<article id="react" class="skill-card" tabindex="0" aria-labelledby="reactLabel">
+						<img src="../../images/svg/icons/skills/javascript/react-icon.svg" alt="React" class="icon frosted shadow mobile-glow">
+						<div id="reactLabel" class="tooltip course padding-side-extend">
+							<h4>React</h4>
+						</div>
+					</article>
+				</div>
+			</article>
+
+			<!-- Python -->
+			<article id="python" class="skill-card" tabindex="0" aria-labelledby="pythonLabel" aria-expanded="false">
+				<img src="../../images/svg/icons/skills/python/python-icon.svg" alt="Python" class="icon frosted shadow mobile-glow">
+				<div id="pythonLabel" class="tooltip course padding-side-extend">
+					<h3>Python</h3>
+				</div>
+
+				<div class="slide-out-initial">
+					<article id="flask" class="skill-card" tabindex="0" aria-labelledby="flaskLabel">
+						<img src="../../images/svg/icons/skills/python/flask-icon.svg" alt="Flask" class="icon frosted shadow mobile-glow">
+						<div id="flaskLabel" class="tooltip course padding-side-extend">
+							<h4>Flask</h4>
+						</div>
+					</article>
+
+					<article id="beautifulSoup" class="skill-card" tabindex="0" aria-labelledby="bs4Label">
+						<img src="../../images/svg/icons/skills/python/beautiful-soup-icon.svg" alt="Beautiful Soup" class="icon frosted shadow mobile-glow">
+						<div id="bs4Label" class="tooltip course padding-side-extend">
+							<h4>Beautiful Soup</h4>
+						</div>
+					</article>
+				</div>
+			</article>
+
+			<!-- Git -->
+			<article id="git" class="skill-card" tabindex="0" aria-labelledby="gitLabel" aria-expanded="false">
+				<img src="../../images/svg/icons/skills/git/git-icon.svg" alt="Git" class="icon frosted shadow mobile-glow">
+				<div id="gitLabel" class="tooltip course padding-side-extend">
+					<h3>Git</h3>
+				</div>
+				
+				<div class="slide-out-initial">
+					<article id="gitBash" class="skill-card" tabindex="0" aria-labelledby="gitBashLabel">
+						<img src="../../images/svg/icons/skills/git/git-bash-icon.svg" alt="Git Bash" class="icon frosted shadow mobile-glow">
+						<div id="gitBashLabel" class="tooltip course padding-side-extend">
+							<h4>Git Bash</h4>
+						</div>
+					</article>
+
+					<article id="gitHub" class="skill-card" tabindex="0" aria-labelledby="githubLabel">
+						<img src="../../images/svg/icons/skills/git/github-icon.svg" alt="GitHub" class="icon frosted shadow mobile-glow">
+						<div id="githubLabel" class="tooltip course padding-side-extend">
+							<h4>GitHub</h4>
+						</div>
+					</article>
+				</div>
+			</article>
+
+			<!-- R Language-->
+			<article id="rLanguage" class="skill-card" tabindex="0" aria-labelledby="rLangLabel" aria-expanded="false">
+				<img src="../../images/svg/icons/skills/r/rlang-icon.svg" alt="R语言" class="icon frosted shadow mobile-glow">
+				<div id="rLangLabel" class="tooltip course padding-side-extend">
+					<h3>R语言</h3>
+				</div>
+				
+				<div class="slide-out-initial">
+					<article id="RStudio" class="skill-card" tabindex="0" aria-labelledby="rStudioLabel">
+						<img src="../../images/svg/icons/skills/r/rstudio-icon.svg" alt="R Studio" class="icon frosted shadow mobile-glow">
+						<div id="rStudioLabel" class="tooltip course padding-side-extend">
+							<h4>R Studio®</h4>
+						</div>
+					</article>
+				</div>
+			</article>
+
+			<!-- SQL -->
+			<article id="sql" class="skill-card" tabindex="0" aria-labelledby="sqlLabel" aria-expanded="false">
+				<img src="../../images/svg/icons/skills/sql/sql-icon.svg" alt="SQL" class="icon frosted shadow mobile-glow">
+				<div id="sqlLabel" class="tooltip course padding-side-extend">
+					<h3>SQL</h3>
+				</div>
+				
+				<div class="slide-out-initial">
+					<article id="bigQuery" class="skill-card" tabindex="0" aria-labelledby="bigQueryLabel">
+						<img src="../../images/svg/icons/skills/sql/bigquery-icon.svg" alt="BigQuery" class="icon frosted shadow mobile-glow">
+						<div id="bigQueryLabel" class="tooltip course padding-side-extend">
+							<h4>BigQuery</h4>
+						</div>
+					</article>
+				</div>
+			</article>
+
+			<!-- Microsoft Suite -->
+			<article id="microsoftSuite" class="skill-card" tabindex="0" aria-labelledby="msSuiteLabel" aria-expanded="false">
+				<img src="../../images/svg/icons/skills/microsoft/microsoft-suite-icon.svg" alt="Microsoft Suite" class="icon frosted shadow mobile-glow">
+				<div id="msSuiteLabel" class="tooltip course padding-side-extend">
+					<h3>微软套件</h3>
+				</div>
+				
+				<div class="slide-out-initial">
+					<article id="excel" class="skill-card" tabindex="0" aria-labelledby="excelLabel">
+						<img src="../../images/svg/icons/skills/microsoft/microsoft-excel-icon.svg" alt="Excel" class="icon frosted shadow mobile-glow">
+						<div id="excelLabel" class="tooltip course padding-side-extend">
+							<h4>Excel</h4>
+						</div>
+					</article>
+
+					<article id="powerPoint" class="skill-card" tabindex="0" aria-labelledby="powerPointLabel">
+						<img src="../../images/svg/icons/skills/microsoft/microsoft-powerpoint-icon.svg" alt="PowerPoint" class="icon frosted shadow mobile-glow">
+						<div id="powerPointLabel" class="tooltip course padding-side-extend">
+							<h4>PowerPoint</h4>
+						</div>
+					</article>
+
+					<article id="word" class="skill-card" tabindex="0" aria-labelledby="wordLabel">
+						<img src="../../images/svg/icons/skills/microsoft/microsoft-word-icon.svg" alt="Word" class="icon frosted shadow mobile-glow">
+						<div id="wordLabel" class="tooltip course padding-side-extend">
+							<h4>Word</h4>
+						</div>
+					</article>
+				</div>
+			</article>
+
+			<!-- Google Suite -->
+			<article id="googleSuite" class="skill-card" tabindex="0" aria-labelledby="googleSuiteLabel" aria-expanded="false">
+				<img src="../../images/svg/icons/skills/google/google-suite-icon.svg" alt="Google Suite" class="icon frosted shadow mobile-glow">
+				<div id="googleSuiteLabel" class="tooltip course padding-side-extend">
+					<h3>谷歌套件</h3>
+				</div>
+				
+				<div class="slide-out-initial">
+					<article id="sheets" class="skill-card" tabindex="0" aria-labelledby="sheetsLabel">
+						<img src="../../images/svg/icons/skills/google/google-sheets-icon.svg" alt="Sheets" class="icon frosted shadow mobile-glow">
+						<div id="sheetsLabel" class="tooltip course padding-side-extend">
+							<h4>Sheets</h4>
+						</div>
+					</article>
+
+					<article id="slides" class="skill-card" tabindex="0" aria-labelledby="slidesLabel">
+						<img src="../../images/svg/icons/skills/google/google-slides-icon.svg" alt="Slides" class="icon frosted shadow mobile-glow">
+						<div id="slidesLabel" class="tooltip course padding-side-extend">
+							<h4>Slides</h4>
+						</div>
+					</article>
+
+					<article id="docs" class="skill-card" tabindex="0" aria-labelledby="docsLabel">
+						<img src="../../images/svg/icons/skills/google/google-docs-icon.svg" alt="Docs" class="icon frosted shadow mobile-glow">
+						<div id="docsLabel" class="tooltip course padding-side-extend">
+							<h4>Docs</h4>
+						</div>
+					</article>
+				</div>
+			</article>
+
+			<!-- Markdown -->
+			<article id="markdown" class="skill-card" tabindex="0" aria-labelledby="markdownLabel" aria-expanded="false">
+				<img src="../../images/svg/icons/skills/markdown/markdown-icon.svg" alt="Markdown" class="icon frosted shadow mobile-glow">
+				<div id="markdownLabel" class="tooltip course padding-side-extend">
+					<h3>Markdown</h3>
+				</div>
+				
+				<div class="slide-out-initial">
+					<article id="latex" class="skill-card" tabindex="0" aria-labelledby="latexLabel">
+						<img src="../../images/svg/icons/skills/markdown/latex-icon.svg" alt="LaTeX" class="icon frosted shadow mobile-glow">
+						<div id="latexLabel" class="tooltip course padding-side-extend">
+							<h4>LaTeX</h4>
+						</div>
+					</article>
+
+					<article id="bibtex" class="skill-card" tabindex="0" aria-labelledby="bibtexLabel">
+						<img src="../../images/svg/icons/skills/markdown/bibtex-icon.svg" alt="BibTeX" class="icon frosted shadow mobile-glow">
+						<div id="bibtexLabel" class="tooltip course padding-side-extend">
+							<h4>BibTeX</h4>
+						</div>
+					</article>
+
+					<article id="yaml" class="skill-card" tabindex="0" aria-labelledby="yamlLabel">
+						<img src="../../images/svg/icons/skills/markdown/yaml-icon.svg" alt="YAML" class="icon frosted shadow mobile-glow">
+						<div id="yamlLabel" class="tooltip course padding-side-extend">
+							<h4>YAML</h4>
+						</div>
+					</article>
+				</div>
+			</article>
+
+			<!-- Tableau-->
+			<article id="tableau" class="skill-card" tabindex="0" aria-labelledby="tableauLabel">
+				<img src="../../images/svg/icons/skills/tableau/tableau-icon.svg" alt="Tableau" class="icon frosted shadow mobile-glow">
+				<div id="tableauLabel" class="tooltip course padding-side-extend">
+					<h3>Tableau</h3>
+				</div>
+			</article>
+
+			<!-- Inkscape -->
+			<article id="inkscape" class="skill-card" tabindex="0" aria-labelledby="inkscapeLabel">
+				<img src="../../images/svg/icons/skills/inkscape/inkscape-icon.svg" alt="inkscape" class="icon frosted shadow mobile-glow">
+				<div id="inkscapeLabel" class="tooltip course padding-side-extend">
+					<h3>Inkscape</h3>
+				</div>
+			</article>
+
+			<article id="figma" class="skill-card" tabindex="0" aria-labelledby="figmaLabel">
+				<img src="../../images/svg/icons/skills/figma/figma-icon.svg" alt="Figma" class="icon frosted shadow mobile-glow">
+				<div id="figmaLabel" class="tooltip course padding-side-extend">
+					<h3>Figma</h3>
+				</div>
+			</article>
+
+			<article id="sketchUp" class="skill-card" tabindex="0" aria-labelledby="sketchUpLabel">
+				<img src="../../images/svg/icons/skills/sketchup/sketchup-icon.svg" alt="SketchUp" class="icon frosted shadow mobile-glow">
+				<div id="sketchUpLabel" class="tooltip course padding-side-extend">
+					<h3>SketchUp</h3>
+				</div>
+			</article>
+
+			<article id="blender" class="skill-card" tabindex="0" aria-labelledby="blenderLabel">
+				<img src="../../images/svg/icons/skills/blender/blender.svg" alt="Blender" class="icon frosted shadow mobile-glow">
+				<div id="blenderLabel" class="tooltip course padding-side-extend">
+					<h3>Blender</h3>
+				</div>
+			</article>
+		</div>
+	</section>
+
+	<section id="workExp" class="frosted shadow base-margin base-padding snap-middle" data-display-type="block">
+		<h2 class="visually-hidden">经验</h2>
+		<h3 class="heading fs-2 txt-glow">自由职业网页开发者</h3>
+		<p class="fs-sm heading">2023年7月至今</p>
+		<p class="fs-1">作为一名自由职业网页开发者，我擅长为不同客户定制吸引人的网站。我的工作涵盖商务网站、作品集网站到个人网页，均以对前端语言包括HTML、CSS和JavaScript及其可扩展的预处理器（SASS）和宝贵的框架（React）的深厚掌握为基础。我融合当代网页设计和开发方法以提升效率和结构，确保每个项目都能与客户的愿景和目标产生共鸣，同时确保所有人都能获得无障碍指南和积极的用户体验。这一职业阶段不仅证明了我的技术技能，也证明了我将客户需求转化为功能性、美观的数字体验的能力。</p>
+		
+		<h3 class="heading fs-2 txt-glow">谷歌数据分析专业认证</h3>
+		<p class="fs-sm heading">2023年7月至2023年8月</p>
+		<p class="fs-1">为了加深我的数据分析专业知识，我努力追求谷歌设立的严谨的数据分析专业认证。在超过250小时的专注于项目的学习中，我磨练了数据收集、准备、清洗、分析和可视化的技能，掌握了像R Studio、SQL、BigQuery和Tableau等工具。这一旅程不仅是学术探索；它是对数据解读和呈现领域的深入研究，巩固了我通过数据和编程从众多领域挖掘洞见的热情。</p>
+
+		<h3 class="heading fs-2 txt-glow">Willow</h3>
+		<p class="fs-sm heading">2023年10月至今</p>
+		<p class="fs-1">在Willow，我所有多样的技能和经验都凝聚在我为自己设定的职责中。利用我在客户服务方面的背景，我在酒店行业的各个部门与专业人士网络互动，设计和实施包括数据收集、验证和管理的分析和市场项目。我对味觉、嗅觉和美学因素微妙平衡的关注，对提升销售额和增强顾客满意度起到了关键作用，展示了我在动态的现实世界场景中应用分析思维的能力。</p>
+		
+		<h3 class="heading fs-2 txt-glow">餐饮业</h3>
+		<p class="fs-sm heading">自古以来至2021年8月</p>
+		<p class="fs-1">我在餐饮行业的广泛任职为我的专业发展奠定了基础。在这一时期，我掌握了对任何行业都至关重要的一系列技能：组织思维、领导力、沟通、冲突解决、时间管理、适应能力、责任心和对细节的关注。这段经历在塑造我对客户服务、团队动态和运营效率的方法上起到了关键作用，形成了我的专业精神的基石，为我准备迎接不同行业的多方面挑战。</p>
+	</section>
+
+	<section id="projects" class="snap-middle base-margin" data-display-type="block">
+		<h2 class="visually-hidden">项目</h2>
+		<div id="projectsGrid" class="project-grid gap">
+			<!-- <a href="https://jbrocklyanderson.github.io/willow-analysis">
+				<article class="frosted shadow project-card mobile-glow expand-glow">
+					<img src="../../images/raster/thumbnails/willow-analysis.png" alt="Willow分析报告封面" class="project-thumbnail">
+					<div class="project-card-txt">
+						<h3 class="heading fs-2 base-padding txt-glow">Willow分析报告</h3>
+						<p class="fs-1 base-padding">对我在一家高档意大利餐厅工作时的销售数据、小费总额和通勤时间的综合分析</p>
+					</div>
+				</article>
+			</a> -->
+
+			<a href="https://jbrocklyanderson.github.io/chroma-lingua" aria-label="ChromaLingua: 一个在线工具，让语言学习者能够将文本转换为颜色">
+				<article class="frosted shadow project-card mobile-glow expand-glow">
+					<img src="../../images/raster/thumbnails/mandarin-orange.png" alt="Chroma Lingua Cover Page" class="project-thumbnail" aria-hidden="true">
+					<div class="project-card-txt">
+						<h3 class="heading fs-2 base-padding txt-glow">Chroma Lingua</h3>
+						<p class="fs-1 base-padding">一个在线工具，使语言学习者能够根据文字的音调、相对位置和发音将文本转换为颜色。</p>
+					</div>
+				</article>
+			</a>
+			
+			<a href="https://brendondye.github.io/windintrailswaggintails/" aria-label="Winding Trails Wagging Tails: 一个专为成功而设的遛狗/宠物看护服务，配备专业的响应式网站。">
+				<article class="frosted shadow project-card mobile-glow expand-glow">
+					<img id="dogsHero" src="../../images/raster/thumbnails/wtwt.png" alt="各种形状和大小的狗在日落时分，背景为壮丽山脉的金色草地上奔向摄像机。" class="project-thumbnail" aria-hidden="true">
+					<div class="project-card-txt">
+						<h3 class="heading fs-2 base-padding txt-glow">Windin' Trails Waggin' Tails</h3>
+						<p class="fs-1 base-padding">一个成功的遛狗和宠物照看服务，拥有一个用HTML、CSS和JavaScript设计的专业、响应式网站。</p>
+					</div>
+				</article>
+			</a>
+
+			<a href="pdf/cyclistic-nontechnical.pdf" aria-label="Cyclistic LLC芝加哥自行车共享数据的专项分析。Cyclistic自行车共享分析。">
+				<article class="frosted shadow project-card mobile-glow expand-glow">
+					<img id="bikesHero" src="../../images/raster/thumbnails/cyclistic.png" alt="在芝加哥千禧公园，骑行者在美好的一天享受骑行乐趣" class="project-thumbnail" aria-hidden="true">
+					<div class="project-card-txt">
+						<h3 class="heading fs-2 base-padding txt-glow">Cyclistic自行车共享分析</h3>
+						<p class="fs-1 base-padding">使用R Studio和谷歌地图API对Cyclistic（Momentum LLC）基于芝加哥的自行车共享数据进行专项分析。</p>
+					</div>
+				</article>
+			</a>
+
+			<a href="html/conflict-in-burkina-faso.html" aria-label="第21世纪布基纳法索的冲突: 一份在大学级别获奖的关于布基纳法索冲突的文学报告">
+				<article class="frosted shadow project-card mobile-glow expand-glow">
+					<img src="../../images/raster/thumbnails/burkinabe-flag.svg" alt="布基纳法索国旗" class="project-thumbnail" aria-hidden="true">
+					<div class="project-card-txt">
+						<h3 class="heading fs-2 base-padding txt-glow">第21世纪布基纳法索的冲突</h3>
+						<p class="fs-1 base-padding">一份获得大学级别奖项的关于布基纳法索冲突的文学报告，涵盖时间、空间和社会学领域，旨在减轻人类苦难。</p>
+					</div>
+				</article>
+			</a>
+		</div>
+	</section>
+
+	<section id="education" class="frosted shadow base-margin base-padding snap-middle" data-display-type="block">
+		<h2 class="visually-hidden">教育</h2>
+		<div> <!-- Wrap for dropdown functionality -->
+			<h3 class="heading fs-2 txt-glow">加州大学戴维斯分校</h3>
+			<p class="fs-sm heading">2021年9月至20236月 | 平均绩点: 90.91</p>
+			<p class="fs-1">在加州大学戴维斯分校，我磨练了我的智力敏锐度，以90.91的平均成绩点毕业，主修政治科学，辅修普通话。这段旅程不仅仅是学术上的；它是我成为一名全球思维者和多元文化及语言鉴赏家的蜕变。我积极参与各种俱乐部，从哲学到工程学，涉猎广泛的知识。我在这里的学习经历特点是采取了战略性的学习方法，我发展了一种创新的组织方式，使我能够将我的课程时间<em>减半</em>，同时保持超过90%的优秀学术表现。这一时期证明了我能够在严格的学习和多样的课外活动中保持平衡，反映了我的多方面兴趣和能力。我以优异成绩毕业，获得了<strong>政治科学学士学位，辅修普通话</strong>。</p>
+			<div class="dropdown-container"> <!-- drop down menu --> 
+				<button class="dropdown flex sm-gap v-centered-columns" aria-label="课程下拉按钮">
+					<img src="../../images/svg/icons/buttons/triangle-dd-zh.svg" alt="课程下拉按钮" class="btn"><span class="fs-sm heading">课程</span>
+				</button>
+				<ul id="uniCourseList" class="fs-1 flex flex-wrap gap sm-row-gap course-container slide-out-initial">
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">政治科学研究</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">分配正义</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">国际政治理论</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">全球互依政治</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">全球不平等政治</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">当代非洲政治</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">政治心理学</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">公众意见</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">团体政治</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">美国总统</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">对外援助专题</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">高级写作</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">中华人民共和国史</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">中级汉语</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">高级汉语</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">汉诗研究</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">法语写作</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">高级法语语法</li>
+				</ul>
+			</div>
+		</div>
+
+		<div>
+			<h3 id="LRCCD" class="heading fs-2 txt-glow">洛斯里奥斯社区学院区</h3>
+			<p class="fs-sm heading">2012年8月至2019年5月 | 平均绩点：85.06</p>
+			<p class="fs-1">在洛斯里奥斯社区学院区的学术之旅为我的未来奠定了基础。我以85.06的平均成绩点获得了<strong>双副学士学位</strong>，分别在<strong>社会与行为科学</strong>和<strong>艺术与人文科学</strong>领域。这一教育阶段以探索和发现为特点，我深入研究了各个领域，以了解我的学术和职业倾向，参与学生组织以保护边缘化社区成员免受仇恨团体的伤害，并激发了我在普通人中激发领导力的决心。我在这里的课程内容丰富多样，涵盖从统计学到宏观经济学，从生物心理学到天文学，从普通话到西班牙语等，使我成为一个视野广阔、全面发展的人才。</p>
+			<div class="dropdown-container"> <!-- drop down menu --> 
+				<button class="dropdown flex sm-gap v-centered-columns" aria-label="课程下拉按钮">
+					<img src="../../images/svg/icons/buttons/triangle-dd-zh.svg" alt="课程下拉按钮" class="btn"><span class="fs-sm heading">课程</span>
+				</button>
+				<ul id="ccCourseList" class="fs-1 flex flex-wrap gap sm-row-gap course-container slide-out-initial">
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">统计与概率（95.05）</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">宏观经济学</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">世界历史: 1500年至今</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">政治理论</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">美国政府</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">美国历史</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">比较正直</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">国际关系</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">公共演讲</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">大众媒体与社会</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">汉语</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">法语</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">西班牙语</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">生物心理学</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">天文学</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">哲学</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">绘画与构图</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">创意写作</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">世界宗教</li>
+					<li class="course popout padding-side-extend dark-shadow" tabindex="0">摇滚乐史</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<section id="awards" class="frosted shadow base-margin base-padding snap-middle" data-display-type="block">
+		<h2 class="visually-hidden">奖项</h2>
+		<div>
+			<h3 class="heading fs-2 txt-glow">注册学生组织领导力与发展</h3>
+			<p class="fs-sm heading">2021年秋天</p>
+			<p class="fs-1">我在大学社团的领导角色，包括政治讨论、护理和3D打印， 展现了我引导和激励同龄人迈向未来的能力。这些经历凸显了我的领导特质和致力于培养协作与前瞻性环境的承诺。</p>
+
+			<h3 class="heading fs-2 txt-glow">旧金山州立大学教育研究生院中文沉浸式项目完成</h3>
+			<p class="fs-sm heading">2022年夏天</p>
+			<p class="fs-1">我参与这一知名项目突显了我致力于掌握普通话并扩大我对多元文化的理解。这一成就反映了我深深的承诺，即拥抱并理解不同的文化和语言。</p>
+			
+			<h3 class="heading fs-2 txt-glow">杰出表现嘉奖</h3>
+			<p class="fs-sm heading">2022年至2023年</p>
+			<p class="fs-1">这项荣誉是对我在学术追求中不懈追求知识和卓越的认可。它证明了我严谨的智力和在具有挑战性的学术环境中表现出色的能力。</p>
+
+			<h3 class="heading fs-2 txt-glow">院长荣誉名单</h3>
+			<p class="fs-sm heading">2023年春天</p>
+			<p class="fs-1">获得院长名单上的一席之地，是我决心、战略性组织和清晰聚焦的成果。这一荣誉象征着我对学术卓越的承诺以及我实现高标准表现的能力。</p>
+		</div>
+	</section>
+
+	<section id="contact" class="frosted shadow base-margin gap base-padding snap-middle" data-display-type="flex">
+		<div>
+			<h2 id="myPhone" class="heading fs-2 txt-glow">给我打电话 / 给我发短信</h2>
+			<p class="fs-1"><a href="tel:+15304171973" aria-labelledby="myPhone">+1 530 417-1973</a></p>
+
+			<h2 class="heading fs-2 txt-glow">给我发电子邮件</h2>
+			<p class="fs-1">jbrocklyanderson@gmail.com</p>
+		</div>
+
+		<div id="findMeElsewhere" class="flex">
+			<h2 class="heading fs-2 txt-glow">其他地方找到我</h2>
+			<div id="otherLinks" class="flex">
+				<a href="https://www.linkedin.com/in/joseph-brockly-anderson-438149287/">
+					<img src="../../images/svg/icons/skills/linkedin/linkedin-icon.svg" alt="Logo de LinkedIn" class="btn">
+				</a>
+				<a href="https://github.com/JBrocklyAnderson">
+					<img src="../../images/svg/icons/skills/git/github-icon.svg" alt="Logo de GitHub" class="btn">
+				</a>
+			</div>
+		</div>
+	</section>
+
+
+<script src="../../js/script.js"></script>
+</body>
+</html>

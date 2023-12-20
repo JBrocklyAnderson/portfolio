@@ -10,6 +10,30 @@
     }
 }
 
+@keyframes frMobileGlow {
+    0% {
+        box-shadow: 0 0 0.25rem 0.25rem $quaternary-color;
+    }
+    50% {
+        box-shadow: 0 0 0.25rem 0.35rem $quaternary-color;
+    }
+    100% {
+        box-shadow: 0 0 0.25rem 0.25rem $quaternary-color;
+    }
+}
+
+@keyframes zhMobileGlow {
+    0% {
+        box-shadow: 0 0 0.25rem 0.25rem $quinary-color;
+    }
+    50% {
+        box-shadow: 0 0 0.25rem 0.35rem $quinary-color;
+    }
+    100% {
+        box-shadow: 0 0 0.25rem 0.25rem $quinary-color;
+    }
+}
+
 .mobile-glow {
     @media (pointer: coarse) and (hover: none) {
         animation: mobileGlow 1s ease-in-out infinite alternate;

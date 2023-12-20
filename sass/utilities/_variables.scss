@@ -1,38 +1,69 @@
-//// Assign font variables
-$heading-font-family: 'Montserrat Subrayada', sans-serif; // Define a font family for headings and navigation buttons
-$base-font-size: 16px;
-$base-font-famly: monospace;
-$majorMono:  'Major Mono Display', monospace;
-$orbitron: 'Orbitron', sans-serif;
-
-// Color and shadow variables
+//// Define variables for main page
 $black-green-gradient: 
     radial-gradient(circle at 0% 0%, rgb(0,0,20), rgba(0,52,0,0.1)),
     radial-gradient(circle at 100% 100%, rgb(0,52,0), rgb(0,0,0));
+
+// Assemble grid
+$gridColumnsM: "[page-columns-left] 7.5% [main-content-left] 85% [main-content-right] 7.5% [page-columns-right]"; // (min-width: 513px) and (max-width: 768px)
+$gridColumnsLG: "[page-columns-left] 12.5% [navbar-left] 5% [main-content-left] 65% [main-content-right] 5% [navbar-right] 12.5% [page-columns-right]"; // (min-width: 769px) and (max-width: 1280px)
+$gridColumnsXLG: "[page-columns-left] 22.5% [navbar-left] 5% [main-content-left] 45% [main-content-right] 5% [navbar-right] 22.5% [page-columns-right]"; // (min-width: 1281px) 
+
+
+// Assign font variables
+$base-font-size: 16px;
+$heading-font-family: 'Montserrat Subrayada', sans-serif; // Define a font family for headings and navigation buttons
+$base-font-famly: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif; // Create base font stack
+
+// Define color variables
+$primary-color: rgb(0, 0, 20);
+$secondary-color: rgb(235, 235, 255);
+$tertiary-color: rgb(0,255,0);
+
+$txt-glow: 0 0 0.55rem $tertiary-color;
+$shadow: 0 0 0.25rem 0.25rem $tertiary-color;
+$dark-shadow: 0.25rem 0.25rem 0.25rem $primary-color;
+$platinum-shadow: 0 0 0.25rem 0.25rem $secondary-color;
+
+
+//// Define variables for French version
+$black-blue-gradient: 
+    radial-gradient(circle at 0% 0%, rgb(20,0,0), rgba(0,52,0,0.1)),
+    radial-gradient(circle at 100% 100%, rgb(0,0,52), rgb(0,0,0));
+
+// Define color variables
+$quaternary-color: rgb(0, 0, 255);
+$fr-txt-glow: 0 0 0.55rem $quaternary-color;
+$fr-shadow: 0 0 0.25rem 0.25rem $quaternary-color;
+
+
+//// Define variables for Chinese version
+$zh-base-font: 'ZCOOL XiaoWei', system-ui, sans-serif;
+$zh-heading-font: 'ZCOOL QingKe HuangYou', system-ui, sans-serif;
+$black-red-gradient:
+    radial-gradient(circle at 0% 0%, rgb(20,0,0), rgba(0,52,0,0.1)),
+    radial-gradient(circle at 100% 100%, rgb(52,0,0), rgb(0,0,0));
+
+// Define color variables
+$quinary-color: rgb(255, 0, 0);
+$zh-txt-glow: 0 0 0.55rem $quinary-color;
+$zh-shadow: 0 0 0.25rem 0.25rem $quinary-color;
+
+
+//// Define variables for essay page
 $red-black-green-gradient: 
     radial-gradient(circle at 50% 50%, rgba(0,0,0,1), rgba(0,0,0,0.5) 100%),
     radial-gradient(circle at 0% 0%, rgba(255,0,0,1), rgba(0,0,0,0.5) 67%),
     radial-gradient(circle at 100% 100%, rgba(0,255,0,1), rgba(0,0,0,0.5) 67%);
   
-$primary-color: rgb(0, 0, 20);
-$secondary-color: rgb(235, 235, 255);
-$tertiary-color: rgba(0,255,0,1);
-
-$gold-dark: rgb(255, 198, 10);
-$gold-mid: rgb(237, 204, 94);
-$gold-bright: rgb(238, 223, 176);
 $red-60: rgb(60, 0, 0);
-
-$shadow: 0 0 0.25rem 0.25rem $tertiary-color;
-$dark-shadow: 0.25rem 0.25rem 0.25rem $primary-color;
-$platinum-shadow: 0 0 0.25rem 0.25rem $secondary-color;
-$txt-glow: 0 0 0.55rem $tertiary-color;
 $gold-glow: 0 0 6rem 0.25rem rgb(254, 221, 1); 
 
-// Grid variables
-$gridColumnsM: "[page-columns-left] 7.5% [main-content-left] 85% [main-content-right] 7.5% [page-columns-right]"; // (min-width: 513px) and (max-width: 768px)
-$gridColumnsLG: "[page-columns-left] 12.5% [navbar-left] 5% [main-content-left] 65% [main-content-right] 5% [navbar-right] 12.5% [page-columns-right]"; // (min-width: 769px) and (max-width: 1280px)
-$gridColumnsXLG: "[page-columns-left] 22.5% [navbar-left] 5% [main-content-left] 45% [main-content-right] 5% [navbar-right] 22.5% [page-columns-right]"; // (min-width: 1281px) 
+
+
+
+
+
+
 
 
 

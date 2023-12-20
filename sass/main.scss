@@ -1,7 +1,8 @@
 /* Import font families */
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Hairline&family=Montserrat+Subrayada:wght@700&display=swap'); // font-family: 'Montserrat Subrayada', sans-serif;
-@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap'); // font-family: 'Major Mono Display', monospace;
-@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap'); // 'Orbitron', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap'); // font-family: 'Ma Shan Zheng', cursive;
+@import url('https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&display=swap'); // font-family: 'ZCOOL QingKe HuangYou', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap'); // font-family: 'ZCOOL XiaoWei', system-ui, sans-serif;
 
 /* Import utilities */
 @import 'utilities/variables'; // Add variables
@@ -20,5 +21,5 @@
 /* Import specific UI component styles */
 @import 'components/images'; // Add styling to images
 @import 'components/buttons'; // Add styling to buttons
-@import 'components/carousel'; // Add styling to carousel
+@import 'components/languages'; // Add foreign language support
 

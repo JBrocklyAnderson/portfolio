@@ -1,7 +1,8 @@
 /* Import font families */
 @import url("https://fonts.googleapis.com/css2?family=Bungee+Hairline&family=Montserrat+Subrayada:wght@700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap");
 /* Import utilities */
 @keyframes mobileGlow {
   0% {
@@ -12,6 +13,28 @@
   }
   100% {
     box-shadow: 0 0 0.25rem 0.25rem rgb(0, 255, 0);
+  }
+}
+@keyframes frMobileGlow {
+  0% {
+    box-shadow: 0 0 0.25rem 0.25rem rgb(0, 0, 255);
+  }
+  50% {
+    box-shadow: 0 0 0.25rem 0.35rem rgb(0, 0, 255);
+  }
+  100% {
+    box-shadow: 0 0 0.25rem 0.25rem rgb(0, 0, 255);
+  }
+}
+@keyframes zhMobileGlow {
+  0% {
+    box-shadow: 0 0 0.25rem 0.25rem rgb(255, 0, 0);
+  }
+  50% {
+    box-shadow: 0 0 0.25rem 0.35rem rgb(255, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 0.25rem 0.25rem rgb(255, 0, 0);
   }
 }
 @media (pointer: coarse) and (hover: none) {
@@ -165,13 +188,16 @@ button, input, select, textarea {
 }
 
 .base-font-family {
-  font-family: monospace;
-  letter-spacing: -1px;
-  font-weight: 600;
+  font-family: Bahnschrift, "DIN Alternate", "Franklin Gothic Medium", "Nimbus Sans Narrow", sans-serif-condensed, sans-serif;
+  font-weight: 300;
 }
 
 .heading {
   font-family: "Montserrat Subrayada", sans-serif;
+}
+
+.fs-8 {
+  font-size: clamp(80px, 12vw, 6rem);
 }
 
 .fs-4 {
@@ -223,14 +249,6 @@ button, input, select, textarea {
 .hanging-indent {
   text-indent: -1.5rem;
   padding-left: 1.5rem;
-}
-
-.orbitron {
-  font-family: "Orbitron", sans-serif;
-}
-
-.major-mono {
-  font-family: "Major Mono Display", monospace;
 }
 
 .project-card-txt {
@@ -536,11 +554,12 @@ body#BurkinaFaso header {
   }
 }
 
-/* #tagline[data-lang="fr"] {
-    @media (max-width: 384px) {
-        font-size: $base-font-size;
-    }
-} */
+@media (max-width: 384px) {
+  #tagline[data-lang=fr] {
+    font-size: 16px;
+  }
+}
+
 #mobileHeader {
   justify-content: space-between;
   padding: 1rem 1rem;
@@ -571,6 +590,10 @@ body#BurkinaFaso header {
 
 #langSelect:hover {
   box-shadow: 0 0 0.25rem 0.25rem rgb(0, 255, 0);
+}
+
+#index[data-lang=zh] #langSelect:hover {
+  box-shadow: 0 0 0.25rem 0.25rem rgb(255, 0, 0);
 }
 
 #langOptions {
@@ -673,7 +696,6 @@ body#BurkinaFaso header {
 #introLogo {
   width: clamp(48px, 9vw, 12rem);
   z-index: 10;
-  filter: drop-shadow(0 0 0.25rem rgb(0, 255, 0));
 }
 @media (min-width: 897px) {
   #introLogo {
@@ -683,7 +705,6 @@ body#BurkinaFaso header {
 
 #navbarLogo {
   width: clamp(2rem, 5vw, 8rem);
-  filter: drop-shadow(0 0 0.25rem rgb(0, 255, 0));
 }
 
 #profileHero {
@@ -691,6 +712,10 @@ body#BurkinaFaso header {
   aspect-ratio: 4/2;
   object-fit: cover;
   border-radius: 1rem 1rem 0 0;
+}
+
+.drop-shadow {
+  filter: drop-shadow(0 0 0.25rem rgb(0, 255, 0));
 }
 
 .icon {
@@ -802,6 +827,86 @@ body#BurkinaFaso header {
 
 .dropdown-container button {
   margin: 0.5rem 0 0.5rem 0;
+}
+
+body#index[data-lang=fr] {
+  background: radial-gradient(circle at 0% 0%, rgb(20, 0, 0), rgba(0, 52, 0, 0.1)), radial-gradient(circle at 100% 100%, rgb(0, 0, 52), rgb(0, 0, 0));
+  background-attachment: fixed;
+  background-size: cover;
+}
+body#index[data-lang=fr] #langSelect:hover {
+  box-shadow: 0 0 0.25rem 0.25rem rgb(0, 0, 255);
+}
+body#index[data-lang=fr] #mobileHeader {
+  background-color: rgb(0, 20, 0);
+}
+@media (min-width: 769px) {
+  body#index[data-lang=fr] #mobileHeader {
+    box-shadow: none;
+    background-color: transparent;
+  }
+}
+body#index[data-lang=fr] #navigationToggle {
+  background-image: url("../images/svg/icons/buttons/hamburger-icon-fr.svg");
+}
+body#index[data-lang=fr] .shadow {
+  box-shadow: 0 0 0.25rem 0.25rem rgb(0, 0, 255);
+}
+body#index[data-lang=fr] .drop-shadow {
+  filter: drop-shadow(0 0 0.25rem rgb(0, 0, 255));
+}
+body#index[data-lang=fr] .txt-glow {
+  text-shadow: 0 0 0.55rem rgb(0, 0, 255);
+}
+@media (pointer: coarse) and (hover: none) {
+  body#index[data-lang=fr] .mobile-glow {
+    animation: frMobileGlow 1s ease-in-out infinite alternate;
+  }
+}
+body#index[data-lang=fr] .course {
+  text-shadow: 0 0 0.55rem rgb(0, 0, 255);
+}
+
+body#index[data-lang=zh] {
+  font-family: "ZCOOL XiaoWei", system-ui, sans-serif;
+  background: radial-gradient(circle at 0% 0%, rgb(20, 0, 0), rgba(0, 52, 0, 0.1)), radial-gradient(circle at 100% 100%, rgb(52, 0, 0), rgb(0, 0, 0));
+  background-attachment: fixed;
+  background-size: cover;
+}
+body#index[data-lang=zh] #langSelect:hover {
+  box-shadow: 0 0 0.25rem 0.25rem rgb(255, 0, 0);
+}
+body#index[data-lang=zh] #mobileHeader {
+  background-color: rgb(20, 20, 0);
+}
+@media (min-width: 769px) {
+  body#index[data-lang=zh] #mobileHeader {
+    box-shadow: none;
+    background-color: transparent;
+  }
+}
+body#index[data-lang=zh] #navigationToggle {
+  background-image: url("../images/svg/icons/buttons/hamburger-icon-zh.svg");
+}
+body#index[data-lang=zh] .shadow {
+  box-shadow: 0 0 0.25rem 0.25rem rgb(255, 0, 0);
+}
+body#index[data-lang=zh] .drop-shadow {
+  filter: drop-shadow(0 0 0.25rem rgb(255, 0, 0));
+}
+body#index[data-lang=zh] .heading {
+  font-family: "ZCOOL QingKe HuangYou", system-ui, sans-serif;
+}
+body#index[data-lang=zh] .txt-glow {
+  text-shadow: 0 0 0.55rem rgb(255, 0, 0);
+}
+@media (pointer: coarse) and (hover: none) {
+  body#index[data-lang=zh] .mobile-glow {
+    animation: zhMobileGlow 1s ease-in-out infinite alternate;
+  }
+}
+body#index[data-lang=zh] .course {
+  text-shadow: 0 0 0.55rem rgb(255, 0, 0);
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -4,12 +4,15 @@
 
 .base-font-family {
     font-family: $base-font-famly;
-    letter-spacing: -1px;
-    font-weight: 600;
+    font-weight: 300;
 }
 
 .heading {
     font-family: $heading-font-family;
+}
+
+.fs-8 {
+    font-size: clamp(calc($base-font-size * 5), 12vw, 6rem);
 }
 
 .fs-4 {
@@ -41,8 +44,6 @@
     color: $red-60;
 }
 
-
-
 #essay p:first-of-type::first-letter {
     float: left;
     top: 0;
@@ -64,14 +65,6 @@
 .hanging-indent {
     text-indent: -1.5rem;
     padding-left: 1.5rem;
-}
-
-.orbitron {
-    font-family: $orbitron;
-}
-
-.major-mono {
-    font-family: $majorMono;
 }
 
 .project-card-txt {
