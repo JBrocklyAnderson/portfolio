@@ -19,7 +19,7 @@
        id="linearGradient2"
        inkscape:collect="always">
       <stop
-         style="stop-color:#00ff00;stop-opacity:0.80000001;"
+         style="stop-color:#00ff00;stop-opacity:1;"
          offset="0"
          id="stop2" />
       <stop
@@ -50,7 +50,7 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="0.75878906"
      inkscape:cx="511.34106"
-     inkscape:cy="512"
+     inkscape:cy="510.68211"
      inkscape:window-width="1920"
      inkscape:window-height="991"
      inkscape:window-x="-9"

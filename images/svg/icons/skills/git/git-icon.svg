@@ -15,7 +15,7 @@
    id="defs1"><linearGradient
      id="linearGradient1"
      inkscape:collect="always"><stop
-       style="stop-color:#00ff00;stop-opacity:0.80000001;"
+       style="stop-color:#00ff00;stop-opacity:1;"
        offset="0"
        id="stop1" /><stop
        style="stop-color:#000014;stop-opacity:1;"
@@ -41,7 +41,7 @@
    inkscape:deskcolor="#d1d1d1"
    inkscape:zoom="8.0103093"
    inkscape:cx="45.940798"
-   inkscape:cy="36.016088"
+   inkscape:cy="36.016087"
    inkscape:window-width="1920"
    inkscape:window-height="991"
    inkscape:window-x="-9"

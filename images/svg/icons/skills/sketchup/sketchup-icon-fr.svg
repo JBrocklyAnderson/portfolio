@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0.09 0.33 108.54672 108.79"
+   width="505"
+   height="505"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="sketchup-icon-fr.svg"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="namedview4"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.3418058"
+     inkscape:cx="212.40033"
+     inkscape:cy="268.66779"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4" />
+  <path
+     d="m 103.10836,24.02 -35.41,-20.41 c 0,0 -5.61,-3.28 -14.56,-3.28 -9.32,0 -14.72,3.38 -14.72,3.38 L 5.6183599,22.48 55.51836,51.16 v 57.96 l 32.84,-18.75 c 0,0 5.87,-3.24 10.33,-10.94 3.93,-6.78 4.42,-13.34 4.42,-13.34 z m -53.4,9.44 c 0,0 7.32,-1.35 13.51,2.22 6.19,3.57 9.84,5.67 9.84,5.67 0,0 0.01,4.97 0.01,12.4 0,5.95 -5.04,12.12 -5.04,12.12 l 0.01,-21.83 z m 29.02,47.88 -10.69,6.13 v -5.75 l 8.32,-4.76 c 7.92,-5.71 9.23,-14.13 9.23,-17.05 l -0.03,-25.86 -22.69,-13.06 c 0,0 -3.45,-2.26 -9.65,-2.26 -6.2,0 -9.58,2.09 -9.58,2.09 l -7.97,4.58 -5.03,-2.91 11.01,-6.29 c 0,0 4.31,-2.39 11.53,-2.39 6.63,0 11.79,2.59 11.79,2.59 l 25.62,14.8 -0.03,28.22 c 0.18,4.34 -1.84,14.94 -11.83,21.92 z"
+     fill="#005f9e"
+     id="path3"
+     style="fill:#000014;fill-opacity:1" />
+  <path
+     d="m 3.0983599,41.25 34.9800001,20.07 -0.03,5.98 -19.9,-11.41 -12.5200001,7.12 32.4000001,18.67 0.02,5.76 L 3.3383599,67.47 c 0.09,2.34 2.21,9.55 6.27,15.13 4.1200001,5.65 8.8200001,8.05 8.8200001,8.05 l 32.08,18.47 V 54.04 L 3.1283599,26.83 Z"
+     fill="#005f9e"
+     id="path4"
+     style="fill:#0000ff;fill-opacity:1" />
+</svg>

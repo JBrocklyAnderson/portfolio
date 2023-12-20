@@ -24,7 +24,7 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="4.0318684"
      inkscape:cx="80.359766"
-     inkscape:cy="116.44725"
+     inkscape:cy="116.19923"
      inkscape:window-width="1920"
      inkscape:window-height="991"
      inkscape:window-x="-9"
@@ -44,7 +44,7 @@
      rx="10"
      style="stroke:#000014;stroke-opacity:1" />
   <path
-     d="M 30,138 V 70.000001 h 20 l 20,25 20,-25 h 20 V 138 H 90 V 99.000001 L 70,124 50,99.000001 V 138 Z m 125,0 -30,-33 h 20 V 70.000001 h 20 V 105 h 20 z"
+     d="M 24.92431,137.39174 V 69.391742 h 20 l 20,25 20,-25 h 20 v 67.999998 h -20 V 98.391742 l -20,24.999998 -20,-24.999998 v 38.999998 z m 125,0 -30,-33 h 20 V 69.391742 h 20 v 34.999998 h 20 z"
      id="path1"
-     style="stroke:#00ff00;stroke-opacity:0.80000001;fill:#000014;fill-opacity:1;stroke-width:5;stroke-dasharray:none" />
+     style="fill:#000014;fill-opacity:1;stroke:#00ff00;stroke-width:5;stroke-dasharray:none;stroke-opacity:1" />
 </svg>

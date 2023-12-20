@@ -67,20 +67,20 @@
          offset="0"
          id="stop3" />
       <stop
-         style="stop-color:#00c300;stop-opacity:0.80000001;"
+         style="stop-color:#00ff00;stop-opacity:1;"
          offset="1"
          id="stop4" />
     </linearGradient>
     <linearGradient
        id="linearGradient2">
       <stop
-         style="stop-color:#00c300;stop-opacity:0.80000001;"
-         offset="0"
-         id="stop1" />
-      <stop
          style="stop-color:#000014;stop-opacity:1;"
-         offset="1"
+         offset="0"
          id="stop2" />
+      <stop
+         style="stop-color:#00ff00;stop-opacity:1;"
+         offset="1"
+         id="stop1" />
     </linearGradient>
     <linearGradient
        id="linearGradient2795">
@@ -255,8 +255,8 @@
        gradientTransform="matrix(0.56875528,0,0,0.567972,-15.156724,-11.702371)"
        x1="99.567352"
        y1="43.517323"
-       x2="125.30292"
-       y2="116.01063" />
+       x2="152.52959"
+       y2="194.61278" />
   </defs>
   <path
      style="fill:url(#linearGradient1478);fill-opacity:1;stroke-width:1"
