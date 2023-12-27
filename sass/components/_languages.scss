@@ -3,6 +3,12 @@ body#index[data-lang='fr'] {
     background-attachment: fixed;
     background-size: cover;
 
+    #tagline {
+        @media (max-width: 384px) {
+            font-size: $base-font-size;
+        }
+    }
+
     #langSelect:hover {
         box-shadow: $fr-shadow;
     }

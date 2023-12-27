@@ -5,10 +5,100 @@
     @media (min-width: 897px) {
         margin: 0 0 0 5rem;
     }
+
+    path#num3 {
+        fill: $tertiary-color;
+    }
 }
 
 #navbarLogo {
     width: clamp(2rem, 5vw, 8rem);
+
+    path#num3 {
+        fill: $tertiary-color;
+    }
+}
+
+.btn {
+    width: clamp(1.5rem, 2.5vw, 2rem);
+}
+
+svg {
+    .color0 {
+        fill:#00ff00;
+    }
+
+    .color2 {
+        fill:#28ff28;
+    }
+
+    .off-black0 {
+        fill:#000014;
+    }
+
+    .off-black1 {
+        fill: #141428;
+    }
+
+    .off-black2 {
+        fill:#28283C;
+    }
+
+    .off-black3 {
+        fill: #3C3C50;
+    }
+
+    .off-black4 {
+        fill: #505064;
+    }
+
+    .off-white0 {
+        fill: #EBEBFF;
+    }
+
+    .stroke-color0 {
+        stroke: #00ff00;
+    }
+
+    .stroke-black0 {
+        stroke: #000014;
+    }
+
+    .stop-color0 {
+        stop-color: #00ff00;
+    }
+
+    .stop-color1 {
+        stop-color: #00EB00;
+    }
+
+    .stop-color4 {
+        stop-color: #00AF00; 
+    }
+
+    .stop-black0 {
+        stop-color: #000014;
+    }
+
+    .stop-black1 {
+        stop-color: #141428;
+    }
+
+    .stop-black2 {
+        stop-color: #28283C;
+    }
+
+    .stop-black4 {
+        stop-color:#505064;
+    }
+
+    .stop-white0 {
+        stop-color: #EBEBFF;
+    }
+
+    .stop-white1 {
+        stop-color: #d7d7eb;
+    }
 }
 
 #profileHero {
@@ -16,6 +106,28 @@
     aspect-ratio: 4 / 2;
     object-fit: cover;
     border-radius: 1rem 1rem 0 0;
+}
+
+#navigationToggle {
+    width: 2rem;
+    aspect-ratio: 1 / 1;
+    background-image: url('../images/svg/icons/buttons/hamburger-icon.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    align-self: center;
+
+    @media (min-width: 769px) {
+        display: none;
+    }
+}
+
+#navigationToggle:hover {
+    transform: scale(1.15, 1.15);
+    transition: transform 0.15s ease-in-out;
+}
+
+.dropdown-container button {
+    margin: 0.5rem 0 0.5rem 0;
 }
 
 .drop-shadow {
@@ -105,4 +217,33 @@
     float: right;
     width: 50%;
     margin: 1rem 0 1rem 1rem;
+}
+
+// Change SVG accent colors Language 
+body#index[data-lang='fr'] {
+    svg#introLogo {
+        path#num3 {
+            fill: $quaternary-color;
+        }
+    }
+
+    svg#navbarLogo {
+        path#num3 {
+            fill: $quaternary-color;
+        }
+    }
+}
+
+body#index[data-lang='zh'] {
+    svg#introLogo {
+        path#num3 {
+            fill: $quinary-color;
+        }
+    }
+
+    svg#navbarLogo {
+        path#num3 {
+            fill: $quinary-color;
+        }
+    }
 }

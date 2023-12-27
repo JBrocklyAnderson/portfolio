@@ -26,7 +26,7 @@
      inkscape:cy="367.07578"
      inkscape:window-width="1920"
      inkscape:window-height="991"
-     inkscape:window-x="-9"
+     inkscape:window-x="2391"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg5" />
@@ -82,11 +82,13 @@
      fill="url(#gradientFill-1)"
      fill-rule="evenodd"
      id="path4"
-     style="fill:url(#gradientFill-1)" />
+     style="fill:url(#gradientFill-1)"
+     inkscape:label="offB2-offB0" />
   <path
      d="m 550.547,460.83609 c 0,0 21.822,6.585 34.5,13 4.399,2.226 12.01,6.668 17.5,12.5 5.378,5.712 8,11.5 8,11.5 l 86,145 -139,0.062 -65,-122.062 c 0,0 -13.31,-22.869 -21.5,-29.5 -6.832,-5.531 -9.745,-7.5 -16.5,-7.5 -4.702,0 -33.026,0 -33.026,0 l 0.026,158.974 -123,0.052 v -406.088 h 247 c 0,0 112.5,2.029 112.5,109.062 0,107.033 -107.5,115 -107.5,115 z m -53.5,-135.976 -74.463,-0.048 -0.037,69.05 74.5,-0.024 c 0,0 34.5,-0.107 34.5,-35.125 0,-35.722 -34.5,-33.853 -34.5,-33.853 z"
      fill="url(#gradientFill-2)"
      fill-rule="evenodd"
      id="path5"
-     style="fill:url(#gradientFill-2)" />
+     style="fill:url(#gradientFill-2)"
+     inkscape:label="color0-offB0" />
 </svg>

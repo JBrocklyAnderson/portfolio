@@ -22,14 +22,14 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="8.5847183"
-     inkscape:cx="25.626933"
-     inkscape:cy="31.043535"
+     inkscape:cx="15.842104"
+     inkscape:cy="31.858937"
      inkscape:window-width="1920"
      inkscape:window-height="991"
-     inkscape:window-x="-9"
+     inkscape:window-x="2391"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g4" />
+     inkscape:current-layer="svg4" />
   <defs
      id="defs1">
     <path
@@ -51,27 +51,31 @@
        fill="#fbbc05"
        id="path1"
        transform="matrix(1.0232554,0,0,1,-0.04651085,0)"
-       style="stroke-width:0.988571;fill:#28283c;fill-opacity:1" />
+       style="stroke-width:0.988571;fill:#28283c;fill-opacity:1"
+       inkscape:label="offBlack2" />
     <path
        d="M 0,11 17,24 24,17.9 48,14 V 0 H 0 Z"
        clip-path="url(#B)"
        fill="#ea4335"
        id="path2"
        transform="matrix(1.0232554,0,0,1,-0.04651085,0)"
-       style="stroke-width:0.988571;fill:#000014;fill-opacity:1" />
+       style="stroke-width:0.988571;fill:#000014;fill-opacity:1"
+       inkscape:label="offBlack0" />
     <path
        d="M 0,37 30,14 37.9,15 48,0 V 48 H 0 Z"
        clip-path="url(#B)"
        fill="#34a853"
        id="path3"
        transform="matrix(1.0232554,0,0,1,-0.04651085,0)"
-       style="stroke-width:0.988571;fill:#00ff00;fill-opacity:1" />
+       style="stroke-width:0.988571;fill:#00ff00;fill-opacity:1"
+       inkscape:label="color0" />
     <path
        d="M 48,48 17,24 13,21 48,11 Z"
        clip-path="url(#B)"
        fill="#4285f4"
        id="path4"
        transform="matrix(1.0232554,0,0,1,-0.04651085,0)"
-       style="stroke-width:0.988571;fill:#141428;fill-opacity:1" />
+       style="stroke-width:0.988571;fill:#141428;fill-opacity:1"
+       inkscape:label="offBlack1" />
   </g>
 </svg>

@@ -27,7 +27,7 @@
      inkscape:cy="51.173782"
      inkscape:window-width="1920"
      inkscape:window-height="991"
-     inkscape:window-x="-9"
+     inkscape:window-x="2391"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg3" />
@@ -35,15 +35,18 @@
      d="M 54,0 76,22 65,24 54,22 52,11 Z"
      fill="#188038"
      id="path1"
-     style="fill:#000014;fill-opacity:1" />
+     style="fill:#000014;fill-opacity:1"
+     inkscape:label="offBlack0" />
   <path
      d="M 54,22 V 0 H 18 c -3.315,0 -6,2.685 -6,6 v 76 c 0,3.315 2.685,6 6,6 h 52 c 3.315,0 6,-2.685 6,-6 V 22 Z"
      fill="#34a853"
      id="path2"
-     style="fill:#141428;fill-opacity:1" />
+     style="fill:#141428;fill-opacity:1"
+     inkscape:label="offBlack1" />
   <path
      d="M 24,34 V 63 H 64 V 34 Z M 41.5,58 H 29 v -7 h 12.5 z m 0,-12 H 29 V 39 H 41.5 Z M 59,58 H 46.5 V 51 H 59 Z M 59,46 H 46.5 V 39 H 59 Z"
      fill="#fff"
      id="path3"
-     style="fill:#00ff00;fill-opacity:1" />
+     style="fill:#00ff00;fill-opacity:1"
+     inkscape:label="color0" />
 </svg>

@@ -60,18 +60,18 @@
        uniform="false" />
   </defs>
   <g
-     inkscape:label="Layer 1"
+     inkscape:label="J3logo"
      inkscape:groupmode="layer"
      id="layer1">
     <path
        id="path3"
        style="fill:#ebebff;fill-opacity:1;stroke:none;stroke-width:50;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke"
-       inkscape:label="reverseJ"
+       inkscape:label="letJ"
        d="M 0 0 L 0 150.00015 A 75.605393 75 0 0 0 75.605721 225.00022 A 75.605393 75 0 0 0 151.21093 150.00015 L 151.21093 125.00012 L 114.62866 125.00012 L 100.80728 125.00012 L 100.80728 150.00015 A 25.201798 25 0 0 1 75.605721 175.00017 A 25.201798 25 0 0 1 50.403642 150.00015 L 50.403642 125.00012 L 39.023458 125.00012 L 39.023458 100.0001 L 50.403642 100.0001 L 50.403642 79.481453 L 50.403642 75.000073 L 39.023458 75.000073 L 39.023458 50.000049 L 50.403642 50.000049 L 50.403642 25.000024 L 39.023458 25.000024 L 39.023458 0 L 0 0 z " />
     <path
        id="use16"
        style="fill:#00ff00;fill-opacity:1;stroke:none;stroke-width:25;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke"
        d="m 50.403642,0 v 25.000024 h 17.1912 11.26029 35.259338 a 12.499988,12.499988 0 0 1 12.50001,12.500013 12.499988,12.499988 0 0 1 -12.50001,12.500012 h -12.5 -51.210828 v 25.000024 h 51.210828 12.5 a 12.499988,12.499988 0 0 1 12.50001,12.500012 12.499988,12.499988 0 0 1 -12.50001,12.500015 h -35.259338 -11.26029 -17.1912 v 25.00002 H 114.11447 A 37.499963,37.499963 0 0 0 151.61451,87.500085 37.499963,37.499963 0 0 0 142.0647,62.500061 37.499963,37.499963 0 0 0 151.61451,37.500037 37.499963,37.499963 0 0 0 114.11447,0 Z"
-       inkscape:label="number3" />
+       inkscape:label="num3" />
   </g>
 </svg>

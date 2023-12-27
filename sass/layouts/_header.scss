@@ -30,17 +30,14 @@
     }
 }
 
-#tagline[data-lang="fr"] {
-    @media (max-width: 384px) {
-        font-size: $base-font-size;
-    }
-}
+
 
 #mobileHeader {
     justify-content: space-between;
     padding: 1rem 1rem;
     align-items: flex-end;
     z-index: 200;
+    flex-grow: 0 0 auto;
 
     @media (max-width: 768px) {
         position: sticky;
@@ -64,12 +61,6 @@
 
 #langSelect:hover {
     box-shadow: $shadow;
-}
-
-#index[data-lang='zh'] {
-    #langSelect:hover {
-        box-shadow: $zh-shadow;
-    }
 }
 
 #langOptions {

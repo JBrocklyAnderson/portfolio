@@ -1,6 +1,5 @@
 /* Import font families */
 @import url("https://fonts.googleapis.com/css2?family=Bungee+Hairline&family=Montserrat+Subrayada:wght@700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap");
 /* Import utilities */
@@ -554,17 +553,12 @@ body#BurkinaFaso header {
   }
 }
 
-@media (max-width: 384px) {
-  #tagline[data-lang=fr] {
-    font-size: 16px;
-  }
-}
-
 #mobileHeader {
   justify-content: space-between;
   padding: 1rem 1rem;
   align-items: flex-end;
   z-index: 200;
+  flex-grow: 0 0 auto;
 }
 @media (max-width: 768px) {
   #mobileHeader {
@@ -590,10 +584,6 @@ body#BurkinaFaso header {
 
 #langSelect:hover {
   box-shadow: 0 0 0.25rem 0.25rem rgb(0, 255, 0);
-}
-
-#index[data-lang=zh] #langSelect:hover {
-  box-shadow: 0 0 0.25rem 0.25rem rgb(255, 0, 0);
 }
 
 #langOptions {
@@ -702,9 +692,77 @@ body#BurkinaFaso header {
     margin: 0 0 0 5rem;
   }
 }
+#introLogo path#num3 {
+  fill: rgb(0, 255, 0);
+}
 
 #navbarLogo {
   width: clamp(2rem, 5vw, 8rem);
+}
+#navbarLogo path#num3 {
+  fill: rgb(0, 255, 0);
+}
+
+.btn {
+  width: clamp(1.5rem, 2.5vw, 2rem);
+}
+
+svg .color0 {
+  fill: #00ff00;
+}
+svg .color2 {
+  fill: #28ff28;
+}
+svg .off-black0 {
+  fill: #000014;
+}
+svg .off-black1 {
+  fill: #141428;
+}
+svg .off-black2 {
+  fill: #28283C;
+}
+svg .off-black3 {
+  fill: #3C3C50;
+}
+svg .off-black4 {
+  fill: #505064;
+}
+svg .off-white0 {
+  fill: #EBEBFF;
+}
+svg .stroke-color0 {
+  stroke: #00ff00;
+}
+svg .stroke-black0 {
+  stroke: #000014;
+}
+svg .stop-color0 {
+  stop-color: #00ff00;
+}
+svg .stop-color1 {
+  stop-color: #00EB00;
+}
+svg .stop-color4 {
+  stop-color: #00AF00;
+}
+svg .stop-black0 {
+  stop-color: #000014;
+}
+svg .stop-black1 {
+  stop-color: #141428;
+}
+svg .stop-black2 {
+  stop-color: #28283C;
+}
+svg .stop-black4 {
+  stop-color: #505064;
+}
+svg .stop-white0 {
+  stop-color: #EBEBFF;
+}
+svg .stop-white1 {
+  stop-color: #d7d7eb;
 }
 
 #profileHero {
@@ -712,6 +770,29 @@ body#BurkinaFaso header {
   aspect-ratio: 4/2;
   object-fit: cover;
   border-radius: 1rem 1rem 0 0;
+}
+
+#navigationToggle {
+  width: 2rem;
+  aspect-ratio: 1/1;
+  background-image: url("../images/svg/icons/buttons/hamburger-icon.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  align-self: center;
+}
+@media (min-width: 769px) {
+  #navigationToggle {
+    display: none;
+  }
+}
+
+#navigationToggle:hover {
+  transform: scale(1.15, 1.15);
+  transition: transform 0.15s ease-in-out;
+}
+
+.dropdown-container button {
+  margin: 0.5rem 0 0.5rem 0;
 }
 
 .drop-shadow {
@@ -802,37 +883,29 @@ body#BurkinaFaso header {
   margin: 1rem 0 1rem 1rem;
 }
 
-#navigationToggle {
-  width: 2rem;
-  aspect-ratio: 1/1;
-  background-image: url("../images/svg/icons/buttons/hamburger-icon.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  align-self: center;
+body#index[data-lang=fr] svg#introLogo path#num3 {
+  fill: rgb(0, 0, 255);
 }
-@media (min-width: 769px) {
-  #navigationToggle {
-    display: none;
-  }
+body#index[data-lang=fr] svg#navbarLogo path#num3 {
+  fill: rgb(0, 0, 255);
 }
 
-#navigationToggle:hover {
-  transform: scale(1.15, 1.15);
-  transition: transform 0.15s ease-in-out;
+body#index[data-lang=zh] svg#introLogo path#num3 {
+  fill: rgb(255, 0, 0);
 }
-
-.btn {
-  width: clamp(1.5rem, 2.5vw, 2rem);
-}
-
-.dropdown-container button {
-  margin: 0.5rem 0 0.5rem 0;
+body#index[data-lang=zh] svg#navbarLogo path#num3 {
+  fill: rgb(255, 0, 0);
 }
 
 body#index[data-lang=fr] {
   background: radial-gradient(circle at 0% 0%, rgb(20, 0, 0), rgba(0, 52, 0, 0.1)), radial-gradient(circle at 100% 100%, rgb(0, 0, 52), rgb(0, 0, 0));
   background-attachment: fixed;
   background-size: cover;
+}
+@media (max-width: 384px) {
+  body#index[data-lang=fr] #tagline {
+    font-size: 16px;
+  }
 }
 body#index[data-lang=fr] #langSelect:hover {
   box-shadow: 0 0 0.25rem 0.25rem rgb(0, 0, 255);

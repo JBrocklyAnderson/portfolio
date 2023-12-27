@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Keep intro animations visible
     showSection('#intro', 'flex');
 
+
     // Listen for the end of the intro animation
     const introLogo = document.getElementById('introLogo');
 
@@ -64,22 +65,6 @@ document.addEventListener('DOMContentLoaded', function() {
         link.addEventListener('click', handleNavigation);
         link.addEventListener('keydown', handleNavigation); // Ensure screen readers can navigate through navigation bar
     });
-
-    /*
-    // Add click event listeners to navigation links
-    document.querySelectorAll('#navBarItems > li > a').forEach(link => {
-        link.addEventListener('click', function(event) {
-            event.preventDefault();
-
-            const sectionID = this.getAttribute('href').substring(1);
-            const displayType = document.getElementById(sectionID).dataset.displayType;
-
-            hideMostSections();
-            showSection('#' + sectionID, displayType); // Reveal clicked section
-            document.getElementById(sectionID).classList.add('rise-up');
-        });
-    });
-    */
     
     //// Handle language menu dropdown toggle
     const langSelect = document.getElementById('langSelect');
@@ -116,29 +101,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Handle project card heights and thumbnail aspect-ratios
-    // const projectCards = document.querySelectorAll('.project-card');
-    // let maxHeight = 0;
-
-    // Find tallest card
-    // projectCards.forEach(function(card) {
-    //     let cardHeight = card.clientHeight;
-        
-    //     if (cardHeight > maxHeight) {
-    //         maxHeight = cardHeight;
-    //     }
-
-        // Set thumbnails equal to 25% of card height
-        // let imageHeight = cardHeight * 0.25;
-        // let image = card.querySelector('.project-thumbnail');
-        // image.style.height = imageHeight + 'px';
-    // });
-
-    // Set all cards equal to tallest card height
-    // projectCards.forEach(function(card) {
-    //     card.style.height = maxHeight + 'px'
-    // });   
-    
     //// Handle drop-down toggle for Education section
     document.querySelectorAll('.dropdown').forEach(function(dropdownButton) {
         dropdownButton.addEventListener('click', function() {
@@ -151,30 +113,4 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-
-    /* //// Manage dynamic content accessibility
-    document.querySelectorAll('.skill-card').forEach(card => {
-        card.setAttribute('tabindex', '0'); // Make each card focusable
-        card.setAttribute('role', 'button'); // Indicate interactivity
-        card.setAttribute('aria-expanded', 'false'); // Set attribute to intialize as collapsed
-
-        card.addEventListener('keydown', function(event) {
-            if (event.keyCode === 13 || event.keyCode === 32) { // Provide functionality to enter or space key
-                const subSkillsContainer = this.querySelector('.slide-out-initial'); // Grab the subskill cards container
-                
-                if (subSkillsContainer) {
-                    const isExpanded = this.getAttribute('aria-expanded') === 'true';
-                    this.setAttribute('aria-expanded', !isExpanded); // Toggle expanded state
-
-                    if (!isExpanded) {
-                        const firstSubSkill = subSkillsContainer.querySelector('.skill-card');
-                        if (firstSubSkill) {
-                            firstSubSkill.setAttribute('tabindex', '0');
-                            firstSubSkill.focus();
-                        }
-                    }
-                }
-            }
-        });
-    }); */
 });
