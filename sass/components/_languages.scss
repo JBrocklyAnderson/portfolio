@@ -19,7 +19,7 @@ body#index[data-lang='fr'] {
     }
 
     #mobileHeader {
-        // background-color: rgb(0, 20, 0);
+        background-color: $fr-black0;
 
         @media (min-width: 769px) {
             box-shadow: none;
@@ -57,6 +57,10 @@ body#index[data-lang='fr'] {
         }
     }
 
+    .expand-glow:hover {
+        animation: frExpandGlow 0.2s forwards;
+    }
+
     .course {
         text-shadow: $fr-txt-glow;
         background-color: $fr-black0;
@@ -74,6 +78,10 @@ body#index[data-lang='zh'] {
     background-size: cover;
     color: $zh-black0;
 
+    #introName {
+        letter-spacing: 1.25rem;
+    }
+
     #introInfo {
         color: $zh-white0;
     }
@@ -83,7 +91,7 @@ body#index[data-lang='zh'] {
     }
 
     #mobileHeader {
-        // background-color: rgb(20, 20, 0);
+        background-color: $zh-black0;
 
         @media (min-width: 769px) {
             box-shadow: none;
@@ -123,6 +131,10 @@ body#index[data-lang='zh'] {
         @media (pointer: coarse) and (hover: none) {
             animation: zhMobileGlow 1s ease-in-out infinite alternate;
         }
+    }
+
+    .expand-glow:hover {
+        animation: zhExpandGlow 0.2s forwards;
     }
 
     .course {

@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Keep intro animations visible
     showSection('#intro', 'flex');
 
-
+    
     // Listen for the end of the intro animation
     const introLogo = document.getElementById('introLogo');
 
@@ -60,6 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById(sectionID).classList.add('rise-up');
         }
     }
+    
 
     document.querySelectorAll('#navBarItems > li > a').forEach(link => {
         link.addEventListener('click', handleNavigation);

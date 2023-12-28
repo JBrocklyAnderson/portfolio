@@ -52,6 +52,30 @@
     }
 }
 
+@keyframes frExpandGlow {
+    0% {
+        box-shadow: 0 0 0.25rem 0.25rem $fr-color0;
+    }
+    50% {
+        box-shadow: 0 0 0.75rem 0.75rem $fr-color0;
+    }
+    100% {
+        box-shadow: 0 0 0.5rem 0.5rem $fr-color0;
+    }
+}
+
+@keyframes zhExpandGlow {
+    0% {
+        box-shadow: 0 0 0.25rem 0.25rem $zh-color0;
+    }
+    50% {
+        box-shadow: 0 0 0.75rem 0.75rem $zh-color0;
+    }
+    100% {
+        box-shadow: 0 0 0.5rem 0.5rem $zh-color0;
+    }
+}
+
 @keyframes mobileSlideIn {
     0% {
         transform: translateX(-500vw);
@@ -95,7 +119,7 @@
     100% {
         transform: translateY(65vh) translateX(-35vw);
     }
-}
+} 
 
 @keyframes fallDown {
     0% {
