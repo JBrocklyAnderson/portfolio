@@ -2,6 +2,11 @@ body#index[data-lang='fr'] {
     background: $black-blue-gradient;
     background-attachment: fixed;
     background-size: cover;
+    color: $fr-black0;
+
+    #introInfo {
+        color: $fr-white0;
+    }
 
     #tagline {
         @media (max-width: 384px) {
@@ -30,12 +35,16 @@ body#index[data-lang='fr'] {
         text-shadow: $fr-txt-glow;
     }
 
+    .frosted {
+        background-color: $fr-white0;
+    }
+
     .shadow {
         box-shadow: $fr-shadow;
     }
 
     .drop-shadow {
-        filter: drop-shadow(0 0 0.25rem $quaternary-color);
+        filter: drop-shadow(0 0 0.25rem $fr-color0);
     }
 
     .txt-glow {
@@ -50,6 +59,11 @@ body#index[data-lang='fr'] {
 
     .course {
         text-shadow: $fr-txt-glow;
+        background-color: $fr-black0;
+    }
+
+    .tooltip {
+        color: $fr-white0;
     }
 }
 
@@ -58,6 +72,11 @@ body#index[data-lang='zh'] {
     background: $black-red-gradient;
     background-attachment: fixed;
     background-size: cover;
+    color: $zh-black0;
+
+    #introInfo {
+        color: $zh-white0;
+    }
 
     #langSelect:hover {
         box-shadow: $zh-shadow;
@@ -80,12 +99,16 @@ body#index[data-lang='zh'] {
         text-shadow: $zh-txt-glow;
     }
 
+    .frosted {
+        background-color: $zh-white0;
+    }
+
     .shadow {
         box-shadow: $zh-shadow;
     }
 
     .drop-shadow {
-        filter: drop-shadow(0 0 0.25rem $quinary-color);
+        filter: drop-shadow(0 0 0.25rem $zh-color0);
     }
 
     .heading {
@@ -104,6 +127,11 @@ body#index[data-lang='zh'] {
 
     .course {
         text-shadow: $zh-txt-glow;
+        background-color: $zh-black0;
+    }
+
+    .tooltip {
+        color: $zh-white0;
     }
 }
 

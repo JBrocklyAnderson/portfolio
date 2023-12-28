@@ -11,7 +11,7 @@
 }
 
 #introInfo {
-    color: $secondary-color;
+    color: $white0;
     text-align: center;
     
 
@@ -44,7 +44,7 @@
         width: 100vw;
         top: 0;
         align-items: center;
-        background-color: $primary-color;
+        background-color: $black0;
         grid-column: page-columns-left / page-columns-right;
     }
 

@@ -5,100 +5,14 @@
     @media (min-width: 897px) {
         margin: 0 0 0 5rem;
     }
-
-    path#num3 {
-        fill: $tertiary-color;
-    }
 }
 
 #navbarLogo {
     width: clamp(2rem, 5vw, 8rem);
-
-    path#num3 {
-        fill: $tertiary-color;
-    }
 }
 
 .btn {
     width: clamp(1.5rem, 2.5vw, 2rem);
-}
-
-svg {
-    .color0 {
-        fill:#00ff00;
-    }
-
-    .color2 {
-        fill:#28ff28;
-    }
-
-    .off-black0 {
-        fill:#000014;
-    }
-
-    .off-black1 {
-        fill: #141428;
-    }
-
-    .off-black2 {
-        fill:#28283C;
-    }
-
-    .off-black3 {
-        fill: #3C3C50;
-    }
-
-    .off-black4 {
-        fill: #505064;
-    }
-
-    .off-white0 {
-        fill: #EBEBFF;
-    }
-
-    .stroke-color0 {
-        stroke: #00ff00;
-    }
-
-    .stroke-black0 {
-        stroke: #000014;
-    }
-
-    .stop-color0 {
-        stop-color: #00ff00;
-    }
-
-    .stop-color1 {
-        stop-color: #00EB00;
-    }
-
-    .stop-color4 {
-        stop-color: #00AF00; 
-    }
-
-    .stop-black0 {
-        stop-color: #000014;
-    }
-
-    .stop-black1 {
-        stop-color: #141428;
-    }
-
-    .stop-black2 {
-        stop-color: #28283C;
-    }
-
-    .stop-black4 {
-        stop-color:#505064;
-    }
-
-    .stop-white0 {
-        stop-color: #EBEBFF;
-    }
-
-    .stop-white1 {
-        stop-color: #d7d7eb;
-    }
 }
 
 #profileHero {
@@ -131,7 +45,7 @@ svg {
 }
 
 .drop-shadow {
-    filter: drop-shadow(0 0 0.25rem $tertiary-color);
+    filter: drop-shadow(0 0 0.25rem $color0);
 }
 
 .icon {
@@ -219,31 +133,240 @@ svg {
     margin: 1rem 0 1rem 1rem;
 }
 
-// Change SVG accent colors Language 
-body#index[data-lang='fr'] {
-    svg#introLogo {
-        path#num3 {
-            fill: $quaternary-color;
-        }
+svg {
+    .color0 {
+        fill:$color0;
     }
 
-    svg#navbarLogo {
-        path#num3 {
-            fill: $quaternary-color;
+    .color2 {
+        fill:$color2;
+    }
+
+    .off-black0 {
+        fill: $black0;
+    }
+
+    .off-black1 {
+        fill:$black1;
+    }
+
+    .off-black2 {
+        fill:$black2;
+    }
+
+    .off-black3 {
+        fill:$black3;
+    }
+
+    .off-black4 {
+        fill:$black4;
+    }
+
+    .off-white0 {
+        fill:$white0;
+    }
+
+    .stroke-color0 {
+        stroke:$color0;
+    }
+
+    .stroke-black0 {
+        stroke:$black0;
+    }
+
+    .stop-color0 {
+        stop-color:$color0;
+    }
+
+    .stop-color1 {
+        stop-color: $color1;
+    }
+
+    .stop-color4 {
+        stop-color:$color4; 
+    }
+
+    .stop-black0 {
+        stop-color:$black0;
+    }
+
+    .stop-black1 {
+        stop-color:$black1;
+    }
+
+    .stop-black2 {
+        stop-color:$black2;
+    }
+
+    .stop-black4 {
+        stop-color:$black4;
+    }
+
+    .stop-white0 {
+        stop-color:$white0;
+    }
+
+    .stop-white1 {
+        stop-color:$white1;
+    }
+}
+
+body#index[data-lang="fr"] {
+    svg {
+        .color0 {
+            fill:$fr-color0;
+        }
+    
+        .color2 {
+            fill:$fr-color2;
+        }
+    
+        .off-black0 {
+            fill: $fr-black0;
+        }
+    
+        .off-black1 {
+            fill:$fr-black1;
+        }
+    
+        .off-black2 {
+            fill:$fr-black2;
+        }
+    
+        .off-black3 {
+            fill:$fr-black3;
+        }
+    
+        .off-black4 {
+            fill:$fr-black4;
+        }
+    
+        .off-white0 {
+            fill:$fr-white0;
+        }
+    
+        .stroke-color0 {
+            stroke:$fr-color0;
+        }
+    
+        .stroke-black0 {
+            stroke:$fr-black0;
+        }
+    
+        .stop-color0 {
+            stop-color:$fr-color0;
+        }
+    
+        .stop-color1 {
+            stop-color: $fr-color1;
+        }
+    
+        .stop-color4 {
+            stop-color:$fr-color4; 
+        }
+    
+        .stop-black0 {
+            stop-color:$fr-black0;
+        }
+    
+        .stop-black1 {
+            stop-color:$fr-black1;
+        }
+    
+        .stop-black2 {
+            stop-color:$fr-black2;
+        }
+    
+        .stop-black4 {
+            stop-color:$fr-black4;
+        }
+    
+        .stop-white0 {
+            stop-color:$fr-white0;
+        }
+    
+        .stop-white1 {
+            stop-color:$fr-white1;
         }
     }
 }
 
-body#index[data-lang='zh'] {
-    svg#introLogo {
-        path#num3 {
-            fill: $quinary-color;
+body#index[data-lang="zh"] {
+    svg {
+        .color0 {
+            fill:$zh-color0;
         }
-    }
-
-    svg#navbarLogo {
-        path#num3 {
-            fill: $quinary-color;
+    
+        .color2 {
+            fill:$zh-color2;
+        }
+    
+        .off-black0 {
+            fill: $zh-black0;
+        }
+    
+        .off-black1 {
+            fill:$zh-black1;
+        }
+    
+        .off-black2 {
+            fill:$zh-black2;
+        }
+    
+        .off-black3 {
+            fill:$zh-black3;
+        }
+    
+        .off-black4 {
+            fill:$zh-black4;
+        }
+    
+        .off-white0 {
+            fill:$zh-white0;
+        }
+    
+        .stroke-color0 {
+            stroke:$zh-color0;
+        }
+    
+        .stroke-black0 {
+            stroke:$zh-black0;
+        }
+    
+        .stop-color0 {
+            stop-color:$zh-color0;
+        }
+    
+        .stop-color1 {
+            stop-color: $zh-color1;
+        }
+    
+        .stop-color4 {
+            stop-color:$zh-color4; 
+        }
+    
+        .stop-black0 {
+            stop-color:$zh-black0;
+        }
+    
+        .stop-black1 {
+            stop-color:$zh-black1;
+        }
+    
+        .stop-black2 {
+            stop-color:$zh-black2;
+        }
+    
+        .stop-black4 {
+            stop-color:$zh-black4;
+        }
+    
+        .stop-white0 {
+            stop-color:$zh-white0;
+        }
+    
+        .stop-white1 {
+            stop-color:$zh-white1;
         }
     }
 }

@@ -1,36 +1,36 @@
 @keyframes mobileGlow {
     0% {
-        box-shadow: 0 0 0.25rem 0.25rem $tertiary-color;
+        box-shadow: 0 0 0.25rem 0.25rem $color0;
     }
     50% {
-        box-shadow: 0 0 0.25rem 0.35rem $tertiary-color;
+        box-shadow: 0 0 0.25rem 0.35rem $color0;
     }
     100% {
-        box-shadow: 0 0 0.25rem 0.25rem $tertiary-color;
+        box-shadow: 0 0 0.25rem 0.25rem $color0;
     }
 }
 
 @keyframes frMobileGlow {
     0% {
-        box-shadow: 0 0 0.25rem 0.25rem $quaternary-color;
+        box-shadow: 0 0 0.25rem 0.25rem $fr-color0;
     }
     50% {
-        box-shadow: 0 0 0.25rem 0.35rem $quaternary-color;
+        box-shadow: 0 0 0.25rem 0.35rem $fr-color0;
     }
     100% {
-        box-shadow: 0 0 0.25rem 0.25rem $quaternary-color;
+        box-shadow: 0 0 0.25rem 0.25rem $fr-color0;
     }
 }
 
 @keyframes zhMobileGlow {
     0% {
-        box-shadow: 0 0 0.25rem 0.25rem $quinary-color;
+        box-shadow: 0 0 0.25rem 0.25rem $zh-color0;
     }
     50% {
-        box-shadow: 0 0 0.25rem 0.35rem $quinary-color;
+        box-shadow: 0 0 0.25rem 0.35rem $zh-color0;
     }
     100% {
-        box-shadow: 0 0 0.25rem 0.25rem $quinary-color;
+        box-shadow: 0 0 0.25rem 0.25rem $zh-color0;
     }
 }
 
@@ -42,13 +42,13 @@
 
 @keyframes expandGlow {
     0% {
-        box-shadow: 0 0 0.25rem 0.25rem $tertiary-color;
+        box-shadow: 0 0 0.25rem 0.25rem $color0;
     }
     50% {
-        box-shadow: 0 0 0.75rem 0.75rem $tertiary-color;
+        box-shadow: 0 0 0.75rem 0.75rem $color0;
     }
     100% {
-        box-shadow: 0 0 0.5rem 0.5rem $tertiary-color;
+        box-shadow: 0 0 0.5rem 0.5rem $color0;
     }
 }
 
