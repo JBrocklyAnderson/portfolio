@@ -279,7 +279,29 @@ button, input, select, textarea {
 }
 
 /* Import layout styles */
-body#index > *:not(#intro, #mobileHeader, #navBar) {
+body[data-custom-cursor=true] {
+  cursor: none;
+}
+body[data-custom-cursor=true] a {
+  cursor: none;
+}
+
+.cursor {
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  display: none;
+  pointer-events: none;
+}
+
+.cursor-delay {
+  transition: transform 200ms ease-out;
+}
+
+body#index > *:not(#cursor, #intro, #mobileHeader, #navBar) {
   margin-top: 2rem;
   margin-bottom: 15rem;
 }
@@ -872,6 +894,9 @@ svg .stroke-color0 {
 }
 svg .stroke-black0 {
   stroke: rgb(0, 0, 20);
+}
+svg .stroke-white0 {
+  stroke: rgb(235, 235, 255);
 }
 svg .stop-color0 {
   stop-color: rgb(0, 255, 0);

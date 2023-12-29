@@ -1,4 +1,27 @@
-body#index > *:not(#intro, #mobileHeader, #navBar) {
+body[data-custom-cursor="true"] {
+    cursor: none;
+
+    a {
+        cursor: none;
+    }
+}
+
+.cursor {
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: none;
+    pointer-events: none;
+}
+
+.cursor-delay {
+    transition: transform 200ms ease-out;
+}
+
+body#index > *:not(#cursor, #intro, #mobileHeader, #navBar) {
     margin-top: 2rem;
     margin-bottom: 15rem;
 }

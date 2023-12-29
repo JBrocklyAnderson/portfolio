@@ -1,4 +1,31 @@
 document.addEventListener('DOMContentLoaded', function() {
+    
+    
+    //// Make custom cursor trace mouse position
+    if (!window.matchMedia("(pointer: coarse)").matches) {
+
+        const cursor = document.getElementById('cursor');
+    
+        // Manage cursor appearance
+        document.addEventListener('mouseenter', () => {
+            cursor.style.display = 'block';
+        });
+
+        document.addEventListener('mouseleave', () => {
+            cursor.style.display = 'none';
+        });
+
+        // Track cursor 
+        document.addEventListener('mousemove', trackCursor);
+
+        function trackCursor (e) {
+            let w = cursor.clientWidth;
+            let h = cursor.clientHeight;
+            cursor.style.transform = `translate(${e.pageX - w / 2}px, ${e.pageY - h / 2}px)`;
+        }
+    }
+
+   
     //// Handle section transitions when navigation links are clicked
     // Create function to hide all sections
     function hideAllSections() {
@@ -32,6 +59,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Keep intro animations visible
     showSection('#intro', 'flex');
 
+    if (!window.matchMedia("(pointer: coarse)").matches) {
+        showSection('#cursor', 'block');
+    }
+
     
     // Listen for the end of the intro animation
     const introLogo = document.getElementById('introLogo');
@@ -41,7 +72,12 @@ document.addEventListener('DOMContentLoaded', function() {
         if (event.animationName === 'slideOutToUpperRight') {
 
             hideAllSections();
-            showSection('#mobileHeader', 'flex')
+
+            if (!window.matchMedia("(pointer: coarse)").matches) {
+                showSection('#cursor', 'block');
+            }
+
+            showSection('#mobileHeader', 'flex');
             showSection('#navBar', 'block');
             showSection('#aboutMe', 'block');
         }
