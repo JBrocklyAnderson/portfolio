@@ -202,6 +202,7 @@ button, input, select, textarea {
   border: none;
   background: transparent;
   font: inherit;
+  cursor: none;
 }
 
 .txt-color {
@@ -541,10 +542,6 @@ body#BurkinaFaso header {
   color: white;
 }
 
-.course:hover {
-  cursor: default;
-}
-
 .popout:hover {
   transform: scale(110%, 110%);
   transition: transform 0.1s ease-in-out;
@@ -624,7 +621,6 @@ body#BurkinaFaso header {
 
 #langSelect {
   position: relative;
-  cursor: pointer;
 }
 
 #langSelect:hover {
@@ -800,6 +796,10 @@ body#BurkinaFaso header {
 
 #bikesHero {
   object-position: 0% 55%;
+}
+
+.dropdown {
+  cursor: none;
 }
 
 .dropdown:hover {

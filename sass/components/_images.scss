@@ -69,6 +69,10 @@
     object-position: 0% 55%;
 }
 
+.dropdown {
+    cursor: none;
+}
+
 .dropdown:hover {
     transform: scale(110%, 110%);
     transition: transform 0.1s ease-in-out;
