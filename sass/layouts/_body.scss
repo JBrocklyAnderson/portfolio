@@ -71,6 +71,14 @@ body#index > *:not(#cursor, #intro, #mobileHeader, #navBar) {
     display: block;
 }
 
+section p {
+    line-height: 1.5;
+}
+
+/*#aboutMeInfo > p.fs-1 {
+    line-height: 1.5;
+}*/
+
 // Flexbox
 .flex {
     display: flex;

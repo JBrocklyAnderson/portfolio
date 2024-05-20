@@ -351,6 +351,13 @@ body#index > *:not(#cursor, #intro, #mobileHeader, #navBar) {
   display: block;
 }
 
+section p {
+  line-height: 1.5;
+}
+
+/*#aboutMeInfo > p.fs-1 {
+    line-height: 1.5;
+}*/
 .flex {
   display: flex;
 }
@@ -796,10 +803,6 @@ body#BurkinaFaso header {
 
 #bikesHero {
   object-position: 0% 55%;
-}
-
-.dropdown {
-  cursor: none;
 }
 
 .dropdown:hover {
